@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('Login.login');
+});
+
+
+Route::get('/dashboard', function () {
     return view('Admin.Dashboard.dashboard');
+});
+Route::get('/aktakelahiran', function () {
+    return view('Admin.Aktakelahiran.aktakelahiran');
+});
+Route::get('/aktakematian', function () {
+    return view('Admin.Aktakematian.aktakematian');
+});
+Route::get('/datamasyarakat', function () {
+    return view('Admin.Datamasyarakat.datamasyarakat');
 });

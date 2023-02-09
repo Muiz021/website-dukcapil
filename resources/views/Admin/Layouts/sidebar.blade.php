@@ -60,7 +60,7 @@
              <span class="menu-header-text">Dashboard</span>
          </li>
          <li class="menu-item {{ $title == 'Dashboard Admin' ? 'active' : '' }}">
-             <a href="#" class="menu-link">
+             <a href="/dashboard" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-home-circle"></i>
                  <div data-i18n="Analytics">Dashboard</div>
              </a>
@@ -68,40 +68,25 @@
          <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Pages</span>
          </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
+         <li class="menu-item {{ $title == 'Akta Kelahiran' ? 'active' : '' }}">
+             <a href="/aktakelahiran" class="menu-link">
                  <i class='menu-icon bx bx-body'></i>
                  <div data-i18n="Analytics">Akta Kelahiran</div>
              </a>
          </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
+         <li class="menu-item {{ $title == 'Akta Kematian' ? 'active' : '' }}">
+             <a href="/aktakematian" class="menu-link">
                  <i class='menu-icon bx bx-accessibility'></i>
                  <div data-i18n="Analytics">Akta Kematian</div>
              </a>
          </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
-                 <i class='menu-icon bx bxl-ok-ru'></i>
-                 <div data-i18n="Analytics">Kartu Identitas Anak</div>
-             </a>
+         <li class="menu-header small text-uppercase">
+             <span class="menu-header-text">Pendaftar</span>
          </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
+         <li class="menu-item {{ $title == 'Data Masyarakat' ? 'active' : '' }}">
+             <a href="/datamasyarakat" class="menu-link">
                  <i class='menu-icon bx bx-group'></i>
-                 <div data-i18n="Analytics">Kartu Keluarga</div>
-             </a>
-         </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
-                 <i class='menu-icon bx bxs-user-pin'></i>
-                 <div data-i18n="Analytics">Kartu Tanda Penduduk</div>
-             </a>
-         </li>
-         <li class="menu-item ">
-             <a href="#" class="menu-link">
-                 <i class='menu-icon bx bx-book-reader'></i>
-                 <div data-i18n="Analytics">Surat Pindah</div>
+                 <div data-i18n="Analytics">Data Masyarakat</div>
              </a>
          </li>
      </ul>
