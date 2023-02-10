@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}">
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
     <script src="{{ asset('assets/js/config.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/datatables.css') }}">
 </head>
 
 <body>
@@ -56,6 +58,9 @@
             <div class="layout-overlay layout-menu-toggle"></div>
         </div>
     </div>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+    <script src="{{ asset('assets/js/datatables.js') }}"></script>
     <script src="{{ asset('/assets/vendor/libs/jquery/jquery.js') }}"></script>
     <script src="{{ asset('/assets/vendor/libs/popper/popper.js') }}"></script>
     <script src="{{ asset('/assets/vendor/js/bootstrap.js') }}"></script>

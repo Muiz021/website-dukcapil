@@ -27,7 +27,7 @@
                                 name="username" id="username" placeholder="Username Email/Petugas">
                             <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                         </div>
-                         <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label">Password</label>
                         <div class="input-group mb-5 d-flex">
                             <input type="password" class="form-control py-3 bg-transparent text-light border-0"
                                 name="password" id="password" placeholder="Password">
