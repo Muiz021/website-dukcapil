@@ -18,15 +18,35 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard', function () {
+Route::get('/admin/dashboard', function () {
     return view('Admin.Dashboard.dashboard');
 });
-Route::get('/aktakelahiran', function () {
+Route::get('/admin/aktakelahiran', function () {
     return view('Admin.Aktakelahiran.aktakelahiran');
 });
-Route::get('/aktakematian', function () {
+Route::get('/admin/aktakematian', function () {
     return view('Admin.Aktakematian.aktakematian');
 });
-Route::get('/datamasyarakat', function () {
+Route::get('/admin/datamasyarakat', function () {
     return view('Admin.Datamasyarakat.datamasyarakat');
+});
+
+
+Route::get('/user/dashboard', function () {
+    return view('User.Dashboard.dashboard');
+});
+Route::get('/user/aktakelahiran', function () {
+    return view('User.Aktakelahiran.aktakelahiran');
+});
+Route::get('/user/formulirkelahiran', function () {
+    return view('User.Aktakelahiran.formulir');
+});
+Route::get('/user/aktakematian', function () {
+    return view('User.Aktakematian.aktakematian');
+});
+Route::get('/user/formulirkematian', function () {
+    return view('User.Aktakematian.formulir');
+});
+Route::get('/user/datamasyarakat', function () {
+    return view('User.Datamasyarakat.datamasyarakat');
 });

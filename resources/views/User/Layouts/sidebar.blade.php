@@ -59,8 +59,8 @@
          <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Dashboard</span>
          </li>
-         <li class="menu-item {{ $title == 'Dashboard Admin' ? 'active' : '' }}">
-             <a href="/admin/dashboard" class="menu-link">
+         <li class="menu-item {{ $title == 'Dashboard User' ? 'active' : '' }}">
+             <a href="/user/dashboard" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-home-circle"></i>
                  <div data-i18n="Analytics">Dashboard</div>
              </a>
@@ -68,25 +68,18 @@
          <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Pages</span>
          </li>
-         <li class="menu-item {{ $title == 'Akta Kelahiran' ? 'active' : '' }}">
-             <a href="/admin/aktakelahiran" class="menu-link">
+         <li
+             class="menu-item {{ ($title == 'Akta Kelahiran' ? 'active' : '' || $title == 'Formulir Pelaporan Kelahiran') ? 'active' : '' }}">
+             <a href="/user/aktakelahiran" class="menu-link">
                  <i class='menu-icon bx bx-body'></i>
                  <div data-i18n="Analytics">Akta Kelahiran</div>
              </a>
          </li>
-         <li class="menu-item {{ $title == 'Akta Kematian' ? 'active' : '' }}">
-             <a href="/admin/aktakematian" class="menu-link">
+         <li
+             class="menu-item {{ ($title == 'Akta Kematian' ? 'active' : '' || $title == 'Formulir Pelaporan Kematian') ? 'active' : '' }}">
+             <a href="/user/aktakematian" class="menu-link">
                  <i class='menu-icon bx bx-accessibility'></i>
                  <div data-i18n="Analytics">Akta Kematian</div>
-             </a>
-         </li>
-         <li class="menu-header small text-uppercase">
-             <span class="menu-header-text">Pendaftar</span>
-         </li>
-         <li class="menu-item {{ $title == 'Data Masyarakat' ? 'active' : '' }}">
-             <a href="/admin/datamasyarakat" class="menu-link">
-                 <i class='menu-icon bx bx-group'></i>
-                 <div data-i18n="Analytics">Data Masyarakat</div>
              </a>
          </li>
      </ul>
