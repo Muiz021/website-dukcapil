@@ -1,15 +1,14 @@
-@extends('User.Layouts.app', ['title' => 'Formulir Pelaporan Kelahiran'])
+@extends('Admin.Layouts.app', ['title' => 'Akta Kelahiran'])
 
 @section('content')
-    <section id="formulirkelahiran">
+    <section id="aktakelahiran">
         <div class="row">
             <div class="col-12">
-                <div class="card p-4">
-                    <p class="fs-4 mb-4 text-center fw-semibold">SURAT PERNYATAAN TANGGUNG JAWAB MUTLAK (SPTJM) KEBENARAN
-                        <br>
-                        DATA KELAHIRAN
-                    </p>
-                    <form action="">
+                <div class="card">
+                    <div class="card-header fs-4 fw-bold">
+                        Detail Data Akta Kelahiran
+                    </div>
+                    <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
@@ -27,31 +26,27 @@
                                                 <div class="mb-3">
                                                     <label for="namattdkelahiran" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namattdkelahiran"
-                                                        id="namattdkelahiran"
-                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                        id="namattdkelahiran" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikttdkelahiran" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikttdkelahiran"
-                                                        id="nikttdkelahiran" placeholder="Masukkan NIK yg ber tanda tangan">
+                                                        id="nikttdkelahiran" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttdkelahiran" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umurttdkelahiran"
-                                                        id="umurttdkelahiran"
-                                                        placeholder="Masukkan Umur yg ber tanda tangan">
+                                                        id="umurttdkelahiran" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanttdkelahiran" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanttdkelahiran"
-                                                        id="pekerjaanttdkelahiran"
-                                                        placeholder="Masukkan Pekerjaan yg ber tanda tangan">
+                                                        id="pekerjaanttdkelahiran" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatttdkelahiran" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatttdkelahiran"
-                                                        id="alamatttdkelahiran"
-                                                        placeholder="Masukkan Alamat yg ber tanda tangan">
+                                                        id="alamatttdkelahiran" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,27 +65,27 @@
                                                 <div class="mb-3">
                                                     <label for="namaanak" class="form-label">Nama</label>
                                                     <input type="text" class="form-control" name="namaanak"
-                                                        id="namaanak" placeholder="Masukkan Nama Anak yg lahir">
+                                                        id="namaanak" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikanak" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikanak" id="nikanak"
-                                                        placeholder="Masukkan NIK Anak">
+                                                        disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir</label>
-                                                    <input type="text" class="form-control" name="ttlanak"
-                                                        id="ttlanak" placeholder="Masukkan Tempat, Tanggal Lahir Anak">
+                                                    <input type="text" class="form-control" name="ttlanak" id="ttlanak"
+                                                        disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke</label>
                                                     <input type="number" class="form-control" name="anakke"
-                                                        id="anakke" placeholder="Anak Ke berapa">
+                                                        id="anakke" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatanak" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatanak"
-                                                        id="alamatanak" placeholder="Masukkan Alamat Anak">
+                                                        disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,27 +108,27 @@
                                                 <div class="mb-3">
                                                     <label for="namaibu" class="form-label">Nama Ibu</label>
                                                     <input type="text" class="form-control" name="namaibu"
-                                                        id="namaibu" placeholder="Masukkan Nama Ibu Kandung">
+                                                        id="namaibu" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikibu" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikibu"
-                                                        id="nikibu" placeholder="Masukkan NIK Ibu Kandung">
+                                                        id="nikibu" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir</label>
                                                     <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" placeholder="Masukkan Tempat, Tanggal Lahir Ibu">
+                                                        id="ttlibu" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
-                                                        id="pekerjaanibu" placeholder="Masukkan Pekerjaan Ibu Kandung">
+                                                        id="pekerjaanibu" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatibu" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatibu"
-                                                        id="alamatibu" placeholder="Masukkan Alamat Ibu Kandung">
+                                                        id="alamatibu" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,22 +147,22 @@
                                                 <div class="mb-3">
                                                     <label for="namapenolong" class="form-label">Nama</label>
                                                     <input type="text" class="form-control" name="namapenolong"
-                                                        id="namapenolong" placeholder="Masukkan Nama Penolong">
+                                                        id="namapenolong" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikpenolong" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikpenolong"
-                                                        id="nikpenolong" placeholder="Masukkan NIK Penolong">
+                                                        id="nikpenolong" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanpenolong" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanpenolong"
-                                                        id="pekerjaanpenolong" placeholder="Masukkan Pekerjaan Penolong">
+                                                        id="pekerjaanpenolong" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatpenolong" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatpenolong"
-                                                        id="alamatpenolong" placeholder="Masukkan Alamat Penolong">
+                                                        id="alamatpenolong" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,21 +175,21 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                    <input type="file" class="form-control" name="bukunikah" id="bukunikah">
+                                    <img src="" class="form-control" alt="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
-                                    <input type="file" class="form-control" name="suratketbidan" id="suratketbidan">
+                                    <img src="" class="form-control" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                    <input type="file" class="form-control" name="ktportuaibu" id="ktportuaibu">
+                                    <img src="" class="form-control" alt="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                    <input type="file" class="form-control" name="ktportuayah" id="ktportuayah">
+                                    <img src="" class="form-control" alt="">
                                 </div>
                             </div>
                         </div>
@@ -202,19 +197,19 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                    <input type="file" class="form-control" name="kkkelahiran" id="kkkelahiran">
+                                    <img src="" class="form-control" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="d-flex justify-content-end gap-3 mt-md-4">
-                                    <a href="" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
-                                        Kembali</a>
-                                    <a href="" class="btn btn-primary"><i class="bi bi-cloud-arrow-up"></i>
-                                        Kirim</a>
+                                    <a href="" class="btn btn-danger">
+                                        Tolak</a>
+                                    <a href="" class="btn btn-success">
+                                        Terima</a>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

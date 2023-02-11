@@ -4,85 +4,67 @@
     font-family: poppins;
     color: #c3c3c3;
 }
-#login .title {
+#regis .title {
     font-size: 64px;
     font-weight: 600;
     line-height: 77px;
     letter-spacing: 0em;
     text-align: center;
-    padding-top: 6%;
+    padding-top: 2%;
     margin-bottom: 50px;
 }
-#login img {
-    margin: auto 0px;
-    max-width: 387px;
-    height: 560px;
-}
-#login .kiri {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    background-color: #c3c3c3;
-}
-#login .kanan {
+#regis .kanan {
     height: 100vh;
     background-color: #231f20;
     padding: 0px 100px;
 }
-#login label {
+#regis label {
     font-size: 18px;
     font-weight: 600;
     line-height: 48px;
 }
-#login .btn-submit {
+#regis .btn-submit {
     background-color: #d9d9d9;
     padding: 16px;
     width: 100%;
     font-size: 18px;
     font-weight: 600;
 }
-#login .btn-submit:hover {
+#regis .btn-submit:hover {
     color: #000;
 }
 .input-group {
     border-radius: 8px;
     border: 2px solid #c3c3c3;
 }
-#login input {
+#regis input {
     outline: none;
 }
 
 @media (max-width: 575.98px) {
-    #login .title {
+    #regis .title {
         font-size: 44px;
         padding-top: 3%;
         margin-bottom: 50px;
     }
-    #login img {
-        display: none;
-    }
-    #login .kiri {
-        display: flex;
-        justify-content: center;
-        height: auto;
-        background-color: #231f20;
-    }
-    #login .kanan {
+    #regis .kanan {
         padding: 0px 30px;
+        height: auto;
     }
-    #login label {
+    #regis label {
         font-size: 16px;
         font-weight: 600;
         line-height: 30px;
     }
-    #login .btn-submit {
+    #regis .btn-submit {
         background-color: #d9d9d9;
         padding: 12px;
         width: 100%;
+        margin-bottom: 20px;
         font-size: 14px;
         font-weight: 600;
     }
-    #login .btn-submit:hover {
+    #regis .btn-submit:hover {
         color: #000;
     }
 }

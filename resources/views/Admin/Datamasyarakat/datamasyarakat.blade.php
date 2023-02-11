@@ -12,21 +12,24 @@
                         <table class="table table-responsive" id="table1">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>City</th>
+                                    <th>Username</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>NIK</th>
                                     <th>Status</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Darius</td>
                                     <td>velit@nec.com</td>
-                                    <td>0309 690 7871</td>
-                                    <td>Ways</td>
+                                    <td>1234567123452</td>
                                     <td>
                                         <span class="badge bg-success">Active</span>
+                                        <span class="badge bg-danger">Belum Active</span>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/showdatamasyarakat" class="btn btn-primary btn-sm">Lihat Data</a>
                                     </td>
                                 </tr>
                             </tbody>

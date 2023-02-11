@@ -17,6 +17,7 @@
                                     <th>Phone</th>
                                     <th>City</th>
                                     <th>Status</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -26,7 +27,11 @@
                                     <td>0309 690 7871</td>
                                     <td>Ways</td>
                                     <td>
-                                        <span class="badge bg-success">Active</span>
+                                        <span class="badge bg-success">Diterima</span>
+                                        <span class="badge bg-danger">Belum diperiksa</span>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/detailaktakelahiran" class="btn btn-sm btn-primary">Lihat Data</a>
                                     </td>
                                 </tr>
                             </tbody>
