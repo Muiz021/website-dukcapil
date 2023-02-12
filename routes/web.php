@@ -48,12 +48,27 @@ Route::get('/user/aktakelahiran', function () {
 Route::get('/user/formulirkelahiran', function () {
     return view('User.Aktakelahiran.formulir');
 });
+Route::get('/user/editaktakelahiran', function () {
+    return view('User.Aktakelahiran.edit');
+});
+Route::get('/user/showaktakelahiran', function () {
+    return view('User.Aktakelahiran.show');
+});
+
+
 Route::get('/user/aktakematian', function () {
     return view('User.Aktakematian.aktakematian');
 });
 Route::get('/user/formulirkematian', function () {
     return view('User.Aktakematian.formulir');
 });
+Route::get('/user/editaktakematian', function () {
+    return view('User.Aktakematian.edit');
+});
+Route::get('/user/showaktakematian', function () {
+    return view('User.Aktakematian.show');
+});
+
 
 
 // login regis
@@ -63,9 +78,9 @@ Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/', [LoginController::class, 'login_action'])->name('login.action');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
-// verifikasi
-Route::put('verification/{id}', [ProfilUserController::class, 'verifikasi_user'])->name('verifikasi_user');
 
+
+// route admin
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
 });

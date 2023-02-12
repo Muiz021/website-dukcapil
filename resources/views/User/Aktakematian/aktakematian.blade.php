@@ -34,8 +34,8 @@
                                         <p class="text-info mb-0">Diproses</p>
                                     </td>
                                     <td class="d-flex justify-content-center gap-2">
-                                        <button class="btn btn-sm btn-primary">Lihat Data</button>
-                                        <button class="btn btn-sm btn-info">Edit Data</button>
+                                        <a href="/user/showaktakematian" class="btn btn-sm btn-primary">Lihat Data</a>
+                                        <a href="/user/editaktakematian" class="btn btn-sm btn-info">Edit Data</a>
                                     </td>
                                 </tr>
                             </tbody>
