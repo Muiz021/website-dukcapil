@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DatamasyarakatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
@@ -14,10 +15,6 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/regis', function () {
-    return view('Login.regis');
-});
-
 
 Route::get('/admin/aktakelahiran', function () {
     return view('Admin.Aktakelahiran.aktakelahiran');
@@ -30,12 +27,6 @@ Route::get('/admin/aktakematian', function () {
 });
 Route::get('/admin/detailaktakematian', function () {
     return view('Admin.Aktakematian.show');
-});
-Route::get('/admin/datamasyarakat', function () {
-    return view('Admin.Datamasyarakat.datamasyarakat');
-});
-Route::get('/admin/showdatamasyarakat', function () {
-    return view('Admin.Datamasyarakat.show');
 });
 
 
@@ -78,9 +69,20 @@ Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/', [LoginController::class, 'login_action'])->name('login.action');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
-
+// verifikasi
+Route::put('verification/{id}',[DatamasyarakatController::class,'verifikasi_user'])->name('verifikasi_user');
 
 // route admin
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
-    route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
+    Route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
+
+    // data masyarakat
+    Route::get('/admin/datamasyarakat', [DatamasyarakatController::class, 'index'])->name('datamasayarakat.index');
+    Route::get('/admin/showdatamasyarakat/{id}', [DatamasyarakatController:: class, 'show']);
+    Route::delete('/admin/datamasyarakat/{id}', [DatamasyarakatController:: class, 'destroy']);
+});
+
+//route user
+Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
+    Route::get('dashboard-user', [LoginController::class, 'dashboard_user'])->name('dashboard-user');
 });

@@ -16,22 +16,37 @@
                                     <th>Nama Lengkap</th>
                                     <th>NIK</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                    <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Darius</td>
-                                    <td>velit@nec.com</td>
-                                    <td>1234567123452</td>
-                                    <td>
-                                        <span class="badge bg-success">Active</span>
-                                        <span class="badge bg-danger">Belum Active</span>
-                                    </td>
-                                    <td>
-                                        <a href="/admin/showdatamasyarakat" class="btn btn-primary btn-sm">Lihat Data</a>
-                                    </td>
-                                </tr>
+                                @foreach ($user as $item)
+                                    <tr>
+                                        <td>{{ $item->username }}</td>
+                                        <td>{{ $item->nama_lengkap }}</td>
+                                        <td>{{ $item->nik }}</td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                {{ $item->is_verification == 1 ? '' : 'hidden' }}>Active</span>
+                                            <span class="badge bg-danger"
+                                                {{ $item->is_verification == 0 ? '' : 'hidden' }}>Belum Active</span>
+                                        </td>
+                                        <td class="d-flex justify-content-center gap-3">
+                                            <a href="/admin/showdatamasyarakat/{{ $item->id }}"
+                                                class="btn btn-primary btn-sm">Lihat
+                                                Data</a>
+
+                                            <form action="/admin/datamasyarakat/{{ $item->id }}" method="post">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-sm btn-danger"
+                                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                    Hapus Akun
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->string('roles');
-            $table->boolean('is_verification')->default(0);
+            $table->boolean('is_verification')->default(0)->nullable();
             $table->string('nama_lengkap')->nullable();
             $table->string('nik')->nullable();
             $table->string('foto_ktp')->nullable();

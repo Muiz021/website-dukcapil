@@ -54,10 +54,10 @@
                         </select>
                         <div class="row">
                             <div class="col-6">
-                                <button type="submit" class="btn btn-submit">Masuk</button>
+                                <a href="{{ route('register') }}" class="btn btn-submit">Daftar</a>
                             </div>
                             <div class="col-6">
-                                <a href="/regis" class="btn btn-submit">DAFTAR</a>
+                                <button type="submit" class="btn btn-submit">Masuk</button>
                             </div>
                         </div>
                     </form>
