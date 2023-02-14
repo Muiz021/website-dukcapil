@@ -28,10 +28,9 @@ class Aktakelahiran extends Model
         'alamatibu',
 
         'namapenolong',
-        'nikinikpenolongbu',
-        'ttlipekerjaanpenolongbu',
-        'pekerjaanibu',
-        'alamatalamatpenolongibu',
+        'nikpenolong',
+        'pekerjaanpenolong',
+        'alamatpenolong',
 
         'bukunikah',
         'suratketbidan',

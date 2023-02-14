@@ -6,7 +6,9 @@
             <div class="col-12">
                 <div class="card p-4">
                     <p class="fs-4 mb-4 fw-semibold">Halaman Edit Data Akta Kematian</p>
-                    <form action="">
+                    <form action="{{ route('aktakematian.update', ['id' => $aktakematian->id]) }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
@@ -33,9 +35,9 @@
                                                         id="kecamatan" placeholder="Kediaman Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="kab/kota" class="form-label">Kabupaten/Kota </label>
-                                                    <input type="text" class="form-control" name="kab/kota"
-                                                        id="kab/kota" placeholder="Kediaman Almarhum/Almarhumah">
+                                                    <label for="kabkota" class="form-label">Kabupaten/Kota </label>
+                                                    <input type="text" class="form-control" name="kabkota"
+                                                        id="kabkota" placeholder="Kediaman Almarhum/Almarhumah">
                                                 </div>
                                             </div>
                                         </div>
@@ -53,23 +55,24 @@
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
                                                     <label for="namattd" class="form-label">Nama Lengkap</label>
-                                                    <input type="text" class="form-control" name="namattd"
-                                                        id="namattd" placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                    <input type="text" class="form-control" name="namattd" id="namattd"
+                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikttd" class="form-label">NIK</label>
-                                                    <input type="number" class="form-control" name="nikttd"
-                                                        id="nikttd" placeholder="Masukkan NIK yg ber tanda tangan">
+                                                    <input type="number" class="form-control" name="nikttd" id="nikttd"
+                                                        placeholder="Masukkan NIK yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttd" class="form-label">Umur</label>
-                                                    <input type="number" class="form-control" name="umurttd"
-                                                        id="umurttd" placeholder="Masukkan Umur yg ber tanda tangan">
+                                                    <input type="number" class="form-control" name="umurttd" id="umurttd"
+                                                        placeholder="Masukkan Umur yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanttd" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanttd"
-                                                        id="pekerjaanttd" placeholder="Masukkan Pekerjaan yg ber tanda tangan">
+                                                        id="pekerjaanttd"
+                                                        placeholder="Masukkan Pekerjaan yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatttd" class="form-label">Alamat</label>
@@ -86,45 +89,49 @@
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingTwo">
                                             <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#hubungan" aria-expanded="false"
-                                                aria-controls="hubungan" role="tabpanel">
+                                                data-bs-toggle="collapse" data-bs-target="#hubungan"
+                                                aria-expanded="false" aria-controls="hubungan" role="tabpanel">
                                                 Hubungan dengan yang mati
                                             </button>
                                         </h2>
                                         <div id="hubungan" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
-                                                 <div class="mb-3">
-                                                    <label for="keteranganlaporan" class="form-label">Melaporkan Bahwa</label>
+                                                <div class="mb-3">
+                                                    <label for="keteranganlaporan" class="form-label">Melaporkan
+                                                        Bahwa</label>
                                                     <input type="text" class="form-control" name="keteranganlaporan"
-                                                        id="keteranganlaporan" placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                        id="keteranganlaporan"
+                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="namaalm" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namaalm"
-                                                        id="namaalm" placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah">
+                                                        id="namaalm"
+                                                        placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="nikalm" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikalm"
                                                         id="nikalm" placeholder="Masukkan NIK Almarhum/Almarhumah">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="umuralm" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umuralm"
                                                         id="umuralm" placeholder="Masukkan Umur Almarhum/Almarhumah">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="pekerjaanalm" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanalm"
-                                                        id="pekerjaanalm" placeholder="Masukkan Pekerjaan Almarhum/Almarhumah">
+                                                        id="pekerjaanalm"
+                                                        placeholder="Masukkan Pekerjaan Almarhum/Almarhumah">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="agamaalm" class="form-label">Agama</label>
                                                     <input type="text" class="form-control" name="agamaalm"
                                                         id="agamaalm" placeholder="Masukkan Agama Almarhum/Almarhumah">
                                                 </div>
-                                                 <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="alamatalm" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatalm"
                                                         id="alamatalm" placeholder="Masukkan Alamat Almarhum/Almarhumah">
@@ -205,10 +212,11 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-end gap-3">
-                                    <a href="" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
+                                    <a href="{{ route('aktakematian.index') }}" class="btn btn-danger"><i
+                                            class="bi bi-arrow-left-circle"></i>
                                         Kembali</a>
-                                    <a href="" class="btn btn-primary"><i class="bi bi-cloud-arrow-up"></i>
-                                        Update</a>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-cloud-arrow-up"></i>
+                                        Update</button>
                                 </div>
                             </div>
                         </div>

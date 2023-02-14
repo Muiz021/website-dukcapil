@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use App\Models\Aktakematian;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class AktakematianController extends Controller
      */
     public function index()
     {
-        //
+        $aktakematian = Aktakematian::all();
+        return view('User.Aktakematian.aktakematian', compact('aktakematian'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AktakematianController extends Controller
      */
     public function create()
     {
-        //
+        return view('User.Aktakematian.formulir');
     }
 
     /**
@@ -35,7 +37,73 @@ class AktakematianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'kelurahan' => 'required',
+            'kecamatan' => 'required',
+            'kabkota' => 'required',
+
+            'namattd' => 'required',
+            'nikttd' => 'required',
+            'umurttd' => 'required',
+            'pekerjaanttd' => 'required',
+            'alamatttd' => 'required',
+
+            'keteranganlaporan' => 'required',
+            'namaalm' => 'required',
+            'nikalm' => 'required',
+            'umuralm' => 'required',
+            'pekerjaanalm' => 'required',
+            'agamaalm' => 'required',
+            'alamatalm' => 'required',
+
+            'hari' => 'required',
+            'tgl' => 'required',
+            'pukul' => 'required',
+            'bertempat' => 'required',
+            'penyebab' => 'required',
+            'bukti' => 'required|mimes:jpeg,png,jpg|max:5000',
+
+            'kkasli' => 'required|mimes:jpeg,png,jpg|max:5000',
+            'ktppemohon' => 'required|mimes:jpeg,png,jpg|max:5000',
+            'ktpsaksi1' => 'required|mimes:jpeg,png,jpg|max:5000',
+            'ktpsaksi2' => 'required|mimes:jpeg,png,jpg|max:5000',
+        ]);
+
+        $aktakematian = new Aktakematian();
+        $aktakematian->fill($data);
+
+        $dir = 'Aktakematian/' . $request->namattd;
+        $path = $request
+            ->file('bukti')
+            ->storePubliclyAs($dir, "bukti.{$request->file('bukti')->extension()}");
+        $aktakematian->bukti = Str::of($path)->replace('public', 'storage')->toString();
+
+        $dir = 'Aktakematian/' . $request->namattd;
+        $path = $request
+            ->file('kkasli')
+            ->storePubliclyAs($dir, "kkasli.{$request->file('kkasli')->extension()}");
+        $aktakematian->kkasli = Str::of($path)->replace('public', 'storage')->toString();
+
+        $dir = 'Aktakematian/' . $request->namattd;
+        $path = $request
+            ->file('ktppemohon')
+            ->storePubliclyAs($dir, "ktppemohon.{$request->file('ktppemohon')->extension()}");
+        $aktakematian->ktppemohon = Str::of($path)->replace('public', 'storage')->toString();
+
+        $dir = 'Aktakematian/' . $request->namattd;
+        $path = $request
+            ->file('ktpsaksi1')
+            ->storePubliclyAs($dir, "ktpsaksi1.{$request->file('ktpsaksi1')->extension()}");
+        $aktakematian->ktpsaksi1 = Str::of($path)->replace('public', 'storage')->toString();
+
+        $dir = 'Aktakematian/' . $request->namattd;
+        $path = $request
+            ->file('ktpsaksi2')
+            ->storePubliclyAs($dir, "ktpsaksi2.{$request->file('ktpsaksi2')->extension()}");
+        $aktakematian->ktpsaksi2 = Str::of($path)->replace('public', 'storage')->toString();
+
+        $aktakematian->save();
+        return redirect()->route('aktakematian.index');
     }
 
     /**
@@ -44,9 +112,10 @@ class AktakematianController extends Controller
      * @param  \App\Models\Aktakematian  $aktakematian
      * @return \Illuminate\Http\Response
      */
-    public function show(Aktakematian $aktakematian)
+    public function show($id)
     {
-        //
+        $aktakematian = Aktakematian::find($id);
+        return view('User.Aktakematian.show', compact('aktakematian'));
     }
 
     /**
@@ -55,9 +124,10 @@ class AktakematianController extends Controller
      * @param  \App\Models\Aktakematian  $aktakematian
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aktakematian $aktakematian)
+    public function edit($id)
     {
-        //
+        $aktakematian = Aktakematian::where('id', $id)->first();
+        return view('User.Aktakematian.edit', compact('aktakematian'));
     }
 
     /**
@@ -67,7 +137,7 @@ class AktakematianController extends Controller
      * @param  \App\Models\Aktakematian  $aktakematian
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aktakematian $aktakematian)
+    public function update(Request $request, $id)
     {
         //
     }

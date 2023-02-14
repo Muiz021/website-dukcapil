@@ -26,27 +26,27 @@
                                                 <div class="mb-3">
                                                     <label for="namattdkelahiran" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namattdkelahiran"
-                                                        id="namattdkelahiran" disabled>
+                                                        id="namattdkelahiran" disabled value="{{ $aktakelahiran->namattdkelahiran }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikttdkelahiran" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikttdkelahiran"
-                                                        id="nikttdkelahiran" disabled>
+                                                        id="nikttdkelahiran" disabled value="{{ $aktakelahiran->nikttdkelahiran }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttdkelahiran" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umurttdkelahiran"
-                                                        id="umurttdkelahiran" disabled>
+                                                        id="umurttdkelahiran" disabled value="{{ $aktakelahiran->umurttdkelahiran }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanttdkelahiran" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanttdkelahiran"
-                                                        id="pekerjaanttdkelahiran" disabled>
+                                                        id="pekerjaanttdkelahiran" disabled value="{{ $aktakelahiran->pekerjaanttdkelahiran }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatttdkelahiran" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatttdkelahiran"
-                                                        id="alamatttdkelahiran" disabled>
+                                                        id="alamatttdkelahiran" disabled value="{{ $aktakelahiran->alamatttdkelahiran }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -65,27 +65,27 @@
                                                 <div class="mb-3">
                                                     <label for="namaanak" class="form-label">Nama</label>
                                                     <input type="text" class="form-control" name="namaanak"
-                                                        id="namaanak" disabled>
+                                                        id="namaanak" disabled value="{{ $aktakelahiran->namaanak }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikanak" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikanak" id="nikanak"
-                                                        disabled>
+                                                        disabled value="{{ $aktakelahiran->nikanak }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir</label>
                                                     <input type="text" class="form-control" name="ttlanak" id="ttlanak"
-                                                        disabled>
+                                                        disabled value="{{ $aktakelahiran->ttlanak }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke</label>
                                                     <input type="number" class="form-control" name="anakke"
-                                                        id="anakke" disabled>
+                                                        id="anakke" disabled value="{{ $aktakelahiran->anakke }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatanak" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatanak"
-                                                        disabled>
+                                                        disabled value="{{ $aktakelahiran->alamatanak }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -108,27 +108,27 @@
                                                 <div class="mb-3">
                                                     <label for="namaibu" class="form-label">Nama Ibu</label>
                                                     <input type="text" class="form-control" name="namaibu"
-                                                        id="namaibu" disabled>
+                                                        id="namaibu" disabled value="{{ $aktakelahiran->namaibu }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikibu" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikibu"
-                                                        id="nikibu" disabled>
+                                                        id="nikibu" disabled value="{{ $aktakelahiran->nikibu }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir</label>
                                                     <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" disabled>
+                                                        id="ttlibu" disabled value="{{ $aktakelahiran->ttlibu }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
-                                                        id="pekerjaanibu" disabled>
+                                                        id="pekerjaanibu" disabled value="{{ $aktakelahiran->pekerjaanibu }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatibu" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatibu"
-                                                        id="alamatibu" disabled>
+                                                        id="alamatibu" disabled value="{{ $aktakelahiran->alamatibu }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -147,22 +147,22 @@
                                                 <div class="mb-3">
                                                     <label for="namapenolong" class="form-label">Nama</label>
                                                     <input type="text" class="form-control" name="namapenolong"
-                                                        id="namapenolong" disabled>
+                                                        id="namapenolong" disabled value="{{ $aktakelahiran->namapenolong }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikpenolong" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikpenolong"
-                                                        id="nikpenolong" disabled>
+                                                        id="nikpenolong" disabled value="{{ $aktakelahiran->nikpenolong }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanpenolong" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanpenolong"
-                                                        id="pekerjaanpenolong" disabled>
+                                                        id="pekerjaanpenolong" disabled value="{{ $aktakelahiran->pekerjaanpenolong }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatpenolong" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatpenolong"
-                                                        id="alamatpenolong" disabled>
+                                                        id="alamatpenolong" disabled value="{{ $aktakelahiran->alamatpenolong }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -175,21 +175,21 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                    <img src="" class="form-control" alt="">
+                                    <img src="/storage/{{ $aktakelahiran->bukunikah }}" class="form-control" alt="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
-                                    <img src="" class="form-control" alt="">
+                                    <img src="/storage/{{ $aktakelahiran->suratketbidan }}" class="form-control" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                    <img src="" class="form-control" alt="">
+                                    <img src="/storage/{{ $aktakelahiran->ktportuaibu }}" class="form-control" alt="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                    <img src="" class="form-control" alt="">
+                                    <img src="/storage/{{ $aktakelahiran->ktportuayah }}" class="form-control" alt="">
                                 </div>
                             </div>
                         </div>
@@ -197,12 +197,12 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                    <img src="" class="form-control" alt="">
+                                    <img src="/storage/{{ $aktakelahiran->kkkelahiran }}" class="form-control" alt="">
                                 </div>
                             </div>
                              <div class="col-md-6">
                                 <div class="d-flex justify-content-end gap-3 mt-md-4">
-                                    <a href="" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
+                                    <a href="{{ route('aktakelahiran.index') }}" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
                                         Kembali</a>
                                 </div>
                             </div>

@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('kelurahan');
             $table->string('kecamatan');
-            $table->string('kab/kota');
+            $table->string('kabkota');
           
             $table->string('namattd');
             $table->string('nikttd');

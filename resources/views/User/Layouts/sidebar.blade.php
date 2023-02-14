@@ -1,6 +1,6 @@
  <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
      <div class="app-brand demo">
-         <a href="index.html" class="app-brand-link">
+         <a href="{{ route('dashboard-admin') }}" class="app-brand-link">
              <img src="{{ asset('assets/img/imglogin.png') }}" alt="" width="40px">
              <span class="app-brand-text demo menu-text fw-bolder ms-2">sidak</span>
          </a>
@@ -27,14 +27,14 @@
          </li>
          <li
              class="menu-item {{ ($title == 'Akta Kelahiran' ? 'active' : '' || $title == 'Formulir Pelaporan Kelahiran') ? 'active' : '' }}">
-             <a href="/user/aktakelahiran" class="menu-link">
+             <a href="{{ route('aktakelahiran.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-body'></i>
                  <div data-i18n="Analytics">Akta Kelahiran</div>
              </a>
          </li>
          <li
              class="menu-item {{ ($title == 'Akta Kematian' ? 'active' : '' || $title == 'Formulir Pelaporan Kematian') ? 'active' : '' }}">
-             <a href="/user/aktakematian" class="menu-link">
+             <a href="{{ route('aktakematian.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-accessibility'></i>
                  <div data-i18n="Analytics">Akta Kematian</div>
              </a>

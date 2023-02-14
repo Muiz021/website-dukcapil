@@ -25,13 +25,15 @@
          <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Pages</span>
          </li>
-         <li class="menu-item {{ $title == 'Akta Kelahiran' ? 'active' : '' }}">
+         <li
+             class="menu-item {{ ($title == 'Data Akta Kelahiran' ? 'active' : '' || $title == 'Detail Data Akta Kelahiran') ? 'active' : '' }}">
              <a href="/admin/aktakelahiran" class="menu-link">
                  <i class='menu-icon bx bx-body'></i>
                  <div data-i18n="Analytics">Akta Kelahiran</div>
              </a>
          </li>
-         <li class="menu-item {{ $title == 'Akta Kematian' ? 'active' : '' }}">
+         <li
+             class="menu-item {{ ($title == 'Data Akta Kematian' ? 'active' : '' || $title == 'Detail Data Akta Kematian') ? 'active' : '' }}">
              <a href="/admin/aktakematian" class="menu-link">
                  <i class='menu-icon bx bx-accessibility'></i>
                  <div data-i18n="Analytics">Akta Kematian</div>

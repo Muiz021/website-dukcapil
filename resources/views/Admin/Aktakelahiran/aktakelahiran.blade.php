@@ -1,4 +1,4 @@
-@extends('Admin.Layouts.app', ['title' => 'Akta Kelahiran'])
+@extends('Admin.Layouts.app', ['title' => 'Data Akta Kelahiran'])
 
 @section('content')
     <section id="aktakelahiran">

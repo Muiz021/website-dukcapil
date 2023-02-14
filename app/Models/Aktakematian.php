@@ -12,7 +12,7 @@ class Aktakematian extends Model
     protected $fillable = [
         'kelurahan',
         'kecamatan',
-        'kab/kota',
+        'kabkota',
 
         'namattd',
         'nikttd',

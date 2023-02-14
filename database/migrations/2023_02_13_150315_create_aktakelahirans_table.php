@@ -35,10 +35,9 @@ return new class extends Migration
             $table->text('alamatibu');
 
             $table->string('namapenolong');
-            $table->string('nikinikpenolongbu');
-            $table->string('ttlipekerjaanpenolongbu');
-            $table->string('pekerjaanibu');
-            $table->text('alamatalamatpenolongibu');
+            $table->string('nikpenolong');
+            $table->string('pekerjaanpenolong');
+            $table->text('alamatpenolong');
 
             $table->string('bukunikah');
             $table->string('suratketbidan');

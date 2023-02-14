@@ -9,7 +9,8 @@
                         <br>
                         DATA KELAHIRAN
                     </p>
-                    <form action="">
+                    <form action="{{ route('aktakelahiran.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
@@ -27,31 +28,32 @@
                                                 <div class="mb-3">
                                                     <label for="namattdkelahiran" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namattdkelahiran"
-                                                        id="namattdkelahiran"
-                                                        required placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                        id="namattdkelahiran" required
+                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikttdkelahiran" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikttdkelahiran"
-                                                        id="nikttdkelahiran" required placeholder="Masukkan NIK yg ber tanda tangan">
+                                                        id="nikttdkelahiran" required
+                                                        placeholder="Masukkan NIK yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttdkelahiran" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umurttdkelahiran"
-                                                        id="umurttdkelahiran"
-                                                        required placeholder="Masukkan Umur yg ber tanda tangan">
+                                                        id="umurttdkelahiran" required
+                                                        placeholder="Masukkan Umur yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanttdkelahiran" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanttdkelahiran"
-                                                        id="pekerjaanttdkelahiran"
-                                                        required placeholder="Masukkan Pekerjaan yg ber tanda tangan">
+                                                        id="pekerjaanttdkelahiran" required
+                                                        placeholder="Masukkan Pekerjaan yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatttdkelahiran" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatttdkelahiran"
-                                                        id="alamatttdkelahiran"
-                                                        required placeholder="Masukkan Alamat yg ber tanda tangan">
+                                                        id="alamatttdkelahiran" required
+                                                        placeholder="Masukkan Alamat yg ber tanda tangan">
                                                 </div>
                                             </div>
                                         </div>
@@ -80,7 +82,8 @@
                                                 <div class="mb-3">
                                                     <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir</label>
                                                     <input type="text" class="form-control" name="ttlanak"
-                                                        id="ttlanak" required placeholder="Masukkan Tempat, Tanggal Lahir Anak">
+                                                        id="ttlanak" required
+                                                        placeholder="Masukkan Tempat, Tanggal Lahir Anak">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke</label>
@@ -123,12 +126,14 @@
                                                 <div class="mb-3">
                                                     <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir</label>
                                                     <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" required placeholder="Masukkan Tempat, Tanggal Lahir Ibu">
+                                                        id="ttlibu" required
+                                                        placeholder="Masukkan Tempat, Tanggal Lahir Ibu">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
-                                                        id="pekerjaanibu" required placeholder="Masukkan Pekerjaan Ibu Kandung">
+                                                        id="pekerjaanibu" required
+                                                        placeholder="Masukkan Pekerjaan Ibu Kandung">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatibu" class="form-label">Alamat</label>
@@ -162,12 +167,14 @@
                                                 <div class="mb-3">
                                                     <label for="pekerjaanpenolong" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanpenolong"
-                                                        id="pekerjaanpenolong" required placeholder="Masukkan Pekerjaan Penolong">
+                                                        id="pekerjaanpenolong" required
+                                                        placeholder="Masukkan Pekerjaan Penolong">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatpenolong" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatpenolong"
-                                                        id="alamatpenolong" required placeholder="Masukkan Alamat Penolong">
+                                                        id="alamatpenolong" required
+                                                        placeholder="Masukkan Alamat Penolong">
                                                 </div>
                                             </div>
                                         </div>
@@ -184,17 +191,20 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
-                                    <input type="file" class="form-control" name="suratketbidan" required id="suratketbidan">
+                                    <input type="file" class="form-control" name="suratketbidan" required
+                                        id="suratketbidan">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                    <input type="file" class="form-control" name="ktportuaibu" required id="ktportuaibu">
+                                    <input type="file" class="form-control" name="ktportuaibu" required
+                                        id="ktportuaibu">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                    <input type="file" class="form-control" name="ktportuayah" required id="ktportuayah">
+                                    <input type="file" class="form-control" name="ktportuayah" required
+                                        id="ktportuayah">
                                 </div>
                             </div>
                         </div>
@@ -202,12 +212,14 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                    <input type="file" class="form-control" name="kkkelahiran" required id="kkkelahiran">
+                                    <input type="file" class="form-control" name="kkkelahiran" required
+                                        id="kkkelahiran">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="d-flex justify-content-end gap-3 mt-md-4">
-                                    <a href="" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
+                                    <a href="{{ route('aktakelahiran.index') }}" class="btn btn-danger"><i
+                                            class="bi bi-arrow-left-circle"></i>
                                         Kembali</a>
                                     <button class="btn btn-primary"><i class="bi bi-cloud-arrow-up"></i>
                                         Kirim</button>
