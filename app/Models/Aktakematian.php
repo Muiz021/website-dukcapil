@@ -10,6 +10,8 @@ class Aktakematian extends Model
     use HasFactory;
 
     protected $fillable = [
+        'is_verification',
+
         'kelurahan',
         'kecamatan',
         'kabkota',
@@ -40,4 +42,9 @@ class Aktakematian extends Model
         'ktpsaksi1',
         'ktpsaksi2',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -10,6 +10,7 @@
                         <a href="{{ route('aktakelahiran.create') }}" class="btn btn-primary ms-auto pt-2"><i
                                 class="bi bi-clipboard-plus"></i> Ajukan Pelaporan</a>
                     </div>
+                    <p class="text-warning mt-md-0 mt-2"><i class="bi bi-exclamation-triangle-fill"> Jika data diproses lebih dari 3hari, periksa kembali data anda, lalu perbaiki</i></p>
 
                     <div class="table-responsive table mt-4">
                         <table class="table table-responsive">
@@ -31,12 +32,17 @@
                                         <td>{{ $item->namaanak }}</td>
                                         <td>{{ $item->namaibu }}</td>
                                         <td>
-                                            <p class="text-success mb-0">Diterima</p>
-                                            <p class="text-info mb-0">Diproses</p>
+                                            <span class="badge bg-success"
+                                                {{ $item->is_verification == 1 ? '' : 'hidden' }}>Diterima</span>
+                                            <span class="badge bg-danger"
+                                                {{ $item->is_verification == 0 ? '' : 'hidden' }}>Diproses</span>
                                         </td>
                                         <td class="d-flex justify-content-center gap-2">
-                                            <a href="/User/aktakelahiran/show/{{ $item->id }}" class="btn btn-sm btn-primary">Lihat Data</a>
-                                            <a href="/User/aktakelahiran/edit/{{ $item->id }}" class="btn btn-sm btn-info">Edit Data</a>
+                                            <a href="/User/aktakelahiran/show/{{ $item->id }}"
+                                                class="btn btn-sm btn-primary">Lihat Data</a>
+                                            <a href="/User/aktakelahiran/edit/{{ $item->id }}"
+                                                class="btn btn-sm btn-info"
+                                                {{ $item->is_verification == 1 ? 'hidden' : '' }}>Edit Data</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -9,6 +9,8 @@ class Aktakelahiran extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'is_verification',
+
         'namattdkelahiran',
         'nikttdkelahiran',
         'umurttdkelahiran',
@@ -38,4 +40,9 @@ class Aktakelahiran extends Model
         'ktportuayah',
         'kkkelahiran',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

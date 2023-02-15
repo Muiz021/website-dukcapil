@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Aktakelahiran;
+use Illuminate\Support\Facades\Auth;
 
 class AktakelahiranController extends Controller
 {
@@ -15,7 +16,8 @@ class AktakelahiranController extends Controller
      */
     public function index()
     {
-        $aktakelahiran = Aktakelahiran::all();
+        $user = Auth::user();
+        $aktakelahiran = Aktakelahiran::where('user_id', $user->id)->get();
         return view('User.Aktakelahiran.aktakelahiran', compact('aktakelahiran'));
     }
 
@@ -52,7 +54,7 @@ class AktakelahiranController extends Controller
 
             'namaibu' => 'required',
             'nikibu' => 'required',
-            'ttlibu' => 'required', 
+            'ttlibu' => 'required',
             'pekerjaanibu' => 'required',
             'alamatibu' => 'required',
 
@@ -70,6 +72,7 @@ class AktakelahiranController extends Controller
 
 
         $aktakelahiran = new Aktakelahiran();
+        $aktakelahiran->user_id = Auth::user()->id;
         $aktakelahiran->fill($data);
 
         $dir = 'Aktakelahiran/' . $request->namattdkelahiran;

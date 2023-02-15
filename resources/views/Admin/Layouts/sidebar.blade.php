@@ -27,14 +27,14 @@
          </li>
          <li
              class="menu-item {{ ($title == 'Data Akta Kelahiran' ? 'active' : '' || $title == 'Detail Data Akta Kelahiran') ? 'active' : '' }}">
-             <a href="/admin/aktakelahiran" class="menu-link">
+             <a href="{{ route('datakelahiran.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-body'></i>
                  <div data-i18n="Analytics">Akta Kelahiran</div>
              </a>
          </li>
          <li
              class="menu-item {{ ($title == 'Data Akta Kematian' ? 'active' : '' || $title == 'Detail Data Akta Kematian') ? 'active' : '' }}">
-             <a href="/admin/aktakematian" class="menu-link">
+             <a href="{{ route('datakematian.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-accessibility'></i>
                  <div data-i18n="Analytics">Akta Kematian</div>
              </a>
@@ -43,7 +43,7 @@
              <span class="menu-header-text">Pendaftar</span>
          </li>
          <li class="menu-item {{ $title == 'Data Masyarakat' ? 'active' : '' }}">
-             <a href="/admin/datamasyarakat" class="menu-link">
+             <a href="{{ route('datamasyarakat.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-group'></i>
                  <div data-i18n="Analytics">Data Masyarakat</div>
              </a>

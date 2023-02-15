@@ -228,8 +228,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-end gap-3">
-                                    <a href="{{ route('aktakematian.index') }}" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i>
+                                    <a href="{{ route('aktakematian.index') }}" class="btn btn-danger"><i
+                                            class="bi bi-arrow-left-circle"></i>
                                         Kembali</a>
+                                    <button class="btn btn-success"
+                                        {{ $aktakematian->is_verification == 1 ? '' : 'hidden' }}>Download Surat<i
+                                            class="bi bi-download"></i></button>
                                 </div>
                             </div>
                         </div>

@@ -39,7 +39,7 @@
                             <img src="/storage/{{ $user->foto_kk }}" width="100%" alt="" class="form-control p-2">
                         </div>
                         <div class="mb-3 d-flex justify-content-end gap-3">
-                            <a href="/admin/datamasyarakat" class="btn btn-danger">Kembali</a>
+                            <a href="{{ route('datamasyarakat.index') }}" class="btn btn-danger">Kembali</a>
                             <form action="{{ route('verifikasi_user', $user->id) }}" method="POST" accept-charset="utf-8"
                                 style="display: inline">
                                 @csrf

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DatamasyarakatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -16,8 +17,6 @@ use App\Http\Controllers\LoginController;
 */
 
 
-
-
 // login regis
 Route::get('register', [LoginController::class, 'register'])->name('register');
 Route::post('register', [LoginController::class, 'register_action'])->name('register.action');
@@ -25,17 +24,26 @@ Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/', [LoginController::class, 'login_action'])->name('login.action');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
-// verifikasi
-Route::put('verification/{id}', [DatamasyarakatController::class, 'verifikasi_user'])->name('verifikasi_user');
 
 // route admin
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
 
     // data masyarakat
-    Route::get('/admin/datamasyarakat', [DatamasyarakatController::class, 'index'])->name('datamasayarakat.index');
+    Route::get('/admin/datamasyarakat', [DatamasyarakatController::class, 'index'])->name('datamasyarakat.index');
     Route::get('/admin/showdatamasyarakat/{id}', [DatamasyarakatController::class, 'show']);
+    Route::put('verification/{id}', [DatamasyarakatController::class, 'verifikasi_user'])->name('verifikasi_user');
     Route::delete('/admin/datamasyarakat/{id}', [DatamasyarakatController::class, 'destroy']);
+
+    // akta kelahiran
+    Route::get('/admin/dataaktakelahiran', [AdminController::class, 'indexkelahiran'])->name('datakelahiran.index');
+    Route::get('/admin/detaildatakelahiran/{id}', [AdminController::class, 'detaildatakelahiran']);
+    Route::put('verificationdatakelahiran/{id}', [AdminController::class, 'verifikasi_dataaktakelahiran'])->name('verifikasi_dataaktakelahiran');
+
+    // akta kematian
+    Route::get('/admin/dataaktakematian', [AdminController::class, 'indexkematian'])->name('datakematian.index');
+    Route::get('/admin/detaildatakematian/{id}', [AdminController::class, 'detaildatakematian']);
+    Route::put('verificationdatakematian/{id}', [AdminController::class, 'verifikasi_dataaktakematian'])->name('verifikasi_dataaktakematian');
 });
 
 //route user

@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('aktakelahirans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->boolean('is_verification')->default(0)->nullable();
 
             $table->string('namattdkelahiran');
             $table->string('nikttdkelahiran');

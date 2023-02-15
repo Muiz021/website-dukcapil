@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('aktakematians', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->boolean('is_verification')->default(0)->nullable();
 
             $table->string('kelurahan');
             $table->string('kecamatan');
             $table->string('kabkota');
-          
+
             $table->string('namattd');
             $table->string('nikttd');
             $table->string('umurttd');

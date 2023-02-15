@@ -35,6 +35,6 @@ class DatamasyarakatController extends Controller
         $user->update([
             "is_verification" => 1
         ]);
-        return redirect()->back();
+        return redirect()->route('datamasyarakat.index');
     }
 }

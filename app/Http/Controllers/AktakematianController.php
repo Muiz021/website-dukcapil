@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Str;
 use App\Models\Aktakematian;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AktakematianController extends Controller
 {
@@ -15,7 +16,8 @@ class AktakematianController extends Controller
      */
     public function index()
     {
-        $aktakematian = Aktakematian::all();
+        $user = Auth::user();
+        $aktakematian = Aktakematian::where('user_id', $user->id)->get();
         return view('User.Aktakematian.aktakematian', compact('aktakematian'));
     }
 
@@ -70,6 +72,7 @@ class AktakematianController extends Controller
         ]);
 
         $aktakematian = new Aktakematian();
+        $aktakematian->user_id = Auth::user()->id;
         $aktakematian->fill($data);
 
         $dir = 'Aktakematian/' . $request->namattd;

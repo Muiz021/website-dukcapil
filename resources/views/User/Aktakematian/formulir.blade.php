@@ -166,7 +166,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bertempat" class="form-label">Bertempat di</label>
-                                                    <input type="date" class="form-control" name="bertempat"
+                                                    <input type="text" class="form-control" name="bertempat"
                                                         id="bertempat" placeholder="Tempat kediaman">
                                                 </div>
                                                 <div class="mb-3">

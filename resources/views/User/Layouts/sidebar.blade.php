@@ -1,6 +1,6 @@
  <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
      <div class="app-brand demo">
-         <a href="{{ route('dashboard-admin') }}" class="app-brand-link">
+         <a href="{{ route('dashboard-user') }}" class="app-brand-link">
              <img src="{{ asset('assets/img/imglogin.png') }}" alt="" width="40px">
              <span class="app-brand-text demo menu-text fw-bolder ms-2">sidak</span>
          </a>
@@ -17,7 +17,7 @@
              <span class="menu-header-text">Dashboard</span>
          </li>
          <li class="menu-item {{ $title == 'Dashboard User' ? 'active' : '' }}">
-             <a href="/user/dashboard" class="menu-link">
+             <a href="{{ route('dashboard-user') }}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-home-circle"></i>
                  <div data-i18n="Analytics">Dashboard</div>
              </a>
