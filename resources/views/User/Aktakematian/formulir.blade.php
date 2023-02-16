@@ -101,7 +101,7 @@
                                                         Bahwa</label>
                                                     <input type="text" class="form-control" name="keteranganlaporan"
                                                         id="keteranganlaporan"
-                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                        placeholder="Masukkan Keterangan Laporan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="namaalm" class="form-label">Nama Lengkap</label>

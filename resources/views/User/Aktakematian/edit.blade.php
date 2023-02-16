@@ -27,17 +27,20 @@
                                                     <label for="kelurahan" class="form-label">Pemerintahan Desa
                                                         Kelurahan</label>
                                                     <input type="text" class="form-control" name="kelurahan"
-                                                        id="kelurahan" placeholder="Kediaman Almarhum/Almarhumah">
+                                                        id="kelurahan" value="{{ $aktakematian->kelurahan }}"
+                                                        placeholder="Kediaman Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="kecamatan" class="form-label">Kecamatan</label>
                                                     <input type="text" class="form-control" name="kecamatan"
-                                                        id="kecamatan" placeholder="Kediaman Almarhum/Almarhumah">
+                                                        id="kecamatan" value="{{ $aktakematian->kecamatan }}"
+                                                        placeholder="Kediaman Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="kabkota" class="form-label">Kabupaten/Kota </label>
-                                                    <input type="text" class="form-control" name="kabkota"
-                                                        id="kabkota" placeholder="Kediaman Almarhum/Almarhumah">
+                                                    <input type="text" class="form-control" name="kabkota" id="kabkota"
+                                                        value="{{ $aktakematian->kabkota }}"
+                                                        placeholder="Kediaman Almarhum/Almarhumah">
                                                 </div>
                                             </div>
                                         </div>
@@ -56,28 +59,32 @@
                                                 <div class="mb-3">
                                                     <label for="namattd" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namattd" id="namattd"
+                                                        value="{{ $aktakematian->namattd }}"
                                                         placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikttd" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikttd" id="nikttd"
+                                                        value="{{ $aktakematian->nikttd }}"
                                                         placeholder="Masukkan NIK yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttd" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umurttd" id="umurttd"
+                                                        value="{{ $aktakematian->umurttd }}"
                                                         placeholder="Masukkan Umur yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanttd" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanttd"
-                                                        id="pekerjaanttd"
+                                                        id="pekerjaanttd" value="{{ $aktakematian->pekerjaanttd }}"
                                                         placeholder="Masukkan Pekerjaan yg ber tanda tangan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatttd" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatttd"
-                                                        id="alamatttd" placeholder="Masukkan Alamat yg ber tanda tangan">
+                                                        id="alamatttd" value="{{ $aktakematian->alamatttd }}"
+                                                        placeholder="Masukkan Alamat yg ber tanda tangan">
                                                 </div>
                                             </div>
                                         </div>
@@ -102,39 +109,44 @@
                                                         Bahwa</label>
                                                     <input type="text" class="form-control" name="keteranganlaporan"
                                                         id="keteranganlaporan"
-                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan">
+                                                        value="{{ $aktakematian->keteranganlaporan }}"
+                                                        placeholder="Masukkan Keterangan Laporan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="namaalm" class="form-label">Nama Lengkap</label>
                                                     <input type="text" class="form-control" name="namaalm"
-                                                        id="namaalm"
+                                                        id="namaalm" value="{{ $aktakematian->namaalm }}"
                                                         placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikalm" class="form-label">NIK</label>
                                                     <input type="number" class="form-control" name="nikalm"
-                                                        id="nikalm" placeholder="Masukkan NIK Almarhum/Almarhumah">
+                                                        id="nikalm" value="{{ $aktakematian->nikalm }}"
+                                                        placeholder="Masukkan NIK Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umuralm" class="form-label">Umur</label>
                                                     <input type="number" class="form-control" name="umuralm"
-                                                        id="umuralm" placeholder="Masukkan Umur Almarhum/Almarhumah">
+                                                        id="umuralm" value="{{ $aktakematian->umuralm }}"
+                                                        placeholder="Masukkan Umur Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pekerjaanalm" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanalm"
-                                                        id="pekerjaanalm"
+                                                        id="pekerjaanalm" value="{{ $aktakematian->pekerjaanalm }}"
                                                         placeholder="Masukkan Pekerjaan Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="agamaalm" class="form-label">Agama</label>
                                                     <input type="text" class="form-control" name="agamaalm"
-                                                        id="agamaalm" placeholder="Masukkan Agama Almarhum/Almarhumah">
+                                                        id="agamaalm" value="{{ $aktakematian->agamaalm }}"
+                                                        placeholder="Masukkan Agama Almarhum/Almarhumah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="alamatalm" class="form-label">Alamat</label>
                                                     <input type="text" class="form-control" name="alamatalm"
-                                                        id="alamatalm" placeholder="Masukkan Alamat Almarhum/Almarhumah">
+                                                        id="alamatalm" value="{{ $aktakematian->alamatalm }}"
+                                                        placeholder="Masukkan Alamat Almarhum/Almarhumah">
                                                 </div>
                                             </div>
                                         </div>
@@ -153,32 +165,38 @@
                                                 <div class="mb-3">
                                                     <label for="hari" class="form-label">Hari</label>
                                                     <input type="text" class="form-control" name="hari"
-                                                        id="hari" placeholder="Hari berpulang kerahmatullah">
+                                                        id="hari" value="{{ $aktakematian->hari }}"
+                                                        placeholder="Hari berpulang kerahmatullah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="tgl" class="form-label">Tanggal Kematian</label>
                                                     <input type="date" class="form-control" name="tgl"
-                                                        id="tgl" placeholder="Tanggal berpulang kerahmatullah">
+                                                        id="tgl" value="{{ $aktakematian->tgl }}"
+                                                        placeholder="Tanggal berpulang kerahmatullah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pukul" class="form-label">Pukul</label>
                                                     <input type="time" class="form-control" name="pukul"
-                                                        id="pukul" placeholder="Pukul berpulang kerahmatullah">
+                                                        id="pukul" value="{{ $aktakematian->pukul }}"
+                                                        placeholder="Pukul berpulang kerahmatullah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bertempat" class="form-label">Bertempat di</label>
-                                                    <input type="date" class="form-control" name="bertempat"
-                                                        id="bertempat" placeholder="Tempat kediaman">
+                                                    <input type="text" class="form-control" name="bertempat"
+                                                        id="bertempat" value="{{ $aktakematian->bertempat }}"
+                                                        placeholder="Tempat kediaman">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="penyebab" class="form-label">Penyebab Kematian</label>
                                                     <input type="text" class="form-control" name="penyebab"
-                                                        id="penyebab" placeholder="Penyebab Kematian">
+                                                        id="penyebab" value="{{ $aktakematian->penyebab }}"
+                                                        placeholder="Penyebab Kematian">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian</label>
                                                     <input type="file" class="form-control" name="bukti"
-                                                        id="buti" placeholder="Bukti Kematian">
+                                                        id="buti" value="{{ $aktakematian->bukti }}"
+                                                        placeholder="Bukti Kematian">
                                                 </div>
                                             </div>
                                         </div>
@@ -191,20 +209,26 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkasli" class="form-label">Kartu Keluarga Asli</label>
+                                    <img src="/storage/{{ $aktakematian->kkasli }}" class="form-control mb-2" alt="">
                                     <input type="file" class="form-control" name="kkasli" id="kkasli">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktppemohon" class="form-label">KTP Pemohon</label>
+                                    <img src="/storage/{{ $aktakematian->ktppemohon }}" class="form-control mb-2"
+                                        alt="">
                                     <input type="file" class="form-control" name="ktppemohon" id="ktppemohon">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktpsaksi1" class="form-label">KTP Saksi 1</label>
+                                    <img src="/storage/{{ $aktakematian->ktpsaksi1 }}" class="form-control mb-2"
+                                        alt="">
                                     <input type="file" class="form-control" name="ktpsaksi1" id="ktpsaksi1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktpsaksi2" class="form-label">KTP Saksi 2</label>
+                                    <img src="/storage/{{ $aktakematian->ktpsaksi2 }}" class="form-control mb-2" alt="">
                                     <input type="file" class="form-control" name="ktpsaksi2" id="ktpsaksi2">
                                 </div>
                             </div>

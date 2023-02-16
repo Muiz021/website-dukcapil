@@ -142,7 +142,62 @@ class AktakematianController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $aktakematian = Aktakematian::where('id', $id)->first();
+        $data = $request->all();
+
+        if (!$request->file("bukti") && !$request->file("kkasli") && !$request->file("ktppemohon") && !$request->file("ktpsaksi1") && !$request->file("ktpsaksi2")) {
+            $aktakematian->fill($data);
+            $aktakematian->save();
+        }
+        if ($request->file("bukti")) {
+            $aktakematian->fill($data);
+
+            $dir = 'Aktakematian/' . $request->namattd;
+            $path = $request
+                ->file('bukti')
+                ->storePubliclyAs($dir, "bukti.{$request->file('bukti')->extension()}");
+            $aktakematian->bukti = Str::of($path)->replace('public', 'storage')->toString();
+            $aktakematian->save();
+        }
+        if ($request->file("kkasli")) {
+            $aktakematian->fill($data);
+
+            $dir = 'Aktakematian/' . $request->namattd;
+            $path = $request
+                ->file('kkasli')
+                ->storePubliclyAs($dir, "kkasli.{$request->file('kkasli')->extension()}");
+            $aktakematian->kkasli = Str::of($path)->replace('public', 'storage')->toString();
+            $aktakematian->save();
+        }
+        if ($request->file("ktppemohon")) {
+
+            $dir = 'Aktakematian/' . $request->namattd;
+            $path = $request
+                ->file('ktppemohon')
+                ->storePubliclyAs($dir, "ktppemohon.{$request->file('ktppemohon')->extension()}");
+            $aktakematian->ktppemohon = Str::of($path)->replace('public', 'storage')->toString();
+            $aktakematian->save();
+        }
+        if ($request->file("ktpsaksi1")) {
+
+            $dir = 'Aktakematian/' . $request->namattd;
+            $path = $request
+                ->file('ktpsaksi1')
+                ->storePubliclyAs($dir, "ktpsaksi1.{$request->file('ktpsaksi1')->extension()}");
+            $aktakematian->ktpsaksi1 = Str::of($path)->replace('public', 'storage')->toString();
+            $aktakematian->save();
+        }
+        if ($request->file("ktpsaksi2")) {
+
+            $dir = 'Aktakematian/' . $request->namattd;
+            $path = $request
+                ->file('ktpsaksi2')
+                ->storePubliclyAs($dir, "ktpsaksi2.{$request->file('ktpsaksi2')->extension()}");
+            $aktakematian->ktpsaksi2 = Str::of($path)->replace('public', 'storage')->toString();
+            $aktakematian->save();
+        }
+
+        return redirect()->route('aktakematian.index');
     }
 
     /**
