@@ -186,24 +186,24 @@
                                 <div class="mb-3">
                                     <label for="bukunikah" class="form-label">Buku Nikah</label>
                                     <img src="/storage/{{ $kelahiran->bukunikah }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
                                     <img src="/storage/{{ $kelahiran->suratketbidan }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
                                     <img src="/storage/{{ $kelahiran->ktportuaibu }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
                                     <img src="/storage/{{ $kelahiran->ktportuayah }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -212,7 +212,7 @@
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
                                     <img src="/storage/{{ $kelahiran->kkkelahiran }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-md-6">

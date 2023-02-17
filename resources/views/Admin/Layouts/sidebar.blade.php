@@ -23,6 +23,15 @@
              </a>
          </li>
          <li class="menu-header small text-uppercase">
+             <span class="menu-header-text">Data Kartu Keluarga</span>
+         </li>
+         <li class="menu-item {{ $title == 'Kartu Keluarga' ? 'active' : '' }}">
+             <a href="{{ route('kk.index') }}" class="menu-link">
+                 <i class="menu-icon bi bi-people"></i>
+                 <div data-i18n="Analytics">Kartu Keluarga</div>
+             </a>
+         </li>
+         <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Pages</span>
          </li>
          <li

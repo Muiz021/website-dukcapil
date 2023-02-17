@@ -7,7 +7,8 @@
                 <div class="card p-4">
                     <p class="title">Akta Kelahiran</p>
                     <p class="subtitle">Nama Anak</p>
-                    <img src="{{ asset('assets/img/imgkelahiran.png') }}" alt="" width="100%" height="180px">
+                    <img src="{{ asset('assets/img/imgkelahiran.png') }}" alt="" width="100%" height="180px"
+                        loading="lazy">
                     <div class="mt-3 d-flex">
                         <p class="my-auto text-success">Berhasil diproses...</p>
                         <button class="btn btn-success ms-auto btn-sm">Download <i class="bi bi-download"></i></button>

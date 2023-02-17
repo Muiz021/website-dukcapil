@@ -188,7 +188,7 @@
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian</label>
                                                     <img src="/storage/{{ $kematian->bukti }}"
-                                                        class="form-control mb-2" alt="">
+                                                        class="form-control mb-2" alt="" loading="lazy">
                                                     <input type="file" class="form-control" disabled
                                                         value="{{ $kematian->bukti }}" name="bukti"
                                                         id="buti">
@@ -204,24 +204,24 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkasli" class="form-label">Kartu Keluarga Asli</label>
-                                    <img src="/storage/{{ $kematian->kkasli }}" class="form-control" alt="">
+                                    <img src="/storage/{{ $kematian->kkasli }}" class="form-control" alt="" loading="lazy">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktppemohon" class="form-label">KTP Pemohon</label>
                                     <img src="/storage/{{ $kematian->ktppemohon }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktpsaksi1" class="form-label">KTP Saksi 1</label>
                                     <img src="/storage/{{ $kematian->ktpsaksi1 }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktpsaksi2" class="form-label">KTP Saksi 2</label>
                                     <img src="/storage/{{ $kematian->ktpsaksi2 }}" class="form-control"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             </div>
                         </div>

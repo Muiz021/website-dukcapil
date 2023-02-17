@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DatamasyarakatController;
+use App\Http\Controllers\KartuKeluargaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
@@ -29,6 +30,9 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
 
+    // kartu keluarga
+    Route::get('/admin/kartukeluarga', [KartuKeluargaController::class, 'index'])->name('kk.index');
+
     // data masyarakat
     Route::get('/admin/datamasyarakat', [DatamasyarakatController::class, 'index'])->name('datamasyarakat.index');
     Route::get('/admin/showdatamasyarakat/{id}', [DatamasyarakatController::class, 'show']);
@@ -51,6 +55,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
     Route::get('dashboard-user', [LoginController::class, 'dashboard_user'])->name('dashboard-user');
 
     Route::namespace('App\Http\Controllers')->group(function () {
+
         // akta kelahiran
         Route::get('/User/aktakelahiran', 'AktakelahiranController@index')->name('aktakelahiran.index');
         Route::get('/User/aktakelahiran/formulir', 'AktakelahiranController@create')->name('aktakelahiran.create');

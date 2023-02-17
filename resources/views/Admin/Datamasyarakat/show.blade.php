@@ -29,14 +29,14 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Foto KTP</label>
-                            <img src="/storage/{{ $user->foto_ktp }}" width="100%" alt=""
+                            <img src="/storage/{{ $user->foto_ktp }}" width="100%" alt="" loading="lazy"
                                 class="form-control p-2">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Foto KK</label>
-                            <img src="/storage/{{ $user->foto_kk }}" width="100%" alt="" class="form-control p-2">
+                            <img src="/storage/{{ $user->foto_kk }}" width="100%" alt="" loading="lazy" class="form-control p-2">
                         </div>
                         <div class="mb-3 d-flex justify-content-end gap-3">
                             <a href="{{ route('datamasyarakat.index') }}" class="btn btn-danger">Kembali</a>

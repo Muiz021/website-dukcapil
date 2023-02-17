@@ -209,13 +209,13 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkasli" class="form-label">Kartu Keluarga Asli</label>
-                                    <img src="/storage/{{ $aktakematian->kkasli }}" class="form-control mb-2" alt="">
+                                    <img src="/storage/{{ $aktakematian->kkasli }}" class="form-control mb-2" alt="" loading="load">
                                     <input type="file" class="form-control" name="kkasli" id="kkasli">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktppemohon" class="form-label">KTP Pemohon</label>
                                     <img src="/storage/{{ $aktakematian->ktppemohon }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="load">
                                     <input type="file" class="form-control" name="ktppemohon" id="ktppemohon">
                                 </div>
                             </div>
@@ -223,12 +223,12 @@
                                 <div class="mb-3">
                                     <label for="ktpsaksi1" class="form-label">KTP Saksi 1</label>
                                     <img src="/storage/{{ $aktakematian->ktpsaksi1 }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="load">
                                     <input type="file" class="form-control" name="ktpsaksi1" id="ktpsaksi1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktpsaksi2" class="form-label">KTP Saksi 2</label>
-                                    <img src="/storage/{{ $aktakematian->ktpsaksi2 }}" class="form-control mb-2" alt="">
+                                    <img src="/storage/{{ $aktakematian->ktpsaksi2 }}" class="form-control mb-2" alt="" loading="load">
                                     <input type="file" class="form-control" name="ktpsaksi2" id="ktpsaksi2">
                                 </div>
                             </div>

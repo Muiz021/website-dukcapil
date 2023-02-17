@@ -198,13 +198,13 @@
                                 <div class="mb-3">
                                     <label for="bukunikah" class="form-label">Buku Nikah</label>
                                     <img src="/storage/{{ $aktakelahiran->bukunikah }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="lazy">
                                     <input type="file" class="form-control" name="bukunikah" id="bukunikah">
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
                                     <img src="/storage/{{ $aktakelahiran->suratketbidan }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="lazy">
                                     <input type="file" class="form-control" name="suratketbidan" id="suratketbidan">
                                 </div>
                             </div>
@@ -212,13 +212,13 @@
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
                                     <img src="/storage/{{ $aktakelahiran->ktportuaibu }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="lazy">
                                     <input type="file" class="form-control" name="ktportuaibu" id="ktportuaibu">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
                                     <img src="/storage/{{ $aktakelahiran->ktportuayah }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="lazy">
                                     <input type="file" class="form-control" name="ktportuayah" id="ktportuayah">
                                 </div>
                             </div>
@@ -228,7 +228,7 @@
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
                                     <img src="/storage/{{ $aktakelahiran->kkkelahiran }}" class="form-control mb-2"
-                                        alt="">
+                                        alt="" loading="lazy">
                                     <input type="file" class="form-control" name="kkkelahiran" id="kkkelahiran">
                                 </div>
                             </div>
