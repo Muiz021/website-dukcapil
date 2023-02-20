@@ -19,7 +19,7 @@
                                             <button type="button" class="accordion-button collapsed"
                                                 data-bs-toggle="collapse" data-bs-target="#ttdkelahiran"
                                                 aria-expanded="false" aria-controls="ttdkelahiran" role="tabpanel">
-                                                Saya yang bertanda tangan dibawah ini
+                                                Data Kepala Keluarga yang berttd dibawah ini
                                             </button>
                                         </h2>
                                         <div id="ttdkelahiran" class="accordion-collapse collapse"

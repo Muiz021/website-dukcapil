@@ -31,7 +31,7 @@
                                 <label for="username" class="form-label">Username/Email</label>
                                 <div class="input-group mb-3 d-flex">
                                     <input type="email" class="form-control py-3 bg-transparent text-light border-0"
-                                        name="username" id="username" required placeholder="Username Email/Petugas">
+                                        name="username" id="username" required placeholder="Masukkan Username atau Email Kepala Keluarga">
                                     <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                                 </div>
                                 <label for="password" class="form-label">Password</label>
@@ -44,16 +44,16 @@
                                 <div class="input-group mb-md-5 mb-3 d-flex">
                                     <input type="text" class="form-control py-3 bg-transparent text-light border-0"
                                         name="nama_lengkap" id="nama_lengkap" required
-                                        placeholder="Nama Lengkap Email/Petugas">
+                                        placeholder="Nama Lengkap Kepala Keluarga">
                                     <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="nik" class="form-label">NIK</label>
+                                <label for="nik" class="form-label">Nomor Kartu Keluarga</label>
                                 <div class="input-group mb-3 d-flex">
                                     <input type="number" class="form-control py-3 bg-transparent text-light border-0"
                                         name="nik" id="nik" required
-                                        placeholder="Nomor Induk Kewarganegaraan">
+                                        placeholder="Masukkan Nomor Kartu Keluarga Anda">
                                     <i class="bi bi-list-ol align-self-center fs-3 pe-3"></i>
                                 </div>
                                 <label for="foto_ktp" class="form-label">Foto KTP</label>

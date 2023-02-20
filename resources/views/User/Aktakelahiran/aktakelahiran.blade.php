@@ -17,7 +17,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Pelapor</th>
+                                    <th>Nama Kepala Keluarga</th>
                                     <th>Nama Anak</th>
                                     <th>Nama Ibu</th>
                                     <th>Status</th>

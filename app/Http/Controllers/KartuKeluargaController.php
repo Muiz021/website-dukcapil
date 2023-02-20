@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\KartuKeluarga;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class KartuKeluargaController extends Controller
@@ -14,7 +15,8 @@ class KartuKeluargaController extends Controller
      */
     public function index()
     {
-        return view('Admin.Kartukeluarga.index');
+        $datakk = User::where('roles', '=', 'user')->where('is_verification', '=', '1')->get();
+        return view('Admin.Kartukeluarga.index', ['datakk' => $datakk]);
     }
 
     /**
