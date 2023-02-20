@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <section id="regis" style="contain: content;">
         <div class="row">
             <div class="col-md-12 kanan">
@@ -27,9 +28,9 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="username" class="form-label">Username</label>
+                                <label for="username" class="form-label">Username/Email</label>
                                 <div class="input-group mb-3 d-flex">
-                                    <input type="text" class="form-control py-3 bg-transparent text-light border-0"
+                                    <input type="email" class="form-control py-3 bg-transparent text-light border-0"
                                         name="username" id="username" required placeholder="Username Email/Petugas">
                                     <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                                 </div>
@@ -42,7 +43,8 @@
                                 <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                                 <div class="input-group mb-md-5 mb-3 d-flex">
                                     <input type="text" class="form-control py-3 bg-transparent text-light border-0"
-                                        name="nama_lengkap" id="nama_lengkap" required placeholder="Nama Lengkap Email/Petugas">
+                                        name="nama_lengkap" id="nama_lengkap" required
+                                        placeholder="Nama Lengkap Email/Petugas">
                                     <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                                 </div>
                             </div>
@@ -50,7 +52,8 @@
                                 <label for="nik" class="form-label">NIK</label>
                                 <div class="input-group mb-3 d-flex">
                                     <input type="number" class="form-control py-3 bg-transparent text-light border-0"
-                                        name="nik" id="nik" required placeholder="Nomor Induk Kewarganegaraan">
+                                        name="nik" id="nik" required
+                                        placeholder="Nomor Induk Kewarganegaraan">
                                     <i class="bi bi-list-ol align-self-center fs-3 pe-3"></i>
                                 </div>
                                 <label for="foto_ktp" class="form-label">Foto KTP</label>

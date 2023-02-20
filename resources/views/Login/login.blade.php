@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <section id="login" style="contain: content;">
         <div class="row">
             <div class="col-md-5 kiri">
@@ -34,10 +35,10 @@
                     @endif
                     <form action="{{ route('login.action') }}" method="POST">
                         @csrf
-                        <label for="username" class="form-label">Username</label>
+                        <label for="username" class="form-label">Username/Email</label>
                         <div class="input-group mb-4 d-flex">
                             <input type="text" class="form-control py-3 bg-transparent text-light border-0"
-                                name="username" id="username" placeholder="Username Email/Petugas" required>
+                                name="username" id="username" placeholder="Masukkan Username/Email anda" required>
                             <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                         </div>
                         <label for="password" class="form-label">Password</label>

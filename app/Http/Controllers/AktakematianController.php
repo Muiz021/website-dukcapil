@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use App\Models\Aktakematian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AktakematianController extends Controller
 {
@@ -106,6 +107,7 @@ class AktakematianController extends Controller
         $aktakematian->ktpsaksi2 = Str::of($path)->replace('public', 'storage')->toString();
 
         $aktakematian->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('aktakematian.index');
     }
 
@@ -196,7 +198,7 @@ class AktakematianController extends Controller
             $aktakematian->ktpsaksi2 = Str::of($path)->replace('public', 'storage')->toString();
             $aktakematian->save();
         }
-
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('aktakematian.index');
     }
 

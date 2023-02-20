@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
@@ -56,6 +57,7 @@ class LoginController extends Controller
         $data->foto_kk = Str::of($path)->replace('public', 'storage')->toString();
 
         $data->save();
+        Alert::success('Sukses Mendaftar', 'Tunggu Verifikasi dari Admin');
         return redirect('/');
     }
 

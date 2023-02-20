@@ -14,7 +14,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Pelapor</th>
-                                    <th>Nama yang Meninggal</th>
+                                    <th>Nama Almarhum/ah</th>
                                     <th>Waktu Meninggal</th>
                                     <th>Status</th>
                                     <th class="text-center">Aksi</th>

@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Aktakelahiran;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AktakelahiranController extends Controller
 {
@@ -106,6 +107,7 @@ class AktakelahiranController extends Controller
         $aktakelahiran->kkkelahiran = Str::of($path)->replace('public', 'storage')->toString();
 
         $aktakelahiran->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('aktakelahiran.index');
     }
 
@@ -198,7 +200,7 @@ class AktakelahiranController extends Controller
             $aktakelahiran->kkkelahiran = Str::of($path)->replace('public', 'storage')->toString();
             $aktakelahiran->save();
         }
-
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('aktakelahiran.index');
     }
 
