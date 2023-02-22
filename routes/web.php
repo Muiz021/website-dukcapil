@@ -54,6 +54,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
 
     Route::namespace('App\Http\Controllers')->group(function () {
 
+        // kk keluarga
+        Route::get('/User/kartukeluarga', 'KartuKeluargaController@index')->name('kk.index');
+
         // akta kelahiran
         Route::get('/User/aktakelahiran', 'AktakelahiranController@index')->name('aktakelahiran.index');
         Route::get('/User/aktakelahiran/formulir', 'AktakelahiranController@create')->name('aktakelahiran.create');
