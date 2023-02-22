@@ -16,14 +16,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label class="form-label">Nama Lengkap</label>
-                                    <input type="text" class="form-control" disabled value="{{ $user->nama_lengkap }}">
+                                    <label class="form-label">Nama Kepala Keluarga</label>
+                                    <input type="text" class="form-control" disabled value="{{ $user->nama_kepala_keluarga }}">
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">NIK</label>
-                            <input type="text" class="form-control" disabled value="{{ $user->nik }}">
+                            <label class="form-label">Nomor Kartu Keluarga</label>
+                            <input type="text" class="form-control" disabled value="{{ $user->nokk }}">
                         </div>
                     </div>
                     <div class="col-md-6">

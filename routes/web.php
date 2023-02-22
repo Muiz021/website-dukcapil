@@ -30,8 +30,6 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('dashboard-admin', [LoginController::class, 'dashboard_admin'])->name('dashboard-admin');
 
-    // kartu keluarga
-    Route::get('/admin/kartukeluarga', [KartuKeluargaController::class, 'index'])->name('kk.index');
 
     // data masyarakat
     Route::get('/admin/datamasyarakat', [DatamasyarakatController::class, 'index'])->name('datamasyarakat.index');

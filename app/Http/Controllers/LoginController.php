@@ -37,8 +37,8 @@ class LoginController extends Controller
         $user->username = $request->username;
         $user->password = Hash::make($request->password);
         $user->roles = 'user';
-        $user->nama_lengkap = $request->nama_lengkap;
-        $user->nik = $request->nik;
+        $user->nama_kepala_keluarga = $request->nama_kepala_keluarga;
+        $user->nokk = $request->nokk;
         $user->foto_ktp = $request->foto_ktp;
         $user->foto_kk = $request->foto_kk;
 

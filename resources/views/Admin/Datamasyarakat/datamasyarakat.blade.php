@@ -13,8 +13,8 @@
                             <thead>
                                 <tr>
                                     <th>Username</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>NIK</th>
+                                    <th>Nama Kepala Keluarga</th>
+                                    <th>NO Kartu Keluarga</th>
                                     <th>Status</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
@@ -23,8 +23,8 @@
                                 @foreach ($user as $item)
                                     <tr>
                                         <td>{{ $item->username }}</td>
-                                        <td>{{ $item->nama_lengkap }}</td>
-                                        <td>{{ $item->nik }}</td>
+                                        <td>{{ $item->nama_kepala_keluarga }}</td>
+                                        <td>{{ $item->nokk }}</td>
                                         <td>
                                             <span class="badge bg-success"
                                                 {{ $item->is_verification == 1 ? '' : 'hidden' }}>Active</span>

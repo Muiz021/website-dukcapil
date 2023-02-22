@@ -40,19 +40,19 @@
                                         name="password" id="password" required placeholder="Password">
                                     <i class="bi bi-key-fill align-self-center fs-3 pe-3"></i>
                                 </div>
-                                <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                                <label for="nama_kepala_keluarga" class="form-label">Nama Kepala Keluarga</label>
                                 <div class="input-group mb-md-5 mb-3 d-flex">
                                     <input type="text" class="form-control py-3 bg-transparent text-light border-0"
-                                        name="nama_lengkap" id="nama_lengkap" required
+                                        name="nama_kepala_keluarga" id="nama_kepala_keluarga" required
                                         placeholder="Nama Lengkap Kepala Keluarga">
                                     <i class="bi bi-person-fill align-self-center fs-3 pe-3"></i>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="nik" class="form-label">Nomor Kartu Keluarga</label>
+                                <label for="nokk" class="form-label">Nomor Kartu Keluarga</label>
                                 <div class="input-group mb-3 d-flex">
                                     <input type="number" class="form-control py-3 bg-transparent text-light border-0"
-                                        name="nik" id="nik" required
+                                        name="nokk" id="nokk" required
                                         placeholder="Masukkan Nomor Kartu Keluarga Anda">
                                     <i class="bi bi-list-ol align-self-center fs-3 pe-3"></i>
                                 </div>

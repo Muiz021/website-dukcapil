@@ -22,8 +22,8 @@ class User extends Authenticatable
         'password',
         'roles',
         'is_verification',
-        'nama_lengkap',
-        'nik',
+        'nama_kepala_keluarga',
+        'nokk',
         'foto_ktp',
         'foto_kk',
     ];
