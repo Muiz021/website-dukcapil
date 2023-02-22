@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
 
         // kk keluarga
         Route::get('/User/kartukeluarga', 'KartuKeluargaController@index')->name('kk.index');
+        Route::get('/User/kartukeluarga/show', 'KartuKeluargaController@show')->name('kk.show');
 
         // akta kelahiran
         Route::get('/User/aktakelahiran', 'AktakelahiranController@index')->name('aktakelahiran.index');
