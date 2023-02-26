@@ -142,37 +142,49 @@
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingThree">
                                             <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#yglahir" aria-expanded="false"
-                                                aria-controls="yglahir" role="tabpanel">
-                                                Yang lahir dengan penolong kelahiran
+                                                data-bs-toggle="collapse" data-bs-target="#dokumen" aria-expanded="false"
+                                                aria-controls="dokumen" role="tabpanel">
+                                                Dokumen Persyaratan
                                             </button>
                                         </h2>
-                                        <div id="yglahir" class="accordion-collapse collapse"
+                                        <div id="dokumen" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
-                                                    <label for="namapenolong" class="form-label">Nama</label>
-                                                    <input type="text" class="form-control" name="namapenolong"
-                                                        id="namapenolong" disabled
-                                                        value="{{ $aktakelahiran->namapenolong }}">
+                                                    <label for="bukunikah" class="form-label">Buku Nikah</label>
+                                                    <img src="/storage/{{ $aktakelahiran->bukunikah }}"
+                                                        class="form-control mb-2" alt="" loading="lazy">
+                                                    <input type="file" class="form-control" name="bukunikah"
+                                                        id="bukunikah">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="nikpenolong" class="form-label">NIK</label>
-                                                    <input type="number" class="form-control" name="nikpenolong"
-                                                        id="nikpenolong" disabled
-                                                        value="{{ $aktakelahiran->nikpenolong }}">
+                                                    <label for="suratketbidan" class="form-label">Surat Keterangan
+                                                        Bidan</label>
+                                                    <img src="/storage/{{ $aktakelahiran->suratketbidan }}"
+                                                        class="form-control mb-2" alt="" loading="lazy">
+                                                    <input type="file" class="form-control" name="suratketbidan"
+                                                        id="suratketbidan">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="pekerjaanpenolong" class="form-label">Pekerjaan</label>
-                                                    <input type="text" class="form-control" name="pekerjaanpenolong"
-                                                        id="pekerjaanpenolong" disabled
-                                                        value="{{ $aktakelahiran->pekerjaanpenolong }}">
+                                                    <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
+                                                    <img src="/storage/{{ $aktakelahiran->ktportuaibu }}"
+                                                        class="form-control mb-2" alt="" loading="lazy">
+                                                    <input type="file" class="form-control" name="ktportuaibu"
+                                                        id="ktportuaibu">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="alamatpenolong" class="form-label">Alamat</label>
-                                                    <input type="text" class="form-control" name="alamatpenolong"
-                                                        id="alamatpenolong" disabled
-                                                        value="{{ $aktakelahiran->alamatpenolong }}">
+                                                    <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
+                                                    <img src="/storage/{{ $aktakelahiran->ktportuayah }}"
+                                                        class="form-control mb-2" alt="" loading="lazy">
+                                                    <input type="file" class="form-control" name="ktportuayah"
+                                                        id="ktportuayah">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
+                                                    <img src="/storage/{{ $aktakelahiran->kkkelahiran }}"
+                                                        class="form-control mb-2" alt="" loading="lazy">
+                                                    <input type="file" class="form-control" name="kkkelahiran"
+                                                        id="kkkelahiran">
                                                 </div>
                                             </div>
                                         </div>
@@ -180,47 +192,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <p class="fw-semibold">Dokumen Persyaratan</p>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                    <img src="/storage/{{ $aktakelahiran->bukunikah }}" class="form-control"
-                                        alt="" loading="lazy">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="suratketbidan" class="form-label">Surat Keterangan Bidan</label>
-                                    <img src="/storage/{{ $aktakelahiran->suratketbidan }}" class="form-control"
-                                        alt="" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                    <img src="/storage/{{ $aktakelahiran->ktportuaibu }}" class="form-control"
-                                        alt="" loading="lazy">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                    <img src="/storage/{{ $aktakelahiran->ktportuayah }}" class="form-control"
-                                        alt="" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                    <img src="/storage/{{ $aktakelahiran->kkkelahiran }}" class="form-control"
-                                        alt="" loading="lazy">
-                                </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="d-flex justify-content-end gap-3 mt-md-4">
                                     <a href="{{ route('aktakelahiran.index') }}" class="btn btn-danger"><i
                                             class="bi bi-arrow-left-circle"></i>
                                         Kembali</a>
-                                    <button class="btn btn-success" {{ $aktakelahiran->is_verification == 1 ? '' : 'hidden' }}>Download Surat<i
+                                    <button class="btn btn-success"
+                                        {{ $aktakelahiran->is_verification == 1 ? '' : 'hidden' }}>Download Surat<i
                                             class="bi bi-download"></i></button>
                                 </div>
                             </div>

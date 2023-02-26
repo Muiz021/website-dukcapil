@@ -36,11 +36,6 @@ return new class extends Migration
             $table->string('pekerjaanibu');
             $table->text('alamatibu');
 
-            $table->string('namapenolong');
-            $table->string('nikpenolong');
-            $table->string('pekerjaanpenolong');
-            $table->text('alamatpenolong');
-
             $table->string('bukunikah');
             $table->string('suratketbidan');
             $table->string('ktportuaibu');

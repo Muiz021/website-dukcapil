@@ -59,11 +59,6 @@ class AktakelahiranController extends Controller
             'pekerjaanibu' => 'required',
             'alamatibu' => 'required',
 
-            'namapenolong' => 'required',
-            'nikpenolong' => 'required',
-            'pekerjaanpenolong' => 'required',
-            'alamatpenolong' => 'required',
-
             'bukunikah' => 'required|mimes:jpeg,png,jpg|max:5000',
             'suratketbidan' => 'required|mimes:jpeg,png,jpg|max:5000',
             'ktportuaibu' => 'required|mimes:jpeg,png,jpg|max:5000',

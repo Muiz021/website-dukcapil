@@ -46,7 +46,7 @@
                                     <p>Desa/Kelurahan</p>
                                 </div>
                                 <div class="col-7">
-                                    <p class="fw-bold">: M.Rizki Madya</p>
+                                    <p class="fw-bold">: Fajrin</p>
                                     <p>: Sarae</p>
                                     <p>: 005/002</p>
                                     <p>: Sarae</p>
@@ -64,10 +64,10 @@
                                     <p>Provinsi</p>
                                 </div>
                                 <div class="col-7">
-                                    <p>: Rasanae Barat</p>
-                                    <p>: Kota Bima</p>
-                                    <p>: 8817</p>
-                                    <p>: Nusa Tenggara Barat</p>
+                                    <p>: Kassi</p>
+                                    <p>: Jeneponto</p>
+                                    <p>: 2345235</p>
+                                    <p>: Sulawesi Selatan</p>
                                 </div>
                             </div>
                         </div>
@@ -103,11 +103,11 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>M.Rizki Madya</td>
+                                    <td>Fajrin</td>
                                     <td>2345672354678</td>
                                     <td>LAKI - LAKI</td>
-                                    <td>Bima</td>
-                                    <td>07-12-2002</td>
+                                    <td>Jeneponto</td>
+                                    <td>12-2-2000</td>
                                     <td>Islam</td>
                                     <td>Sarjana</td>
                                     <td>Programmer</td>
@@ -148,11 +148,11 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>M.Rizki Madya</td>
+                                    <td>Fajrin</td>
                                     <td>2345672354678</td>
                                     <td>LAKI - LAKI</td>
-                                    <td>Bima</td>
-                                    <td>07-12-2002</td>
+                                    <td>Jeneponto</td>
+                                    <td>-</td>
                                     <td>Islam</td>
                                     <td>Sarjana</td>
                                 </tr>
@@ -182,7 +182,7 @@
                                 <p>KEPALA KELUARGA</p>
                             </div>
                             <div style="margin-top: 74px;">
-                                <p class="text-decoration-underline fw-bold">M.Rizki Madya</p>
+                                <p class="text-decoration-underline fw-bold">Fajrin</p>
                                 <p class="fs-6">Tanda Tangan/Cap Jempol</p>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                                 <p>KEPALA DINAS KEPENDUDUKAN DAN <br> PENCATATAN SIPIL</p>
                             </div>
                             <div class="mt-5">
-                                <p class="text-decoration-underline fw-bold">M.Rizki Madya</p>
+                                <p class="text-decoration-underline fw-bold">Fajrin</p>
                                 <p class="fs-6">NIP. 1234567567</p>
                             </div>
                         </div>
