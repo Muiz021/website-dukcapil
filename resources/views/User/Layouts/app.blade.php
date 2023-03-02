@@ -39,7 +39,7 @@
 <body>
     <div id="app">
         <!-- Layout wrapper -->
-        <div class="layout-wrapper layout-content-navbar">
+        {{-- <div class="layout-wrapper layout-content-navbar">
             <div class="layout-container">
                 @include('User.Layouts.sidebar')
 
@@ -56,8 +56,51 @@
                 </div>
             </div>
             <div class="layout-overlay layout-menu-toggle"></div>
+        </div> --}}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    @include('User.Layouts.navbar')
+                    <div class="mt-4">
+                        @include('sweetalert::alert')
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyloadImages = document.querySelectorAll("img.lazy");
+            var lazyloadThrottleTimeout;
+
+            function lazyload() {
+                if (lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function() {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function(img) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if (lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 20);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
 
     <script src="{{ asset('/assets/vendor/libs/jquery/jquery.js') }}"></script>
     <script src="{{ asset('/assets/vendor/libs/popper/popper.js') }}"></script>

@@ -8,52 +8,25 @@ use App\Models\Aktakematian;
 @section('content')
     <section id="dashboard">
         <div class="row">
-            <div class="col-md-3 mb-md-4 mb-3">
+            <div class="col-md-4 mb-md-4 mb-3">
                 <div class="card p-4">
-                    <p class="title">Akta Kelahiran</p>
-                    <p class="subtitle">Jumlah Pengajuan</p>
-                    <img src="{{ asset('assets/img/imgkelahiran.png') }}" alt="" width="100%" height="140px" loading="lazy">
-                    <div class="mt-3">
-                        <p class="mb-0"><span
-                                class="text-danger fw-bold fs-4">{{ Aktakelahiran::where('is_verification', '=', '0')->where('user_id', '=', auth()->user()->id)->count() }}
-                            </span>Pengajuan</p>
-                    </div>
+                    <p class="title fs-5">Kartu Keluarga</p>
+                    <img src="{{ asset('assets/img/imgkk.jpg') }}" alt="" loading="lazy">
+                    <a href="{{ route('kk.index') }}" class="btn btn-primary w-100">Lihat Data</a>
                 </div>
             </div>
-            <div class="col-md-3 mb-md-4 mb-3">
+            <div class="col-md-4 mb-md-4 mb-3">
                 <div class="card p-4">
-                    <p class="title">Akta Kematian</p>
-                    <p class="subtitle">Jumlah Pengajuan</p>
-                    <img src="{{ asset('assets/img/imgkematian.png') }}" alt="" width="100%" height="140px" loading="lazy">
-                    <div class="mt-3">
-                        <p class="mb-0"><span
-                                class="text-danger fw-bold fs-4">{{ Aktakematian::where('is_verification', '=', '0')->where('user_id', '=', auth()->user()->id)->count() }}
-                            </span>Pengajuan</p>
-                    </div>
+                    <p class="title fs-5">Akta Kelahiran</p>
+                    <img src="{{ asset('assets/img/imgkk.jpg') }}" alt="" loading="lazy">
+                    <a href="{{ route('aktakelahiran.index') }}" class="btn btn-primary w-100">Ajukan Akta Kelahiran</a>
                 </div>
             </div>
-            <div class="col-md-3 mb-md-4 mb-3">
+            <div class="col-md-4 mb-md-4 mb-3">
                 <div class="card p-4">
-                    <p class="title">Akta Kelahiran</p>
-                    <p class="subtitle">Jumlah Diterima</p>
-                    <img src="{{ asset('assets/img/imgkelahiran.png') }}" alt="" width="100%" height="140px" loading="lazy">
-                    <div class="mt-3">
-                        <p class="mb-0"><span
-                                class="text-success fw-bold fs-4">{{ Aktakelahiran::where('is_verification', '=', '1')->where('user_id', '=', auth()->user()->id)->count() }}
-                            </span>Diterima</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-md-4 mb-3">
-                <div class="card p-4">
-                    <p class="title">Akta Kematian</p>
-                    <p class="subtitle">Jumlah Diterima</p>
-                    <img src="{{ asset('assets/img/imgkematian.png') }}" alt="" width="100%" height="140px" loading="lazy">
-                    <div class="mt-3">
-                        <p class="mb-0"><span
-                                class="text-success fw-bold fs-4">{{ Aktakematian::where('is_verification', '=', '1')->where('user_id', '=', auth()->user()->id)->count() }}
-                            </span>Diterima</p>
-                    </div>
+                    <p class="title fs-5">Akta Kematian</p>
+                    <img src="{{ asset('assets/img/imgkk.jpg') }}" alt="" loading="lazy">
+                    <a href="{{ route('aktakematian.index') }}" class="btn btn-primary w-100">Ajukan Akta Kematian</a>
                 </div>
             </div>
         </div>
