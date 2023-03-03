@@ -82,10 +82,15 @@
                                                         placeholder="Masukkan NIK Anak">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir</label>
-                                                    <input type="text" class="form-control" name="ttlanak"
-                                                        id="ttlanak" value="{{ $aktakelahiran->ttlanak }}"
-                                                        placeholder="Masukkan Tempat, Tanggal Lahir Anak">
+                                                    <label for="tempatlahiranak" class="form-label">Tempat Lahir</label>
+                                                    <input type="text" class="form-control" name="tempatlahiranak"
+                                                        id="tempatlahiranak"
+                                                        value="{{ $aktakelahiran->tempatlahiranak }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tgllahiranak" class="form-label">Tanggal Lahir</label>
+                                                    <input type="text" class="form-control" name="tgllahiranak"
+                                                        id="tgllahiranak" value="{{ $aktakelahiran->tgllahiranak }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke</label>
@@ -130,12 +135,6 @@
                                                         placeholder="Masukkan NIK Ibu Kandung">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir</label>
-                                                    <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" value="{{ $aktakelahiran->ttlibu }}"
-                                                        placeholder="Masukkan Tempat, Tanggal Lahir Ibu">
-                                                </div>
-                                                <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
                                                         id="pekerjaanibu" value="{{ $aktakelahiran->pekerjaanibu }}"
@@ -163,37 +162,32 @@
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
                                                     <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                                    <img src="/storage/{{ $aktakelahiran->bukunikah }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
+
                                                     <input type="file" class="form-control" name="bukunikah"
                                                         id="bukunikah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="suratketbidan" class="form-label">Surat Keterangan
                                                         Bidan</label>
-                                                    <img src="/storage/{{ $aktakelahiran->suratketbidan }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
+
                                                     <input type="file" class="form-control" name="suratketbidan"
                                                         id="suratketbidan">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                                    <img src="/storage/{{ $aktakelahiran->ktportuaibu }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
+
                                                     <input type="file" class="form-control" name="ktportuaibu"
                                                         id="ktportuaibu">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                                    <img src="/storage/{{ $aktakelahiran->ktportuayah }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
+
                                                     <input type="file" class="form-control" name="ktportuayah"
                                                         id="ktportuayah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                                    <img src="/storage/{{ $aktakelahiran->kkkelahiran }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
+
                                                     <input type="file" class="form-control" name="kkkelahiran"
                                                         id="kkkelahiran">
                                                 </div>
@@ -204,6 +198,7 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-6"></div>
                             <div class="col-md-6">
                                 <div class="d-flex justify-content-end gap-3 mt-md-4">
                                     <a href="{{ route('aktakelahiran.index') }}" class="btn btn-danger"><i

@@ -78,9 +78,16 @@
                                                         disabled value="{{ $aktakelahiran->nikanak }}">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir</label>
-                                                    <input type="text" class="form-control" name="ttlanak"
-                                                        id="ttlanak" disabled value="{{ $aktakelahiran->ttlanak }}">
+                                                    <label for="tempatlahiranak" class="form-label">Tempat Lahir</label>
+                                                    <input type="text" class="form-control" name="tempatlahiranak"
+                                                        id="tempatlahiranak" disabled
+                                                        value="{{ $aktakelahiran->tempatlahiranak }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tgllahiranak" class="form-label">Tanggal Lahir</label>
+                                                    <input type="text" class="form-control" name="tgllahiranak"
+                                                        id="tgllahiranak" disabled
+                                                        value="{{ $aktakelahiran->tgllahiranak }}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke</label>
@@ -121,11 +128,6 @@
                                                         id="nikibu" disabled value="{{ $aktakelahiran->nikibu }}">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir</label>
-                                                    <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" disabled value="{{ $aktakelahiran->ttlibu }}">
-                                                </div>
-                                                <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan</label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
                                                         id="pekerjaanibu" disabled
@@ -151,40 +153,142 @@
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
-                                                    <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                                    <img src="/storage/{{ $aktakelahiran->bukunikah }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" name="bukunikah"
-                                                        id="bukunikah">
+                                                    <label class="form-label">Buku Nikah</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        Lihat Buku Nikah
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed src="/storage/{{ $aktakelahiran->bukunikah }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="suratketbidan" class="form-label">Surat Keterangan
-                                                        Bidan</label>
-                                                    <img src="/storage/{{ $aktakelahiran->suratketbidan }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" name="suratketbidan"
-                                                        id="suratketbidan">
+                                                    <label class="form-label">Surat Keterangan Bidang</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                                        Lihat Surat Ket Bidan
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $aktakelahiran->suratketbidan }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ktportuaibu" class="form-label">KTP Orangtua/Ibu</label>
-                                                    <img src="/storage/{{ $aktakelahiran->ktportuaibu }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" name="ktportuaibu"
-                                                        id="ktportuaibu">
+                                                    <label class="form-label">KTP
+                                                        Orangtua/Ibu</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                                        Lihat KTP
+                                                        Orangtua/Ibu
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $aktakelahiran->ktportuaibu }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ktportuayah" class="form-label">KTP Orangtua/Ayah</label>
-                                                    <img src="/storage/{{ $aktakelahiran->ktportuayah }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" name="ktportuayah"
-                                                        id="ktportuayah">
+                                                    <label class="form-label">KTP
+                                                        Orangtua/Ayah</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                                        Lihat KTP
+                                                        Orangtua/Ayah
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $aktakelahiran->ktportuaayah }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                                    <img src="/storage/{{ $aktakelahiran->kkkelahiran }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" name="kkkelahiran"
-                                                        id="kkkelahiran">
+                                                    <label class="form-label">Kartu Keluarga</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                                        Kartu Keluarga
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $aktakelahiran->kkkelahiran }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

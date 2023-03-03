@@ -26,13 +26,13 @@ return new class extends Migration
 
             $table->string('namaanak');
             $table->string('nikanak');
-            $table->string('ttlanak');
+            $table->string('tempatlahiranak');
+            $table->string('tgllahiranak');
             $table->string('anakke');
             $table->text('alamatanak');
 
             $table->string('namaibu');
             $table->string('nikibu');
-            $table->string('ttlibu');
             $table->string('pekerjaanibu');
             $table->text('alamatibu');
 

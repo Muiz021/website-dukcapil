@@ -38,7 +38,7 @@
                                                             class="text-danger">*</span></label>
                                                     <input type="number" class="form-control" name="nikttdkelahiran"
                                                         id="nikttdkelahiran" required
-                                                        placeholder="Masukkan NIK yg ber tanda tangan">
+                                                        placeholder="Masukkan NIK Kepala Keluarga">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umurttdkelahiran" class="form-label">Umur <span
@@ -88,11 +88,18 @@
                                                         id="nikanak" required placeholder="Masukkan NIK Anak">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlanak" class="form-label">Tempat, Tanggal Lahir <span
+                                                    <label for="tempatlahiranak" class="form-label">Tempat Lahir<span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="ttlanak"
-                                                        id="ttlanak" required
-                                                        placeholder="Masukkan Tempat, Tanggal Lahir Anak">
+                                                    <input type="text" class="form-control" name="tempatlahiranak"
+                                                        id="tempatlahiranak" required
+                                                        placeholder="Masukkan Tempat Lahir Anak">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tgllahiranak" class="form-label">Tanggal Lahir<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" name="tgllahiranak"
+                                                        id="tgllahiranak" required
+                                                        placeholder="Masukkan Tanggal Lahir Anak">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="anakke" class="form-label">Anak Ke <span
@@ -137,13 +144,6 @@
                                                         id="nikibu" required placeholder="Masukkan NIK Ibu Kandung">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="ttlibu" class="form-label">Tempat, Tanggal Lahir <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="ttlibu"
-                                                        id="ttlibu" required
-                                                        placeholder="Masukkan Tempat, Tanggal Lahir Ibu">
-                                                </div>
-                                                <div class="mb-3">
                                                     <label for="pekerjaanibu" class="form-label">Pekerjaan <span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="pekerjaanibu"
@@ -172,32 +172,35 @@
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
                                                     <label for="bukunikah" class="form-label">Buku Nikah <span
-                                                            class="text-danger">*</span></label>
+                                                            class="text-danger">* | Format PDF | Max:5Mb</span></label>
                                                     <input type="file" class="form-control" name="bukunikah" required
                                                         id="bukunikah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="suratketbidan" class="form-label">Surat Keterangan
-                                                        Bidan <span class="text-danger">*</span></label>
+                                                        Bidan <span class="text-danger">* | Format PDF |
+                                                            Max:5Mb</span></label>
                                                     <input type="file" class="form-control" name="suratketbidan"
                                                         required id="suratketbidan">
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="ktportuaibu" class="form-label">KTP
-                                                        Orangtua/Ibu <span class="text-danger">*</span></label>
+                                                        Orangtua/Ibu <span class="text-danger">* | Format PDF |
+                                                            Max:5Mb</span></label>
                                                     <input type="file" class="form-control" name="ktportuaibu"
                                                         required id="ktportuaibu">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="ktportuayah" class="form-label">KTP
-                                                        Orangtua/Ayah <span class="text-danger">*</span></label>
+                                                        Orangtua/Ayah <span class="text-danger">* | Format PDF |
+                                                            Max:5Mb</span></label>
                                                     <input type="file" class="form-control" name="ktportuayah"
                                                         required id="ktportuayah">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga <span
-                                                            class="text-danger">*</span></label>
+                                                            class="text-danger">* | Format PDF | Max:5Mb</span></label>
                                                     <input type="file" class="form-control" name="kkkelahiran"
                                                         required id="kkkelahiran">
                                                 </div>

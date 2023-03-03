@@ -19,13 +19,13 @@ class Aktakelahiran extends Model
 
         'namaanak',
         'nikanak',
-        'ttlanak',
+        'tempatlahiranak',
+        'tgllahiranak',
         'anakke',
         'alamatanak',
 
         'namaibu',
         'nikibu',
-        'ttlibu',
         'pekerjaanibu',
         'alamatibu',
 

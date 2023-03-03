@@ -49,21 +49,21 @@ class AktakelahiranController extends Controller
 
             'namaanak' => 'required',
             'nikanak' => 'required',
-            'ttlanak' => 'required',
+            'tempatlahiranak' => 'required',
+            'tgllahiranak' => 'required',
             'anakke' => 'required',
             'alamatanak' => 'required',
 
             'namaibu' => 'required',
             'nikibu' => 'required',
-            'ttlibu' => 'required',
             'pekerjaanibu' => 'required',
             'alamatibu' => 'required',
 
-            'bukunikah' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'suratketbidan' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'ktportuaibu' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'ktportuayah' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'kkkelahiran' => 'required|mimes:jpeg,png,jpg|max:5000',
+            'bukunikah' => 'required|mimes:pdf|max:5000',
+            'suratketbidan' => 'required|mimes:pdf|max:5000',
+            'ktportuaibu' => 'required|mimes:pdf|max:5000',
+            'ktportuayah' => 'required|mimes:pdf|max:5000',
+            'kkkelahiran' => 'required|mimes:pdf|max:5000',
         ]);
 
 
