@@ -219,12 +219,12 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="kkasli" class="form-label">Kartu Keluarga Asli <span
-                                            class="text-danger">*</span></label>
+                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="kkasli" id="kkasli" required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktppemohon" class="form-label">KTP Pemohon <span
-                                            class="text-danger">*</span></label>
+                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktppemohon" id="ktppemohon"
                                         required />
                                 </div>
@@ -232,13 +232,13 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktpsaksi1" class="form-label">KTP Saksi 1 <span
-                                            class="text-danger">*</span></label>
+                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktpsaksi1" id="ktpsaksi1"
                                         required />
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktpsaksi2" class="form-label">KTP Saksi 2 <span
-                                            class="text-danger">*</span></label>
+                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktpsaksi2" id="ktpsaksi2"
                                         required />
                                 </div>

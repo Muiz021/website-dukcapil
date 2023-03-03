@@ -66,10 +66,10 @@ class AktakematianController extends Controller
             'penyebab' => 'required',
             'bukti' => 'required|mimes:jpeg,png,jpg|max:5000',
 
-            'kkasli' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'ktppemohon' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'ktpsaksi1' => 'required|mimes:jpeg,png,jpg|max:5000',
-            'ktpsaksi2' => 'required|mimes:jpeg,png,jpg|max:5000',
+            'kkasli' => 'required|mimes:pdf|max:5000',
+            'ktppemohon' => 'required|mimes:pdf|max:5000',
+            'ktpsaksi1' => 'required|mimes:pdf|max:5000',
+            'ktpsaksi2' => 'required|mimes:pdf|max:5000',
         ]);
 
         $aktakematian = new Aktakematian();
