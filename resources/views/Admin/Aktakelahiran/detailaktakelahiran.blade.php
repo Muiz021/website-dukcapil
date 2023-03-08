@@ -151,66 +151,173 @@
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
-                                                    <label for="bukunikah" class="form-label">Buku Nikah</label>
-                                                    <img src="/storage/{{ $kelahiran->bukunikah }}" class="form-control"
-                                                        alt="" loading="lazy">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="suratketbidan" class="form-label">Surat Keterangan
-                                                        Bidan</label>
-                                                    <img src="/storage/{{ $kelahiran->suratketbidan }}"
-                                                        class="form-control" alt="" loading="lazy">
-                                                </div>
+                                                    <label class="form-label">Buku Nikah</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        Lihat Buku Nikah
+                                                    </button>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed src="/storage/{{ $kelahiran->bukunikah }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="mb-3">
-                                                    <label for="ktportuaibu" class="form-label">KTP
+                                                    <label class="form-label">Surat Keterangan Bidang</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                                        Lihat Surat Ket Bidan
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $kelahiran->suratketbidan }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">KTP
                                                         Orangtua/Ibu</label>
-                                                    <img src="/storage/{{ $kelahiran->ktportuaibu }}"
-                                                        class="form-control" alt="" loading="lazy">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="ktportuayah" class="form-label">KTP
-                                                        Orangtua/Ayah</label>
-                                                    <img src="/storage/{{ $kelahiran->ktportuayah }}"
-                                                        class="form-control" alt="" loading="lazy">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="kkkelahiran" class="form-label">Kartu Keluarga</label>
-                                                    <img src="/storage/{{ $kelahiran->kkkelahiran }}"
-                                                        class="form-control" alt="" loading="lazy">
-                                                </div>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                                        Lihat KTP
+                                                        Orangtua/Ibu
+                                                    </button>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $kelahiran->ktportuaibu }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">KTP
+                                                        Orangtua/Ayah</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                                        Lihat KTP
+                                                        Orangtua/Ayah
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $kelahiran->ktportuaayah }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Kartu Keluarga</label>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                                        Kartu Keluarga
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <embed
+                                                                        src="/storage/{{ $kelahiran->kkkelahiran }}"
+                                                                        width="100%" style="height: 70vh;"
+                                                                        type="application/pdf">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">
 
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex justify-content-end gap-3 mt-md-4">
-                                        <a href="{{ route('datakelahiran.index') }}" class="btn btn-danger">
-                                            Kembali</a>
-                                        <form action="{{ route('verifikasi_dataaktakelahiran', $kelahiran->id) }}"
-                                            method="POST" accept-charset="utf-8" style="display: inline">
-                                            @csrf
-                                            @method('PUT')
-                                            <input type="hidden" name="is_verification" value="1">
-                                            @if ($kelahiran->is_verification != 1)
-                                                <button type="submit" class="btn btn-success"
-                                                    onclick="confirm('Apakah data diterima?')">
-                                                    Terima
-                                                </button>
-                                            @endif
-                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex justify-content-end gap-3 mt-md-4">
+                                            <a href="{{ route('datakelahiran.index') }}" class="btn btn-danger">
+                                                Kembali</a>
+                                            <form action="{{ route('verifikasi_dataaktakelahiran', $kelahiran->id) }}"
+                                                method="POST" accept-charset="utf-8" style="display: inline">
+                                                @csrf
+                                                @method('PUT')
+                                                <input type="hidden" name="is_verification" value="1">
+                                                @if ($kelahiran->is_verification != 1)
+                                                    <button type="submit" class="btn btn-success"
+                                                        onclick="confirm('Apakah data diterima?')">
+                                                        Terima
+                                                    </button>
+                                                @endif
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
     </section>
 @endsection
