@@ -46,7 +46,7 @@
                                     <p>Desa/Kelurahan</p>
                                 </div>
                                 <div class="col-7">
-                                    <p class="fw-bold">: Fajrin</p>
+                                    <p class="fw-bold">: {{ auth()->user()->nama_kepala_keluarga }}</p>
                                     <p>: Sarae</p>
                                     <p>: 005/002</p>
                                     <p>: Sarae</p>
@@ -101,17 +101,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Fajrin</td>
-                                    <td>2345672354678</td>
-                                    <td>LAKI - LAKI</td>
-                                    <td>Jeneponto</td>
-                                    <td>12-2-2000</td>
-                                    <td>Islam</td>
-                                    <td>Sarjana</td>
-                                    <td>Programmer</td>
-                                </tr>
+                                @foreach ($aktakelahiran as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->namaanak }}</td>
+                                        <td>{{ $item->nikanak }}</td>
+                                        <td>LAKI - LAKI</td>
+                                        <td>{{ $item->tempatlahiranak }}</td>
+                                        <td>{{ $item->tgllahiranak }}</td>
+                                        <td>Islam</td>
+                                        <td>Sarjana</td>
+                                        <td>Programmer</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

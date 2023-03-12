@@ -17,12 +17,15 @@ use App\Http\Controllers\LoginController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // login regis
 Route::get('register', [LoginController::class, 'register'])->name('register');
 Route::post('register', [LoginController::class, 'register_action'])->name('register.action');
-Route::get('/', [LoginController::class, 'login'])->name('login');
-Route::post('/', [LoginController::class, 'login_action'])->name('login.action');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/login', [LoginController::class, 'login_action'])->name('login.action');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 
