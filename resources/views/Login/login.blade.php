@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Halaman Login</title>
-    <link rel="shortcut icon" href="{{ asset('assets/img/imglogin.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-6 mx-auto mt-2">
                     <div class="card px-5 py-4 border-0">
-                        <img src="{{ asset('assets/img/imglogin.png') }}" alt="" class="d-block mx-auto" width="60px">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="" class="d-block mx-auto" width="200px">
                         <p class="text-center fs-3 fw-semibold mb-5 mt-2 title">Login</p>
                         @if (session('success'))
                             <p class="alert alert-success">{{ session('success') }}</p>

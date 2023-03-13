@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/imglogin.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon.png') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
