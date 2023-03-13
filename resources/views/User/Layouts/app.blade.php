@@ -33,35 +33,19 @@
     <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
     <script src="{{ asset('assets/js/config.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   
 </head>
 
 <body>
     <div id="app">
-        <!-- Layout wrapper -->
-        {{-- <div class="layout-wrapper layout-content-navbar">
-            <div class="layout-container">
-                @include('User.Layouts.sidebar')
 
-                <!-- Layout container -->
-                <div class="layout-page">
-                    @include('User.Layouts.navbar')
-
-                    <div class="content-wrapper">
-                        <div class="container-xxl flex-grow-1 container-p-y">
-                            @include('sweetalert::alert')
-                            @yield('content')
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="layout-overlay layout-menu-toggle"></div>
-        </div> --}}
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     @include('User.Layouts.navbar')
-                    <div class="mt-4">
+                    <div class="container" id="content">
                         @include('sweetalert::alert')
                         @yield('content')
                     </div>
@@ -101,6 +85,7 @@
             window.addEventListener("orientationChange", lazyload);
         });
     </script>
+
 
     <script src="{{ asset('/assets/vendor/libs/jquery/jquery.js') }}"></script>
     <script src="{{ asset('/assets/vendor/libs/popper/popper.js') }}"></script>
