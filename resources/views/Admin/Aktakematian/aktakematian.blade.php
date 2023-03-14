@@ -13,8 +13,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Pelapor</th>
-                                    <th>Nama Almarhum/ah</th>
+                                    <th>Nama yang Meninggal</th>
+                                    <th>NIK yang Meninggal</th>
                                     <th>Waktu Meninggal</th>
                                     <th>Status</th>
                                     <th class="text-center">Aksi</th>
@@ -23,9 +23,9 @@
                             <tbody>
                                 @foreach ($kematian as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->namattd }}</td>
+                                          <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->namaalm }}</td>
+                                        <td>{{ $item->nikalm }}</td>
                                         <td>{{ $item->hari }}, {{ $item->tgl }}</td>
                                         <td>
                                              <span class="badge bg-success" {{ $item->is_verification == 1 ? '' : 'hidden' }}>Diterima</span>

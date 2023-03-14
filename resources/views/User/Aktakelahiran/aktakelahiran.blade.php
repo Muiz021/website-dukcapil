@@ -10,15 +10,16 @@
                         <a href="{{ route('aktakelahiran.create') }}" class="btn btn-primary ms-auto pt-2"><i
                                 class="bi bi-clipboard-plus"></i> Ajukan Pelaporan</a>
                     </div>
-                    <p class="text-warning mt-md-0 mt-2"><i class="bi bi-exclamation-triangle-fill"> Jika data diproses lebih dari 3hari, periksa kembali data anda, lalu perbaiki</i></p>
+                    <p class="text-warning mt-md-0 mt-2"><i class="bi bi-exclamation-triangle-fill"> Jika data diproses lebih
+                            dari 3hari, periksa kembali data anda, lalu perbaiki</i></p>
 
                     <div class="table-responsive table mt-4">
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Kepala Keluarga</th>
                                     <th>Nama Anak</th>
+                                    <th>Nama Ayah</th>
                                     <th>Nama Ibu</th>
                                     <th>Status</th>
                                     <th class="text-center">Aksi</th>
@@ -28,8 +29,8 @@
                                 @foreach ($aktakelahiran as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->namattdkelahiran }}</td>
                                         <td>{{ $item->namaanak }}</td>
+                                        <td>{{ $item->namaayah }}</td>
                                         <td>{{ $item->namaibu }}</td>
                                         <td>
                                             <span class="badge bg-success"

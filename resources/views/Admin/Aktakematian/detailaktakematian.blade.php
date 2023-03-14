@@ -15,72 +15,41 @@
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingTwo">
                                             <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#datadaerah" aria-expanded="false"
-                                                aria-controls="datadaerah" role="tabpanel">
-                                                Data Daerah
+                                                data-bs-toggle="collapse" data-bs-target="#hubungan" aria-expanded="false"
+                                                aria-controls="hubungan" role="tabpanel">
+                                                Data Almarhum/Almarhumah
                                             </button>
                                         </h2>
-                                        <div id="datadaerah" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div id="hubungan" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
-                                                    <label for="kelurahan" class="form-label">Pemerintahan Desa
-                                                        Kelurahan</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->kelurahan }}" name="kelurahan"
-                                                        id="kelurahan">
+                                                    <label for="keteranganlaporan" class="form-label">Melaporkan
+                                                        Bahwa <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="keteranganlaporan"
+                                                        id="keteranganlaporan" placeholder="Masukkan Keterangan Laporan"
+                                                        disabled value="{{ $kematian->keteranganlaporan }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="kecamatan" class="form-label">Kecamatan</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->kecamatan }}" name="kecamatan"
-                                                        id="kecamatan">
+                                                    <label for="namaalm" class="form-label">Nama Lengkap <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="namaalm" id="namaalm"
+                                                        placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah" disabled
+                                                        value="{{ $kematian->namaalm }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="kabkota" class="form-label">Kabupaten/Kota </label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->kabkota }}" name="kabkota" id="kabkota">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-1 mb-3 accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#yangberttd" aria-expanded="false"
-                                                aria-controls="yangberttd" role="tabpanel">
-                                                Yang bertanda tangan dibawah ini
-                                            </button>
-                                        </h2>
-                                        <div id="yangberttd" class="accordion-collapse collapse"
-                                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body mt-3">
-                                                <div class="mb-3">
-                                                    <label for="namattd" class="form-label">Nama Lengkap</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->namattd }}" name="namattd" id="namattd">
+                                                    <label for="nikalm" class="form-label">NIK <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" name="nikalm" id="nikalm"
+                                                        placeholder="Masukkan NIK Almarhum/Almarhumah" disabled
+                                                        value="{{ $kematian->nikalm }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="nikttd" class="form-label">NIK</label>
-                                                    <input type="number" class="form-control" disabled
-                                                        value="{{ $kematian->nikttd }}" name="nikttd" id="nikttd">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="umurttd" class="form-label">Umur</label>
-                                                    <input type="number" class="form-control" disabled
-                                                        value="{{ $kematian->umurttd }}" name="umurttd" id="umurttd">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="pekerjaanttd" class="form-label">Pekerjaan</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->pekerjaanttd }}" name="pekerjaanttd"
-                                                        id="pekerjaanttd">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="alamatttd" class="form-label">Alamat</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->alamatttd }}" name="alamatttd"
-                                                        id="alamatttd">
+                                                    <label for="umuralm" class="form-label">Umur <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" name="umuralm" id="umuralm"
+                                                        placeholder="Masukkan Umur Almarhum/Almarhumah" disabled
+                                                        value="{{ $kematian->umuralm }}" />
                                                 </div>
                                             </div>
                                         </div>
@@ -89,63 +58,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
-                                    <div class="border-1 mb-3 accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#hubungan"
-                                                aria-expanded="false" aria-controls="hubungan" role="tabpanel">
-                                                Hubungan dengan yang mati
-                                            </button>
-                                        </h2>
-                                        <div id="hubungan" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body mt-3">
-                                                <div class="mb-3">
-                                                    <label for="keteranganlaporan" class="form-label">Melaporkan
-                                                        Bahwa</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->keteranganlaporan }}"
-                                                        name="keteranganlaporan" id="keteranganlaporan">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="namaalm" class="form-label">Nama Lengkap</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->namaalm }}" name="namaalm"
-                                                        id="namaalm">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="nikalm" class="form-label">NIK</label>
-                                                    <input type="number" class="form-control" disabled
-                                                        value="{{ $kematian->nikalm }}" name="nikalm"
-                                                        id="nikalm">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="umuralm" class="form-label">Umur</label>
-                                                    <input type="number" class="form-control" disabled
-                                                        value="{{ $kematian->umuralm }}" name="umuralm"
-                                                        id="umuralm">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="pekerjaanalm" class="form-label">Pekerjaan</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->pekerjaanalm }}" name="pekerjaanalm"
-                                                        id="pekerjaanalm">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="agamaalm" class="form-label">Agama</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->agamaalm }}" name="agamaalm"
-                                                        id="agamaalm">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="alamatalm" class="form-label">Alamat</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->alamatalm }}" name="alamatalm"
-                                                        id="alamatalm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingThree">
                                             <button type="button" class="accordion-button collapsed"
@@ -158,40 +71,44 @@
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
-                                                    <label for="hari" class="form-label">Hari</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->hari }}" name="hari" id="hari">
+                                                    <label for="hari" class="form-label">Hari <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="hari" id="hari"
+                                                        placeholder="Hari berpulang kerahmatullah" disabled
+                                                        value="{{ $kematian->hari }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="tgl" class="form-label">Tanggal Kematian</label>
-                                                    <input type="date" class="form-control" disabled
-                                                        value="{{ $kematian->tgl }}" name="tgl" id="tgl">
+                                                    <label for="tgl" class="form-label">Tanggal Kematian <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" name="tgl"
+                                                        id="tgl" placeholder="Tanggal berpulang kerahmatullah"
+                                                        disabled value="{{ $kematian->tgl }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="pukul" class="form-label">Pukul</label>
-                                                    <input type="time" class="form-control" disabled
-                                                        value="{{ $kematian->pukul }}" name="pukul"
-                                                        id="pukul">
+                                                    <label for="pukul" class="form-label">Pukul <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="time" class="form-control" name="pukul"
+                                                        id="pukul" placeholder="Pukul berpulang kerahmatullah"
+                                                        disabled value="{{ $kematian->pukul }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="bertempat" class="form-label">Bertempat di</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->bertempat }}" name="bertempat"
-                                                        id="bertempat">
+                                                    <label for="bertempat" class="form-label">Bertempat di <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="bertempat"
+                                                        id="bertempat" placeholder="Tempat kediaman" disabled
+                                                        value="{{ $kematian->bertempat }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="penyebab" class="form-label">Penyebab Kematian</label>
-                                                    <input type="text" class="form-control" disabled
-                                                        value="{{ $kematian->penyebab }}" name="penyebab"
-                                                        id="penyebab">
+                                                    <label for="penyebab" class="form-label">Penyebab Kematian <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="penyebab"
+                                                        id="penyebab" placeholder="Penyebab Kematian" disabled
+                                                        value="{{ $kematian->penyebab }}" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="bukti" class="form-label">Bukti Kematian</label>
-                                                    <img src="/storage/{{ $kematian->bukti }}"
-                                                        class="form-control mb-2" alt="" loading="lazy">
-                                                    <input type="file" class="form-control" disabled
-                                                        value="{{ $kematian->bukti }}" name="bukti"
-                                                        id="buti">
+                                                    <label for="bukti" class="form-label">Bukti Kematian <span
+                                                            class="text-danger">*</span></label>
+                                                    <img src="/storage/{{ $kematian->bukti }}" alt="" width="100%">
                                                 </div>
                                             </div>
                                         </div>

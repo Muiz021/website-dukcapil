@@ -13,6 +13,7 @@ class Aktakelahiran extends Model
 
         'namaanak',
         'nikanak',
+        'jk',
         'tempatlahiranak',
         'tgllahiranak',
         'agama',

@@ -58,7 +58,7 @@ class LoginController extends Controller
 
         $data->save();
         Alert::success('Sukses Mendaftar', 'Tunggu Verifikasi dari Admin');
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function login_action(Request $request)

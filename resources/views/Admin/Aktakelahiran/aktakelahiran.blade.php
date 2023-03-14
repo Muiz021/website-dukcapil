@@ -14,8 +14,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Kepala Keluarga</th>
                                     <th>Nama Anak</th>
+                                    <th>Nama Ayah</th>
                                     <th>Nama Ibu</th>
                                     <th>Status</th>
                                     <th class="text-center">Aksi</th>
@@ -25,8 +25,8 @@
                                 @foreach ($kelahiran as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->namattdkelahiran }}</td>
                                         <td>{{ $item->namaanak }}</td>
+                                        <td>{{ $item->namaayah }}</td>
                                         <td>{{ $item->namaibu }}</td>
                                         <td>
                                             <span class="badge bg-success"
