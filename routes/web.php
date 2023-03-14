@@ -49,6 +49,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('/admin/dataaktakematian', [AdminController::class, 'indexkematian'])->name('datakematian.index');
     Route::get('/admin/detaildatakematian/{id}', [AdminController::class, 'detaildatakematian']);
     Route::put('verificationdatakematian/{id}', [AdminController::class, 'verifikasi_dataaktakematian'])->name('verifikasi_dataaktakematian');
+
+    // kartu keluarga
+    Route::get('/admin/kartukeluarga', [KartuKeluargaController::class, 'indexadmin'])->name('kkadmin.index');
 });
 
 //route user

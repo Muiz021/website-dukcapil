@@ -46,7 +46,7 @@
                         sipil. Ditjen Dukcapil berada di bawah dan bertanggung jawab
                         kepada Menteri.
                     </p>
-                    <a href="#" class="btn-ajukan">Ajukan Pelaporan</a>
+                    <a href="{{ route('login') }}" class="btn-ajukan">Ajukan Pelaporan</a>
                 </div>
                 <div class="col-md-6 col-12">
                     <img src="{{ asset('assets/img/bghero.png') }}" alt="" width="100%" />

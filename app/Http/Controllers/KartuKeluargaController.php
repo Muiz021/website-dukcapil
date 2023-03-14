@@ -22,4 +22,9 @@ class KartuKeluargaController extends Controller
         $aktakelahiran = Aktakelahiran::where('user_id', $user->id)->get();
         return view('User.KartuKeluarga.show', compact('aktakelahiran'));
     }
+
+    public function indexAdmin()
+    {
+        return view('Admin.KK.index');
+    }
 }
