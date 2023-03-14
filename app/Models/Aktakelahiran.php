@@ -11,23 +11,21 @@ class Aktakelahiran extends Model
     protected $fillable = [
         'is_verification',
 
-        'namattdkelahiran',
-        'nikttdkelahiran',
-        'umurttdkelahiran',
-        'pekerjaanttdkelahiran',
-        'alamatttdkelahiran',
-
         'namaanak',
         'nikanak',
         'tempatlahiranak',
         'tgllahiranak',
-        'anakke',
-        'alamatanak',
+        'agama',
+        'pendidikan',
+        'jpekerjaan',
+        'statuspernikahan',
+        'statushubkeluarga',
+        'kewarganegaraan',
+        'nopaspor',
+        'nokitas',
 
         'namaibu',
-        'nikibu',
-        'pekerjaanibu',
-        'alamatibu',
+        'namaayah',
 
         'bukunikah',
         'suratketbidan',

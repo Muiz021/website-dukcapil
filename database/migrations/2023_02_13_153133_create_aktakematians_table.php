@@ -18,23 +18,10 @@ return new class extends Migration
             $table->string('user_id');
             $table->boolean('is_verification')->default(0)->nullable();
 
-            $table->string('kelurahan');
-            $table->string('kecamatan');
-            $table->string('kabkota');
-
-            $table->string('namattd');
-            $table->string('nikttd');
-            $table->string('umurttd');
-            $table->string('pekerjaanttd');
-            $table->text('alamatttd');
-
             $table->text('keteranganlaporan');
             $table->string('namaalm');
             $table->string('nikalm');
             $table->string('umuralm');
-            $table->string('pekerjaanalm');
-            $table->string('agamaalm');
-            $table->text('alamatalm');
 
             $table->string('hari');
             $table->string('tgl');

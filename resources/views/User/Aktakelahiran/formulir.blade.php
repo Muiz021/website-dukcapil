@@ -149,10 +149,10 @@
                                                         id="namaibu" required placeholder="Masukkan Nama Ibu Kandung">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="namaibu" class="form-label">Nama Ayah <span
+                                                    <label for="namaayah" class="form-label">Nama Ayah <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="namaibu"
-                                                        id="namaibu" required placeholder="Masukkan Nama Ibu Kandung">
+                                                    <input type="text" class="form-control" name="namaayah"
+                                                        id="namaayah" required placeholder="Masukkan Nama Ayah Kandung">
                                                 </div>
                                             </div>
                                         </div>

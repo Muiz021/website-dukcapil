@@ -41,23 +41,21 @@ class AktakelahiranController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'namattdkelahiran' => 'required',
-            'nikttdkelahiran' => 'required',
-            'umurttdkelahiran' => 'required',
-            'pekerjaanttdkelahiran' => 'required',
-            'alamatttdkelahiran' => 'required',
-
             'namaanak' => 'required',
             'nikanak' => 'required',
             'tempatlahiranak' => 'required',
             'tgllahiranak' => 'required',
-            'anakke' => 'required',
-            'alamatanak' => 'required',
+            'agama' => 'required',
+            'pendidikan' => 'required',
+            'jpekerjaan' => 'required',
+            'statuspernikahan' => 'required',
+            'statushubkeluarga' => 'required',
+            'kewarganegaraan' => 'required',
+            'nopaspor' => 'required',
+            'nokitas' => 'required',
 
             'namaibu' => 'required',
-            'nikibu' => 'required',
-            'pekerjaanibu' => 'required',
-            'alamatibu' => 'required',
+            'namaayah' => 'required',
 
             'bukunikah' => 'required|mimes:pdf|max:5000',
             'suratketbidan' => 'required|mimes:pdf|max:5000',

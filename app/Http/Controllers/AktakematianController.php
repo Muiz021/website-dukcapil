@@ -41,23 +41,10 @@ class AktakematianController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'kelurahan' => 'required',
-            'kecamatan' => 'required',
-            'kabkota' => 'required',
-
-            'namattd' => 'required',
-            'nikttd' => 'required',
-            'umurttd' => 'required',
-            'pekerjaanttd' => 'required',
-            'alamatttd' => 'required',
-
             'keteranganlaporan' => 'required',
             'namaalm' => 'required',
             'nikalm' => 'required',
             'umuralm' => 'required',
-            'pekerjaanalm' => 'required',
-            'agamaalm' => 'required',
-            'alamatalm' => 'required',
 
             'hari' => 'required',
             'tgl' => 'required',

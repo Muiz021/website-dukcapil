@@ -18,23 +18,22 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->boolean('is_verification')->default(0)->nullable();
 
-            $table->string('namattdkelahiran');
-            $table->string('nikttdkelahiran');
-            $table->string('umurttdkelahiran');
-            $table->string('pekerjaanttdkelahiran');
-            $table->text('alamatttdkelahiran');
-
             $table->string('namaanak');
             $table->string('nikanak');
+            $table->string('jk');
             $table->string('tempatlahiranak');
             $table->string('tgllahiranak');
-            $table->string('anakke');
-            $table->text('alamatanak');
+            $table->string('agama');
+            $table->string('pendidikan');
+            $table->string('jpekerjaan');
+            $table->string('statuspernikahan');
+            $table->string('statushubkeluarga');
+            $table->string('kewarganegaraan');
+            $table->string('nopaspor');
+            $table->string('nokitas');
 
             $table->string('namaibu');
-            $table->string('nikibu');
-            $table->string('pekerjaanibu');
-            $table->text('alamatibu');
+            $table->string('namaayah');
 
             $table->string('bukunikah');
             $table->string('suratketbidan');

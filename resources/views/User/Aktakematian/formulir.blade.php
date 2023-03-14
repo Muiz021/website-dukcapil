@@ -14,93 +14,9 @@
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingTwo">
                                             <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#datadaerah" aria-expanded="false"
-                                                aria-controls="datadaerah" role="tabpanel">
-                                                Data Daerah
-                                            </button>
-                                        </h2>
-                                        <div id="datadaerah" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body mt-3">
-                                                <div class="mb-3">
-                                                    <label for="kelurahan" class="form-label">Pemerintahan Desa
-                                                        Kelurahan <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="kelurahan"
-                                                        id="kelurahan" placeholder="Kediaman Almarhum/Almarhumah"
-                                                        required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="kecamatan" class="form-label">Kecamatan <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="kecamatan"
-                                                        id="kecamatan" placeholder="Kediaman Almarhum/Almarhumah"
-                                                        required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="kabkota" class="form-label">Kabupaten/Kota <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="kabkota" id="kabkota"
-                                                        placeholder="Kediaman Almarhum/Almarhumah" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-1 mb-3 accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#yangberttd" aria-expanded="false"
-                                                aria-controls="yangberttd" role="tabpanel">
-                                                Yang bertanda tangan dibawah ini
-                                            </button>
-                                        </h2>
-                                        <div id="yangberttd" class="accordion-collapse collapse"
-                                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body mt-3">
-                                                <div class="mb-3">
-                                                    <label for="namattd" class="form-label">Nama Lengkap <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="namattd" id="namattd"
-                                                        placeholder="Masukkan Nama Lengkap yg ber tanda tangan" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="nikttd" class="form-label">NIK <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="number" class="form-control" name="nikttd" id="nikttd"
-                                                        placeholder="Masukkan NIK yg ber tanda tangan" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="umurttd" class="form-label">Umur <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="number" class="form-control" name="umurttd" id="umurttd"
-                                                        placeholder="Masukkan Umur yg ber tanda tangan" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="pekerjaanttd" class="form-label">Pekerjaan <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="pekerjaanttd"
-                                                        id="pekerjaanttd"
-                                                        placeholder="Masukkan Pekerjaan yg ber tanda tangan" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="alamatttd" class="form-label">Alamat <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="alamatttd"
-                                                        id="alamatttd" placeholder="Masukkan Alamat yg ber tanda tangan"
-                                                        required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="border-1 mb-3 accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button type="button" class="accordion-button collapsed"
                                                 data-bs-toggle="collapse" data-bs-target="#hubungan"
                                                 aria-expanded="false" aria-controls="hubungan" role="tabpanel">
-                                                Hubungan dengan yang mati
+                                                Data Almarhum/Almarhumah
                                             </button>
                                         </h2>
                                         <div id="hubungan" class="accordion-collapse collapse"
@@ -134,30 +50,14 @@
                                                         id="umuralm" placeholder="Masukkan Umur Almarhum/Almarhumah"
                                                         required />
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="pekerjaanalm" class="form-label">Pekerjaan <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="pekerjaanalm"
-                                                        id="pekerjaanalm"
-                                                        placeholder="Masukkan Pekerjaan Almarhum/Almarhumah" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="agamaalm" class="form-label">Agama <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="agamaalm"
-                                                        id="agamaalm" placeholder="Masukkan Agama Almarhum/Almarhumah"
-                                                        required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="alamatalm" class="form-label">Alamat <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="alamatalm"
-                                                        id="alamatalm" placeholder="Masukkan Alamat Almarhum/Almarhumah"
-                                                        required />
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="accordion" id="accordionExample">
+                                    
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingThree">
                                             <button type="button" class="accordion-button collapsed"

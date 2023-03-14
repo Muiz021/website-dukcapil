@@ -12,23 +12,10 @@ class Aktakematian extends Model
     protected $fillable = [
         'is_verification',
 
-        'kelurahan',
-        'kecamatan',
-        'kabkota',
-
-        'namattd',
-        'nikttd',
-        'umurttd',
-        'pekerjaanttd',
-        'alamatttd',
-
         'keteranganlaporan',
         'namaalm',
         'nikalm',
         'umuralm',
-        'pekerjaanalm',
-        'agamaalm',
-        'alamatalm',
 
         'hari',
         'tgl',
