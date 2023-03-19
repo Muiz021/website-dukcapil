@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
 
             // data diatas
-            $table->string('nokartu');
             $table->string('nokk');
             $table->string('alamat');
             $table->string('rt_rw');
@@ -36,11 +35,12 @@ return new class extends Migration
             $table->string('agama');
             $table->string('pendidikan');
             $table->string('jpekerjaan');
-            $table->string('statuspernikahan');
+            $table->string('statusperkawinan');
+            $table->string('tglperkawinan');
             $table->string('statushubkeluarga');
             $table->string('kewarganegaraan');
             $table->string('nopaspor');
-            $table->string('nokitas');
+            $table->string('nokitap');
             $table->string('namaibu');
             $table->string('namaayah');
 

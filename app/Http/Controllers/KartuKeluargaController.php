@@ -39,7 +39,6 @@ class KartuKeluargaController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'nokartu' => 'required',
             'nokk' => 'required',
             'alamat' => 'required',
             'rt_rw' => 'required',
@@ -57,11 +56,13 @@ class KartuKeluargaController extends Controller
             'agama' => 'required',
             'pendidikan' => 'required',
             'jpekerjaan' => 'required',
-            'statuspernikahan' => 'required',
+            'goldarah' => 'required',
+            'statusperkawinan' => 'required',
+            'tglperkawinan' => 'required',
             'statushubkeluarga' => 'required',
             'kewarganegaraan' => 'required',
             'nopaspor' => 'required',
-            'nokitas' => 'required',
+            'nokitap' => 'required',
             'namaibu' => 'required',
             'namaayah' => 'required',
 

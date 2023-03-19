@@ -10,7 +10,6 @@ class KartuKeluarga extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nokartu',
         'nokk',
         'alamat',
         'rt_rw',
@@ -28,11 +27,13 @@ class KartuKeluarga extends Model
         'agama',
         'pendidikan',
         'jpekerjaan',
-        'statuspernikahan',
+        'goldarah',
+        'statusperkawinan',
+        'tglperkawinan',
         'statushubkeluarga',
         'kewarganegaraan',
         'nopaspor',
-        'nokitas',
+        'nokitap',
         'namaibu',
         'namaayah',
 
