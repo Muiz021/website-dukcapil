@@ -52,6 +52,8 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 
     // kartu keluarga
     Route::get('/admin/kartukeluarga', [KartuKeluargaController::class, 'indexadmin'])->name('kkadmin.index');
+    Route::get('/admin/kartukeluarga/create', [KartuKeluargaController::class, 'create'])->name('kkadmin.create');
+    Route::post('/admin/kartukeluarga', [KartuKeluargaController::class, 'store'])->name('kkadmin.store');
 });
 
 //route user

@@ -17,10 +17,10 @@ use App\Models\Aktakematian;
                         <div class="col-md-10 align-self-center">
                             <div class="d-md-flex d-block">
                                 <div>
-                                    <p class="title">Nama Kepala Keluarga</p>
-                                    <p class="subtitle">12345678902345</p>
+                                    <p class="title">{{ auth()->user()->nama_kepala_keluarga }}</p>
+                                    <p class="subtitle">{{ auth()->user()->nokk }}</p>
                                 </div>
-                                <p class="title ms-auto">dnlgsd@gmail.com</p>
+                                <p class="title ms-auto">{{ auth()->user()->username }}</p>
                             </div>
                             <button class="btn btn-success mt-3">Download KK</button>
                         </div>

@@ -39,6 +39,12 @@
                  <div data-i18n="Analytics">Akta Kematian</div>
              </a>
          </li>
+         <li class="menu-item {{ $title == 'Kartu Keluarga' ? 'active' : '' }}">
+             <a href="{{ route('kkadmin.index') }}" class="menu-link">
+                 <i class="bi bi-person-hearts menu-icon"></i>
+                 <div data-i18n="Analytics">Kartu Keluarga</div>
+             </a>
+         </li>
          <li class="menu-header small text-uppercase">
              <span class="menu-header-text">Pendaftar</span>
          </li>
@@ -46,12 +52,6 @@
              <a href="{{ route('datamasyarakat.index') }}" class="menu-link">
                  <i class='menu-icon bx bx-group'></i>
                  <div data-i18n="Analytics">Data Masyarakat</div>
-             </a>
-         </li>
-         <li class="menu-item {{ $title == 'Kartu Keluarga User' ? 'active' : '' }}">
-             <a href="{{ route('kkadmin.index') }}" class="menu-link">
-                 <i class="bi bi-person-hearts menu-icon"></i>
-                 <div data-i18n="Analytics">Kartu Keluarga</div>
              </a>
          </li>
      </ul>
