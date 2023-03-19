@@ -13,15 +13,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="nokartu" class="form-label">Nomor Kartu <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="nokartu" id="nokartu" required
-                                        placeholder="Masukkan Nomor Kartu">
-                                </div>
-                                <div class="mb-3">
                                     <label for="nokk" class="form-label">Nomor Kartu Keluarga<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="nokk" id="nokk" required
+                                    <input type="number" class="form-control" name="nokk" id="nokk" required
                                         placeholder="Masukkan Nomor Kartu Keluarga">
                                 </div>
                                 <div class="mb-3">
@@ -38,19 +32,58 @@
                                 <div class="mb-3">
                                     <label for="kel" class="form-label">Kelurahan<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="kel" id="kel" required
-                                        placeholder="Masukkan Kelurahan">
+                                    <select name="kel" id="kel" class="form-select" >
+                                        <option>Pilihan Kelurahan</option>
+                                        <option value="BENTENG">BENTENG</option>
+                                        <option value="PALLENGU">PALLENGU</option>
+                                        <option value="PANTAI BAHARI">PANTAI BAHARI</option>
+                                        <option value="BONTORANNU">BONTORANNU</option>
+                                        <option value="PALLANTIKANG">PALLANTIKANG</option>
+                                        <option value="KALIMPORO">KALIMPORO</option>
+                                        <option value="PUNAGAYA">PUNAGAYA</option>
+                                        <option value="MALLASORO">MALLASORO</option>
+                                        <option value="KAPITA">KAPITA</option>
+                                        <option value="MARAYOKA">MARAYOKA</option>
+                                        <option value="JENETALLASA">JENETALLASA</option>
+                                        <option value="TOMBO TOMBOLO">TOMBO TOMBOLO</option>
+                                        <option value="GUNUNG SILANU">GUNUNG SILANU</option>
+                                        <option value="BONTOMANAI">BONTOMANAI</option>
+                                        <option value="BONTO TANGA">BONTO TANGA</option>
+                                        <option value="TONRO KASSI">TONRO KASSI</option>
+                                        <option value="TONRO KASSI BARAT">TONRO KASSI BARAT</option>
+                                        <option value="TONRO KASSI TIMUR">TONRO KASSI TIMUR</option>
+                                        <option value="TAMAN ROYA">TAMAN ROYA</option>
+                                        <option value="MANJANGLOE">MANJANGLOE</option>
+                                        <option value="BORONGTALA">BORONGTALA</option>
+                                        <option value="BONTOSUNGGU">BONTOSUNGGU</option>
+                                        <option value="TURATEA">TURATEA</option>
+                                        <option value="KARELAYU">KARELAYU</option>
+                                        <option value="BONTOJAI">BONTOJAI</option>
+                                        <option value="TURATEA TIMUR">TURATEA TIMUR</option>
+                                    </select>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 search_select_box">
                                     <label for="kec" class="form-label">Kecamatan<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="kec" id="kec" required
-                                        placeholder="Masukkan Kecamatan">
+                                    <select name="kec" id="kec" class="form-select" >
+                                        <option>Pilihan Kecamatan</option>
+                                        <option value="BANGKALA">BANGKALA</option>
+                                        <option value="TAMALATEA">TAMALATEA</option>
+                                        <option value="BINAMU">BINAMU</option>
+                                        <option value="BATANG">BATANG</option>
+                                        <option value="KELARA">KELARA</option>
+                                        <option value="BANGKALA BARAT">BANGKALA BARAT</option>
+                                        <option value="BONTORAMBA">BONTORAMBA</option>
+                                        <option value="TURATEA">TURATEA</option>
+                                        <option value="ARUNGKEKE">ARUNGKEKE</option>
+                                        <option value="RUMBIA">RUMBIA</option>
+                                        <option value="TAROWANG">TAROWANG</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="kota" class="form-label">Kota<span class="text-danger">*</span></label>
+                                    <label for="kota" class="form-label">Kota/Kabupaten<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="kota" id="kota" required
-                                        placeholder="Masukkan Kota">
+                                        placeholder="Masukkan Kota/Kab" value="JENEPONTO">
                                 </div>
                                 <div class="mb-3">
                                     <label for="kode_pos" class="form-label">Kode Pos<span
@@ -68,7 +101,7 @@
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="nama" id="nama" required
-                                        placeholder="Masukkan Nama  yg lahir">
+                                        placeholder="Masukkan Nama Kepala Keluarga">
                                 </div>
                                 <div class="mb-3">
                                     <label for="nik" class="form-label">NIK <span
@@ -76,9 +109,9 @@
                                     <input type="number" class="form-control" name="nik" id="nik" required
                                         placeholder="Masukkan NIK ">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-4">
                                     <label class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
-                                    <div class="flex">
+                                    <div class="flex mt-2">
                                         <input class="form-check-input" type="radio" name="jk" id="laki-laki"
                                             value="LAKI-LAKI">
                                         <label class="form-check-label me-3" for="laki-laki">
@@ -103,17 +136,17 @@
                                     <input type="date" class="form-control" name="tgllahir" id="tgllahir" required
                                         placeholder="Masukkan Tanggal Lahir ">
                                 </div>
-                            </div>
-                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="agama" class="form-label">Agama<span
                                             class="text-danger">*</span></label>
                                     <select name="agama" id="agama" class="form-select">
                                         <option>Pilihan Agama</option>
-                                        <option value="Islam">Islam</option>
-                                        <option value="Kristen">Kristen</option>
+                                        <option value="ISLAM">ISLAM</option>
+                                        <option value="KRISTEN">KRISTEN</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="pendidikan" class="form-label">Pendidikan<span
                                             class="text-danger">*</span></label>
@@ -127,20 +160,36 @@
                                         required placeholder="Masukkan Jenis Pekerjaan ">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="statuspernikahan" class="form-label">Status
-                                        Pernikahan<span class="text-danger">*</span></label>
-                                    <select name="statuspernikahan" id="statuspernikahan" class="form-select">
-                                        <option>status pernikahan</option>
-                                        <option value="KAWIN">KAWIN</option>
+                                    <label for="goldarah" class="form-label">Golongan Darah<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="goldarah" id="goldarah"
+                                        required placeholder="Masukkan Golongan Darah Anda">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="statusperkawinan" class="form-label">Status
+                                        Perkawinan<span class="text-danger">*</span></label>
+                                    <select name="statusperkawinan" id="statusperkawinan" class="form-select">
+                                        <option>status perkawinan</option>
+                                        <option value="KAWIN TERCATAT">KAWIN TERCATAT</option>
                                         <option value="BELUM KAWIN">BELUM KAWIN</option>
+                                        <option value="CERAI MATI">CERAI MATI</option>
                                     </select>
+                                </div><div class="mb-3">
+                                    <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
+                                            class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" name="tglperkawinan" id="tglperkawinan"
+                                        required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="statushubkeluarga"
-                                        id="statushubkeluarga" required
-                                        value="Kepala Keluarga">
+                                    <select name="statushubkeluarga" id="statushubkeluarga" class="form-select">
+                                        <option>Pilih Status</option>
+                                        <option value="KEPALA KELUARGA">KEPALA KELUARGA</option>
+                                        <option value="ISTERI">ISTERI</option>
+                                        <option value="ANAK">ANAK</option>
+                                        <option value="ORANG TUA">ORANG TUA</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span
@@ -155,9 +204,9 @@
                                         placeholder="Masukkan Nomor Paspor">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nokitas" class="form-label">No. Kitas/Kitap<span
+                                    <label for="nokitap" class="form-label">No. Kitap<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="nokitas" id="nokitas" required
+                                    <input type="text" class="form-control" name="nokitap" id="nokitap" required
                                         placeholder="Masukkan Nomor Kitas/Kitap">
                                 </div>
                                 <div class="mb-3">
@@ -186,7 +235,7 @@
                                         required placeholder="Masukkan Nama Dinas yang berTTD">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nik_dinas" class="form-label">Nama Dinas<span
+                                    <label for="nik_dinas" class="form-label">NIK Dinas<span
                                             class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="nik_dinas" id="nik_dinas" required
                                         placeholder="Masukkan NIK Dinas yang berTTD">

@@ -70,12 +70,19 @@ class KartuKeluargaController extends Controller
             'nama_dinas' => 'required',
             'nik_dinas' => 'required',
         ]);
-
         $kk = new KartuKeluarga();
         $kk->fill($data);
 
         $kk->save();
         Alert::success('Sukses', 'Data Berhasil Ditambah');
+        return redirect()->route('kkadmin.index');
+    }
+
+    public function destroy($id)
+    {
+        $data = KartuKeluarga::find($id);
+        $data->delete();
+        Alert::success('Sukses', 'Data Kartu Keluarga Berhasil Dihapus');
         return redirect()->route('kkadmin.index');
     }
 }

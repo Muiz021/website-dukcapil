@@ -35,6 +35,7 @@ return new class extends Migration
             $table->string('agama');
             $table->string('pendidikan');
             $table->string('jpekerjaan');
+            $table->string('goldarah');
             $table->string('statusperkawinan');
             $table->string('tglperkawinan');
             $table->string('statushubkeluarga');

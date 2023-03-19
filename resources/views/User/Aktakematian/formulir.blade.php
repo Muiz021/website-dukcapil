@@ -104,7 +104,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
-                                                            class="text-danger">*</span></label>
+                                                            class="text-danger">* | MAX 5MB</span></label>
                                                     <input type="file" class="form-control" name="bukti"
                                                         id="buti" placeholder="Bukti Kematian" required />
                                                 </div>

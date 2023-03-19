@@ -29,10 +29,16 @@
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->nik }}</td>
                                     <td class="d-flex justify-content-center gap-2">
-                                        <button class="btn btn-sm btn-success">+ Anggota</button>
-                                        <button class="btn btn-sm btn-primary">Lihat KK</button>
+                                        <button class="btn btn-sm btn-success">Lihat KK</button>
                                         <button class="btn btn-sm btn-warning">Edit</button>
-                                        <button class="btn btn-sm btn-danger">Hapus</button>
+                                        <form action="/admin/kartukeluarga/{{ $item->id }}" method="post">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                Hapus
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

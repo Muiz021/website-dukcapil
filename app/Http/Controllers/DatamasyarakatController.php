@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\KartuKeluarga;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -19,7 +20,8 @@ class DatamasyarakatController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('Admin.Datamasyarakat.show', compact('user'));
+        $kartukeluarga = KartuKeluarga::where('statushubkeluarga', '=', 'Kepala Keluarga')->get();
+        return view('Admin.Datamasyarakat.show', compact('user', 'kartukeluarga'));
     }
     public function destroy($id)
     {

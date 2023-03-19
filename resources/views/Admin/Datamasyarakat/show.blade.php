@@ -17,7 +17,8 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Nama Kepala Keluarga</label>
-                                    <input type="text" class="form-control" disabled value="{{ $user->nama_kepala_keluarga }}">
+                                    <input type="text" class="form-control" disabled
+                                        value="{{ $user->nama_kepala_keluarga }}">
                                 </div>
                             </div>
                         </div>
@@ -36,7 +37,8 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Foto KK</label>
-                            <img src="/storage/{{ $user->foto_kk }}" width="100%" alt="" loading="lazy" class="form-control p-2">
+                            <img src="/storage/{{ $user->foto_kk }}" width="100%" alt="" loading="lazy"
+                                class="form-control p-2">
                         </div>
                         <div class="mb-3 d-flex justify-content-end gap-3">
                             <a href="{{ route('datamasyarakat.index') }}" class="btn btn-danger">Kembali</a>
@@ -54,6 +56,30 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="card p-4 mt-3">
+
+                <div class="table-responsive table mt-4">
+                    <table class="table table-responsive" id="table1">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nomor KK</th>
+                                <th>Nama Kepala Keluarga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($kartukeluarga as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nokk }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
