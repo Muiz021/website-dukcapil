@@ -139,6 +139,8 @@ class KartuKeluargaController extends Controller
     public function showAnggota($nokk)
     {
         $kk = KartuKeluarga::find($nokk);
-        return view('Admin.KK.show', compact('kk'));
+        $data = KartuKeluarga::where('nokk', $nokk)->first();
+        $datakk = KartuKeluarga::all();
+        return view('Admin.KK.show', compact('kk', 'data', 'datakk'));
     }
 }
