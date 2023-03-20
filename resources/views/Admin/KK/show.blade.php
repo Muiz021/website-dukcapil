@@ -28,8 +28,17 @@
                                         <td>{{ $item->nama }}</td>
                                         <td>{{ $item->nik }}</td>
                                         <td>{{ $item->statushubkeluarga }}</td>
-                                        <td>
-                                            lorem
+                                        <td class="d-flex gap-2 justify-content-center">
+                                            <a href="/admin/kartukeluarga/edit/{{ $item->id }}"
+                                                class="btn btn-sm btn-primary" {{ $item->statushubkeluarga == 'KEPALA KELUARGA' ? 'hidden' : '' }}><i class="bi bi-pencil-square"></i></a>
+                                            <form action="/admin/kartukeluarga/{{ $item->id }}" method="post" {{ $item->statushubkeluarga == 'KEPALA KELUARGA' ? 'hidden' : '' }}>
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-sm btn-danger"
+                                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endif

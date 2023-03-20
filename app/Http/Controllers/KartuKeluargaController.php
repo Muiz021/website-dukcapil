@@ -103,13 +103,14 @@ class KartuKeluargaController extends Controller
 
     public function createAnggota()
     {
-        $data = KartuKeluarga::all();
-        return view('Admin.KK.tambahanggota', compact('data'));
+        // $data = KartuKeluarga::all();
+        return view('Admin.KK.tambahanggota');
     }
 
     public function storeAnggota(Request $request)
     {
         $data = $request->validate([
+            'nokk' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'jk' => 'required',

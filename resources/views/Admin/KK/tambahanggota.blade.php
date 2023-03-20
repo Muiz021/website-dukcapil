@@ -1,3 +1,7 @@
+<?php
+use App\Models\KartuKeluarga;
+?>
+
 @extends('Admin.Layouts.app', ['title' => 'Kartu Keluarga'])
 
 @section('content')
@@ -15,9 +19,13 @@
                                 <label for="nokk" class="form-label">Nomor Kartu Keluarga<span
                                         class="text-danger">*</span></label>
                                 <select name="nokk" id="nokk" class="form-select">
-                                    <option selected>Pilih Nomor Kartu Keluarga</option>
+                                    <option>Pilih Nomor Kartu Keluarga</option>
+                                    {{ $data = KartuKeluarga::all() }}
                                     @foreach ($data as $item)
-                                        <option value="{{ $item->nokk }}">{{ $item->nokk }}</option>
+                                        <option value="{{ $item->nokk }}"
+                                            {{ $item->statushubkeluarga != 'KEPALA KELUARGA' ? 'hidden' : '' }}>
+                                            {{ $item->nokk }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
