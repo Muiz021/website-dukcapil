@@ -54,7 +54,14 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('/admin/kartukeluarga', [KartuKeluargaController::class, 'indexadmin'])->name('kkadmin.index');
     Route::get('/admin/kartukeluarga/create', [KartuKeluargaController::class, 'create'])->name('kkadmin.create');
     Route::post('/admin/kartukeluarga', [KartuKeluargaController::class, 'store'])->name('kkadmin.store');
+    Route::get('/admin/kartukeluarga/edit/{id}', [KartuKeluargaController::class, 'edit'])->name('kkadmin.edit');
+    Route::post('/admin/kartukeluarga/update/{id}', [KartuKeluargaController::class, 'update'])->name('kkadmin.update');
     Route::delete('/admin/kartukeluarga/{id}', [KartuKeluargaController::class, 'destroy']);
+
+    // anggota kk
+    Route::get('/admin/kartukeluarga/createanggota', [KartuKeluargaController::class, 'createAnggota'])->name('kkadmin.createanggota');
+    Route::post('/admin/kartukeluarga/anggota', [KartuKeluargaController::class, 'storeAnggota'])->name('kkadmin.storeanggota');
+    Route::get('/admin/kartukeluarga/nokartu/{nokk}', [KartuKeluargaController::class, 'showAnggota'])->name('kkadmin.showanggota');
 });
 
 //route user

@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
 
             // data diatas
-            $table->string('nokk');
-            $table->string('alamat');
-            $table->string('rt_rw');
-            $table->string('kel');
-            $table->string('kec');
-            $table->string('kota');
-            $table->string('kode_pos');
-            $table->string('provinsi');
+            $table->string('nokk')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('rt_rw')->nullable();
+            $table->string('kel')->nullable();
+            $table->string('kec')->nullable();
+            $table->string('kota')->nullable();
+            $table->string('kode_pos')->nullable();
+            $table->string('provinsi')->nullable();
 
             // isi KK
             $table->string('nama');
@@ -46,10 +46,9 @@ return new class extends Migration
             $table->string('namaayah');
 
             // data dibawah
-            $table->string('tgl_keluar');
-            $table->string('nama_dinas');
-            $table->string('nik_dinas');
-
+            $table->string('tgl_keluar')->nullable();
+            $table->string('nama_dinas')->nullable();
+            $table->string('nik_dinas')->nullable();
 
             $table->timestamps();
         });

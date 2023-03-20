@@ -78,11 +78,67 @@ class KartuKeluargaController extends Controller
         return redirect()->route('kkadmin.index');
     }
 
+    public function edit($id)
+    {
+        $kk = KartuKeluarga::find($id);
+        return view('Admin.KK.edit', compact('kk'));
+    }
+    public function update(Request $request, $id)
+    {
+        $kk = KartuKeluarga::where('id', $id)->first();
+        $data = $request->all();
+        $kk->fill($data);
+        $kk->save();
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
+        return redirect()->route('kkadmin.index');
+    }
+
     public function destroy($id)
     {
         $data = KartuKeluarga::find($id);
         $data->delete();
         Alert::success('Sukses', 'Data Kartu Keluarga Berhasil Dihapus');
         return redirect()->route('kkadmin.index');
+    }
+
+    public function createAnggota()
+    {
+        $data = KartuKeluarga::all();
+        return view('Admin.KK.tambahanggota', compact('data'));
+    }
+
+    public function storeAnggota(Request $request)
+    {
+        $data = $request->validate([
+            'nama' => 'required',
+            'nik' => 'required',
+            'jk' => 'required',
+            'tempatlahir' => 'required',
+            'tgllahir' => 'required',
+            'agama' => 'required',
+            'pendidikan' => 'required',
+            'jpekerjaan' => 'required',
+            'goldarah' => 'required',
+            'statusperkawinan' => 'required',
+            'tglperkawinan' => 'required',
+            'statushubkeluarga' => 'required',
+            'kewarganegaraan' => 'required',
+            'nopaspor' => 'required',
+            'nokitap' => 'required',
+            'namaibu' => 'required',
+            'namaayah' => 'required',
+        ]);
+
+        $kk = new KartuKeluarga();
+        $kk->fill($data);
+
+        $kk->save();
+        Alert::success('Sukses', 'Data Anggota Keluarga Berhasil Ditambah');
+        return redirect()->route('kkadmin.index');
+    }
+    public function showAnggota($nokk)
+    {
+        $kk = KartuKeluarga::find($nokk);
+        return view('Admin.KK.show', compact('kk'));
     }
 }
