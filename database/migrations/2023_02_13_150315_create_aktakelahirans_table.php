@@ -19,7 +19,7 @@ return new class extends Migration
             $table->boolean('is_verification')->default(0)->nullable();
 
             $table->string('namaanak');
-            $table->string('nikanak');
+            // $table->string('nikanak');
             $table->string('jk');
             $table->string('tempatlahiranak');
             $table->string('tgllahiranak');

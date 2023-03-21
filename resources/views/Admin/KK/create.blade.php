@@ -274,9 +274,9 @@
                                     <select name="statushubkeluarga" id="statushubkeluarga" class="form-select">
                                         <option>Pilih Status</option>
                                         <option value="KEPALA KELUARGA">KEPALA KELUARGA</option>
-                                        <option value="ISTERI">ISTERI</option>
+                                        {{-- <option value="ISTERI">ISTERI</option>
                                         <option value="ANAK">ANAK</option>
-                                        <option value="ORANG TUA">ORANG TUA</option>
+                                        <option value="ORANG TUA">ORANG TUA</option> --}}
                                     </select>
                                 </div>
                                 <div class="mb-3">

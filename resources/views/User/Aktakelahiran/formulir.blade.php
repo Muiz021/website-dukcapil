@@ -31,12 +31,12 @@
                                                     <input type="text" class="form-control" name="namaanak"
                                                         id="namaanak" required placeholder="Masukkan Nama Anak yg lahir">
                                                 </div>
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label for="nikanak" class="form-label">NIK <span
                                                             class="text-danger">*</span></label>
                                                     <input type="number" class="form-control" name="nikanak" id="nikanak"
                                                         required placeholder="Masukkan NIK Anak">
-                                                </div>
+                                                </div> --}}
                                                 <div class="mb-3">
                                                     <label class="form-label">Jenis Kelamin<span
                                                             class="text-danger">*</span></label>

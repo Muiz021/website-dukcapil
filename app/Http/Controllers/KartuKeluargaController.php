@@ -21,8 +21,8 @@ class KartuKeluargaController extends Controller
     public function show()
     {
         $user = Auth::user();
-        $aktakelahiran = Aktakelahiran::where('user_id', $user->id)->get();
-        return view('User.KartuKeluarga.show', compact('aktakelahiran'));
+        $kartukeluarga = KartuKeluarga::where('nokk', $user->nokk)->get();
+        return view('User.KartuKeluarga.show', compact('kartukeluarga'));
     }
 
     public function indexAdmin()
@@ -82,6 +82,11 @@ class KartuKeluargaController extends Controller
     {
         $kk = KartuKeluarga::find($id);
         return view('Admin.KK.edit', compact('kk'));
+    }
+    public function editAnggota($id)
+    {
+        $kk = KartuKeluarga::find($id);
+        return view('Admin.KK.editanggota', compact('kk'));
     }
     public function update(Request $request, $id)
     {

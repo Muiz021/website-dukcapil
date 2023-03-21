@@ -12,7 +12,7 @@ class Aktakelahiran extends Model
         'is_verification',
 
         'namaanak',
-        'nikanak',
+        // 'nikanak',
         'jk',
         'tempatlahiranak',
         'tgllahiranak',

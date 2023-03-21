@@ -29,7 +29,7 @@
                                         <td>{{ $item->nik }}</td>
                                         <td>{{ $item->statushubkeluarga }}</td>
                                         <td class="d-flex gap-2 justify-content-center">
-                                            <a href="/admin/kartukeluarga/edit/{{ $item->id }}"
+                                            <a href="/admin/kartukeluarga/editanggota/{{ $item->id }}"
                                                 class="btn btn-sm btn-primary" {{ $item->statushubkeluarga == 'KEPALA KELUARGA' ? 'hidden' : '' }}><i class="bi bi-pencil-square"></i></a>
                                             <form action="/admin/kartukeluarga/{{ $item->id }}" method="post" {{ $item->statushubkeluarga == 'KEPALA KELUARGA' ? 'hidden' : '' }}>
                                                 {{ method_field('DELETE') }}

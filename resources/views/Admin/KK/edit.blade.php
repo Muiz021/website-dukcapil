@@ -276,13 +276,13 @@
                                     <option value="KEPALA KELUARGA"
                                         {{ $kk->statushubkeluarga == 'KEPALA KELUARGA' ? 'hidden' : '' }}>KEPALA
                                         KELUARGA</option>
-                                    <option value="ISTERI" {{ $kk->statushubkeluarga == 'ISTERI' ? 'hidden' : '' }}>ISTERI
+                                    {{-- <option value="ISTERI" {{ $kk->statushubkeluarga == 'ISTERI' ? 'hidden' : '' }}>ISTERI
                                     </option>
                                     <option value="ANAK" {{ $kk->statushubkeluarga == 'ANAK' ? 'hidden' : '' }}>ANAK
                                     </option>
                                     <option value="ORANG TUA" {{ $kk->statushubkeluarga == 'ORANG TUA' ? 'hidden' : '' }}>
                                         ORANG TUA
-                                    </option>
+                                    </option> --}}
                                 </select>
                             </div>
                             <div class="mb-3">

@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="" width="170px" />
+                <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100px" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -68,7 +68,7 @@
                 <div class="col-md-4 mb-4 col-12">
                     <div class="card">
                         <img src="{{ asset('assets/img/aktakelahiran.png') }}" alt="" width="100%" />
-                        <a href="{{ route('login') }}" class="btn-masuk border-0 mt-4">
+                        <a href="{{ route('login') }}" class="btn-masuk border-0 mt-4 text-center">
                             Pengajuan Akta Kelahiran
                         </a>
                     </div>
@@ -76,7 +76,7 @@
                 <div class="col-md-4 mb-4 col-12">
                     <div class="card">
                         <img src="{{ asset('assets/img/aktakematian.png') }}" alt="" width="100%" />
-                        <a href="{{ route('login') }}" class="btn-masuk border-0 mt-4">
+                        <a href="{{ route('login') }}" class="btn-masuk border-0 mt-4 text-center">
                             Pengajuan Akta Kematian
                         </a>
                     </div>

@@ -42,7 +42,7 @@ class AktakelahiranController extends Controller
     {
         $data = $request->validate([
             'namaanak' => 'required',
-            'nikanak' => 'required',
+            // 'nikanak' => 'required',
             'jk' => 'required',
             'tempatlahiranak' => 'required',
             'tgllahiranak' => 'required',

@@ -30,13 +30,13 @@
                                                         id="namaanak" placeholder="Masukkan Nama Anak yg lahir" disabled
                                                         value="{{ $kelahiran->namaanak }}">
                                                 </div>
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label for="nikanak" class="form-label">NIK <span
                                                             class="text-danger">*</span></label>
                                                     <input type="number" class="form-control" name="nikanak" id="nikanak"
                                                         placeholder="Masukkan NIK Anak" disabled
                                                         value="{{ $kelahiran->nikanak }}">
-                                                </div>
+                                                </div> --}}
                                                 <div class="mb-3">
                                                     <label class="form-label">Jenis Kelamin<span
                                                             class="text-danger">*</span></label>
