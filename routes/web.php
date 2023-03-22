@@ -76,6 +76,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
         Route::get('/User/kartukeluarga', 'KartuKeluargaController@index')->name('kk.index');
         Route::get('/User/kartukeluarga/show', 'KartuKeluargaController@show')->name('kk.show');
 
+        // download KK
+        Route::get('/User/kartukeluarga/download', 'KartuKeluargaController@downloadPDF')->name('kk.download');
+
         // akta kelahiran
         Route::get('/User/aktakelahiran', 'AktakelahiranController@index')->name('aktakelahiran.index');
         Route::get('/User/aktakelahiran/formulir', 'AktakelahiranController@create')->name('aktakelahiran.create');

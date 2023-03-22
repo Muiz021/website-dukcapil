@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\PDF;
 use App\Models\Aktakematian;
 use Illuminate\Http\Request;
 use App\Models\Aktakelahiran;
@@ -11,6 +12,23 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class KartuKeluargaController extends Controller
 {
+    // public function pdf_history_antrian()
+    // {
+    //     $tanggapan = Tanggapan::orderBy('tgl_periksa', 'asc')->get();
+
+    //     $pdf = PDF::loadView('admin.pdf.history-antrian-pdf', compact('tanggapan'))->setPaper('A4', 'potrait')->setOptions(['defaultFont' => 'sans-serif']);
+    //     $pdf->render();
+    //     $waktu = date("d-F-Y");
+    //     return $pdf->stream("data_history_antrian_{$waktu} .pdf");
+    // }
+    public function downloadPDF()
+    {
+        $user = Auth::user();
+        $kartukeluarga = KartuKeluarga::where('nokk', $user->nokk)->get();
+        $pdf = PDF::loadView('User.downloadPDF.kkPDF', compact('kartukeluarga'))->setPaper('A4', 'landscape')->setOptions(['defaultFont' => 'sans-serif']);
+        $pdf->render();
+        return $pdf->stream("KARTU KELARGA.pdf");
+    }
     public function index()
     {
         $user = Auth::user();
