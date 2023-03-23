@@ -36,8 +36,8 @@
             <tbody>
                 <tr>
                     <td style="width:30%;">
-                        <img src="{{ asset('assets/img/garuda.png') }}" alt=""
-                            style="margin-left: 40px; width: 100px;">
+                        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/img/garuda.png'))) }}"
+                            alt="" style="margin-left: 40px; width: 100px;">
                     </td>
                     <td style="width:40%; text-align: center;">
                         <p style="font-size: 36px; font-weight: 600; margin-top: -24px;">KARTU KELUARGA</p>
