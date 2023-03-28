@@ -68,14 +68,14 @@
                                 <input type="text" class="form-control" name="pendidikan" id="pendidikan"
                                     value="{{ $kk->pendidikan }}" placeholder="Masukkan Pendidikan ">
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="jpekerjaan" class="form-label">Jenis Pekerjaan<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="jpekerjaan" id="jpekerjaan"
                                     value="{{ $kk->jpekerjaan }}" placeholder="Masukkan Jenis Pekerjaan ">
                             </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="goldarah" class="form-label">Golongan Darah<span
                                         class="text-danger">*</span></label>
@@ -90,8 +90,14 @@
                                     <option value="KAWIN TERCATAT"
                                         {{ $kk->statusperkawinan == 'KAWIN TERCATAT' ? 'hidden' : '' }}>KAWIN TERCATAT
                                     </option>
+                                    <option value="KAWIN BELUM TERCATAT"
+                                        {{ $kk->statusperkawinan == 'KAWIN BELUM TERCATAT' ? 'hidden' : '' }}>KAWIN BELUM
+                                        TERCATAT</option>
                                     <option value="BELUM KAWIN"
                                         {{ $kk->statusperkawinan == 'BELUM KAWIN' ? 'hidden' : '' }}>BELUM KAWIN</option>
+                                    <option value="CERAI TERCATAT"
+                                        {{ $kk->statusperkawinan == 'CERAI TERCATAT' ? 'hidden' : '' }}>CERAI TERCATAT
+                                    </option>
                                     <option value="CERAI MATI"
                                         {{ $kk->statusperkawinan == 'CERAI MATI' ? 'hidden' : '' }}>CERAI MATI</option>
                                 </select>
@@ -99,7 +105,7 @@
                             <div class="mb-3">
                                 <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
                                         class="text-danger">*</span></label>
-                                <input type="date" class="form-control" name="tglperkawinan" id="tglperkawinan"
+                                <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
                                     value="{{ $kk->tglperkawinan }}">
                             </div>
                             <div class="mb-3">
@@ -136,6 +142,18 @@
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="nokitap" id="nokitap"
                                     value="{{ $kk->nokitap }}" placeholder="Masukkan Nomor Kitas/Kitap">
+                            </div>
+                            <div class="mb-3">
+                                <label for="namaibu" class="form-label">Nama Ibu <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="namaibu" id="namaibu" value="{{ $kk->namaibu }}"
+                                    placeholder="Masukkan Nama Ibu Kandung">
+                            </div>
+                            <div class="mb-3">
+                                <label for="namaayah" class="form-label">Nama Ayah <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="namaayah" id="namaayah" value="{{ $kk->namaayah }}"
+                                    placeholder="Masukkan Nama Ayah Kandung">
                             </div>
                         </div>
                     </div>

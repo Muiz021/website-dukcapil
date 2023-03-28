@@ -32,7 +32,7 @@ use App\Models\KartuKeluarga;
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="nama" id="nama" required
-                                    placeholder="Masukkan Nama Kepala Keluarga">
+                                    placeholder="Masukkan Nama">
                             </div>
                             <div class="mb-3">
                                 <label for="nik" class="form-label">NIK <span class="text-danger">*</span></label>
@@ -100,15 +100,17 @@ use App\Models\KartuKeluarga;
                                 <select name="statusperkawinan" id="statusperkawinan" class="form-select">
                                     <option>status perkawinan</option>
                                     <option value="KAWIN TERCATAT">KAWIN TERCATAT</option>
+                                    <option value="KAWIN BELUM TERCATAT">KAWIN BELUM TERCATAT</option>
                                     <option value="BELUM KAWIN">BELUM KAWIN</option>
+                                    <option value="CERAI TERCATAT">CERAI TERCATAT</option>
                                     <option value="CERAI MATI">CERAI MATI</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
                                         class="text-danger">*</span></label>
-                                <input type="date" class="form-control" name="tglperkawinan" id="tglperkawinan"
-                                    required>
+                                <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
+                                    required placeholder="Masukkan Tanggal Perkawinan">
                             </div>
                             <div class="mb-3">
                                 <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span

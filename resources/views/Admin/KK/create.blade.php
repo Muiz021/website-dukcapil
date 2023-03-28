@@ -32,7 +32,7 @@
                                 <div class="mb-3">
                                     <label for="kel" class="form-label">Kelurahan<span
                                             class="text-danger">*</span></label>
-                                    <select name="kel" id="kel" class="form-select" >
+                                    <select name="kel" id="kel" class="form-select">
                                         <option>Pilihan Kelurahan</option>
                                         <option value="BENTENG">BENTENG</option>
                                         <option value="PALLENGU">PALLENGU</option>
@@ -152,7 +152,7 @@
                                 <div class="mb-3 search_select_box">
                                     <label for="kec" class="form-label">Kecamatan<span
                                             class="text-danger">*</span></label>
-                                    <select name="kec" id="kec" class="form-select" >
+                                    <select name="kec" id="kec" class="form-select">
                                         <option>Pilihan Kecamatan</option>
                                         <option value="BANGKALA">BANGKALA</option>
                                         <option value="TAMALATEA">TAMALATEA</option>
@@ -169,7 +169,8 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="kota" class="form-label">Kota/Kabupaten<span class="text-danger">*</span></label>
+                                    <label for="kota" class="form-label">Kota/Kabupaten<span
+                                            class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="kota" id="kota" required
                                         placeholder="Masukkan Kota/Kab" value="JENEPONTO">
                                 </div>
@@ -187,7 +188,8 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
+                                    <label for="nama" class="form-label">Nama <span
+                                            class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="nama" id="nama" required
                                         placeholder="Masukkan Nama Kepala Keluarga">
                                 </div>
@@ -250,8 +252,8 @@
                                 <div class="mb-3">
                                     <label for="goldarah" class="form-label">Golongan Darah<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="goldarah" id="goldarah"
-                                        required placeholder="Masukkan Golongan Darah Anda">
+                                    <input type="text" class="form-control" name="goldarah" id="goldarah" required
+                                        placeholder="Masukkan Golongan Darah Anda">
                                 </div>
                                 <div class="mb-3">
                                     <label for="statusperkawinan" class="form-label">Status
@@ -259,14 +261,17 @@
                                     <select name="statusperkawinan" id="statusperkawinan" class="form-select">
                                         <option>status perkawinan</option>
                                         <option value="KAWIN TERCATAT">KAWIN TERCATAT</option>
+                                        <option value="KAWIN BELUM TERCATAT">KAWIN BELUM TERCATAT</option>
                                         <option value="BELUM KAWIN">BELUM KAWIN</option>
+                                        <option value="CERAI TERCATAT">CERAI TERCATAT</option>
                                         <option value="CERAI MATI">CERAI MATI</option>
                                     </select>
-                                </div><div class="mb-3">
+                                </div>
+                                <div class="mb-3">
                                     <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
                                             class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" name="tglperkawinan" id="tglperkawinan"
-                                        required>
+                                    <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
+                                        required placeholder="Masukkan Tanggal Perkawinan">
                                 </div>
                                 <div class="mb-3">
                                     <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span
@@ -323,10 +328,10 @@
                                         required placeholder="Masukkan Nama Dinas yang berTTD">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nik_dinas" class="form-label">NIK Dinas<span
+                                    <label for="nik_dinas" class="form-label">NIP Dinas<span
                                             class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="nik_dinas" id="nik_dinas" required
-                                        placeholder="Masukkan NIK Dinas yang berTTD">
+                                        placeholder="Masukkan NIP Dinas yang berTTD">
                                 </div>
                             </div>
                         </div>

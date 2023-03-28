@@ -256,8 +256,14 @@
                                     <option value="KAWIN TERCATAT"
                                         {{ $kk->statusperkawinan == 'KAWIN TERCATAT' ? 'hidden' : '' }}>KAWIN TERCATAT
                                     </option>
+                                    <option value="KAWIN BELUM TERCATAT"
+                                        {{ $kk->statusperkawinan == 'KAWIN BELUM TERCATAT' ? 'hidden' : '' }}>KAWIN BELUM
+                                        TERCATAT</option>
                                     <option value="BELUM KAWIN"
                                         {{ $kk->statusperkawinan == 'BELUM KAWIN' ? 'hidden' : '' }}>BELUM KAWIN</option>
+                                    <option value="CERAI TERCATAT"
+                                        {{ $kk->statusperkawinan == 'CERAI TERCATAT' ? 'hidden' : '' }}>CERAI TERCATAT
+                                    </option>
                                     <option value="CERAI MATI"
                                         {{ $kk->statusperkawinan == 'CERAI MATI' ? 'hidden' : '' }}>CERAI MATI</option>
                                 </select>
@@ -265,7 +271,7 @@
                             <div class="mb-3">
                                 <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
                                         class="text-danger">*</span></label>
-                                <input type="date" class="form-control" name="tglperkawinan" id="tglperkawinan"
+                                <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
                                     value="{{ $kk->tglperkawinan }}">
                             </div>
                             <div class="mb-3">
@@ -329,10 +335,10 @@
                                     value="{{ $kk->nama_dinas }}" placeholder="Masukkan Nama Dinas yang berTTD">
                             </div>
                             <div class="mb-3">
-                                <label for="nik_dinas" class="form-label">NIK Dinas<span
+                                <label for="nik_dinas" class="form-label">NIP Dinas<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="nik_dinas" id="nik_dinas"
-                                    value="{{ $kk->nik_dinas }}" placeholder="Masukkan NIK Dinas yang berTTD">
+                                    value="{{ $kk->nik_dinas }}" placeholder="Masukkan NIP Dinas yang berTTD">
                             </div>
                         </div>
                     </div>
