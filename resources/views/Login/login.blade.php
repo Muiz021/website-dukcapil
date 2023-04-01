@@ -35,10 +35,10 @@
                         <form action="{{ route('login.action') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username/Nama Lengkap</label>
+                                <label for="username" class="form-label">Username/Email</label>
                                 <input type="text" name="username" id="username"
                                     class="py-3 ps-4 form-control"
-                                    placeholder="Masukkan Username/Nama Lengkap Anda">
+                                    placeholder="Masukkan Username/Email anda">
                             </div>
                             <label for="pass" class="form-label">Password</label>
                             <div class="input-group mb-3">

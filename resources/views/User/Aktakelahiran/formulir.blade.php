@@ -70,8 +70,11 @@
                                                 <div class="mb-3">
                                                     <label for="agama" class="form-label">Agama<span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="agama" id="agama"
-                                                        required placeholder="Masukkan Agama">
+                                                    <select name="agama" id="agama" class="form-select">
+                                                        <option>Pilihan Agama</option>
+                                                        <option value="ISLAM">ISLAM</option>
+                                                        <option value="KRISTEN">KRISTEN</option>
+                                                    </select>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pendidikan" class="form-label">Pendidikan<span
@@ -97,8 +100,8 @@
                                                     </select>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span
-                                                            class="text-danger">*</span></label>
+                                                    <label for="statushubkeluarga" class="form-label">Status Hubungan
+                                                        Dalam Keluarga<span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="statushubkeluarga"
                                                         id="statushubkeluarga" required
                                                         placeholder="Masukkan Status Hubungan Dalam Keluarga Anak">
@@ -111,18 +114,14 @@
                                                         placeholder="Masukkan Kewarganegaraan">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="nopaspor" class="form-label">Nomor Paspor<span
-                                                            class="text-danger">*</span></label>
+                                                    <label for="nopaspor" class="form-label">Nomor Paspor</label>
                                                     <input type="text" class="form-control" name="nopaspor"
-                                                        id="nopaspor" required
-                                                        placeholder="Masukkan Nomor Paspor">
+                                                        id="nopaspor" required placeholder="Masukkan Nomor Paspor">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="nokitas" class="form-label">No. Kitas/Kitap<span
-                                                            class="text-danger">*</span></label>
+                                                    <label for="nokitas" class="form-label">No. Kitas/Kitap</label>
                                                     <input type="text" class="form-control" name="nokitas"
-                                                        id="nokitas" required
-                                                        placeholder="Masukkan Nomor Kitas/Kitap">
+                                                        id="nokitas" required placeholder="Masukkan Nomor Kitas/Kitap">
                                                 </div>
                                             </div>
                                         </div>

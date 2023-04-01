@@ -9,7 +9,7 @@
                     <form action="{{ route('aktakelahiran.update', ['id' => $aktakelahiran->id]) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
-                         <div class="row">
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
                                     <div class="border-1 mb-3 accordion-item">
@@ -59,24 +59,29 @@
                                                     <label for="tempatlahiranak" class="form-label">Tempat Lahir<span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="tempatlahiranak"
-                                                        id="tempatlahiranak"
-                                                        value="{{ $aktakelahiran->tempatlahiranak }}"
+                                                        id="tempatlahiranak" value="{{ $aktakelahiran->tempatlahiranak }}"
                                                         placeholder="Masukkan Tempat Lahir Anak">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="tgllahiranak" class="form-label">Tanggal Lahir<span
                                                             class="text-danger">*</span></label>
                                                     <input type="date" class="form-control" name="tgllahiranak"
-                                                        id="tgllahiranak"
-                                                        value="{{ $aktakelahiran->tgllahiranak }}"
+                                                        id="tgllahiranak" value="{{ $aktakelahiran->tgllahiranak }}"
                                                         placeholder="Masukkan Tanggal Lahir Anak">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="agama" class="form-label">Agama<span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="agama" id="agama"
-                                                     value="{{ $aktakelahiran->agama }}"
-                                                        placeholder="Masukkan Agama">
+                                                    <select name="agama" id="agama" class="form-select">
+                                                        <option value="{{ $aktakelahiran->agama }}">
+                                                            {{ $aktakelahiran->agama }}</option>
+                                                        <option value="ISLAM"
+                                                            {{ $aktakelahiran->agama == 'ISLAM' ? 'hidden' : '' }}>ISLAM
+                                                        </option>
+                                                        <option value="KRISTEN"
+                                                            {{ $aktakelahiran->agama == 'KRISTEN' ? 'hidden' : '' }}>KRISTEN
+                                                        </option>
+                                                    </select>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pendidikan" class="form-label">Pendidikan<span
