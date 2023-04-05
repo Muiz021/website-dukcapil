@@ -83,45 +83,47 @@
                                                         id="pendidikan" required placeholder="Masukkan Pendidikan Anak">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="jpekerjaan" class="form-label">Jenis Pekerjaan<span
-                                                            class="text-danger">*</span></label>
+                                                    <label for="jpekerjaan" class="form-label">Jenis Pekerjaan</label>
                                                     <input type="text" class="form-control" name="jpekerjaan"
-                                                        id="jpekerjaan" required
-                                                        placeholder="Masukkan Jenis Pekerjaan Anak">
+                                                        id="jpekerjaan" value="-">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="statuspernikahan" class="form-label">Status
-                                                        Pernikahan<span class="text-danger">*</span></label>
+                                                        Pernikahan</label>
                                                     <select name="statuspernikahan" id="statuspernikahan"
                                                         class="form-select">
-                                                        <option>status pernikahan</option>
+                                                        <option value="-">-</option>
                                                         <option value="KAWIN">KAWIN</option>
                                                         <option value="BELUM KAWIN">BELUM KAWIN</option>
                                                     </select>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="statushubkeluarga" class="form-label">Status Hubungan
-                                                        Dalam Keluarga<span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="statushubkeluarga"
-                                                        id="statushubkeluarga" required
-                                                        placeholder="Masukkan Status Hubungan Dalam Keluarga Anak">
+                                                        Dalam Keluarga</label>
+                                                    <select name="statushubkeluarga" id="statushubkeluarga"
+                                                        class="form-select">
+                                                        <option>Pilih Status</option>
+                                                        <option value="ANAK">ANAK</option>
+                                                    </select>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="kewarganegaraan"
-                                                        id="kewarganegaraan" required
-                                                        placeholder="Masukkan Kewarganegaraan">
+                                                    <select name="kewarganegaraan" id="kewarganegaraan"
+                                                        class="form-select">
+                                                        <option value="WNI">WNI</option>
+                                                        <option value="WNA">WNA</option>
+                                                    </select>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nopaspor" class="form-label">Nomor Paspor</label>
                                                     <input type="text" class="form-control" name="nopaspor"
-                                                        id="nopaspor" required placeholder="Masukkan Nomor Paspor">
+                                                        id="nopaspor" required value="-">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nokitas" class="form-label">No. Kitas/Kitap</label>
                                                     <input type="text" class="form-control" name="nokitas"
-                                                        id="nokitas" required placeholder="Masukkan Nomor Kitas/Kitap">
+                                                        id="nokitas" required value="-">
                                                 </div>
                                             </div>
                                         </div>

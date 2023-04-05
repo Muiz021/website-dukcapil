@@ -171,8 +171,7 @@
                                     value="{{ $kk->kota }}" placeholder="Masukkan Kota/Kab" value="JENEPONTO">
                             </div>
                             <div class="mb-3">
-                                <label for="kode_pos" class="form-label">Kode Pos<span
-                                        class="text-danger">*</span></label>
+                                <label for="kode_pos" class="form-label">Kode Pos</label>
                                 <input type="text" class="form-control" name="kode_pos" id="kode_pos"
                                     value="{{ $kk->kode_pos }}" placeholder="Masukkan Kode Pos">
                             </div>
@@ -237,20 +236,18 @@
                                     value="{{ $kk->pendidikan }}" placeholder="Masukkan Pendidikan ">
                             </div>
                             <div class="mb-3">
-                                <label for="jpekerjaan" class="form-label">Jenis Pekerjaan<span
-                                        class="text-danger">*</span></label>
+                                <label for="jpekerjaan" class="form-label">Jenis Pekerjaan</label>
                                 <input type="text" class="form-control" name="jpekerjaan" id="jpekerjaan"
                                     value="{{ $kk->jpekerjaan }}" placeholder="Masukkan Jenis Pekerjaan ">
                             </div>
                             <div class="mb-3">
-                                <label for="goldarah" class="form-label">Golongan Darah<span
-                                        class="text-danger">*</span></label>
+                                <label for="goldarah" class="form-label">Golongan Darah</label>
                                 <input type="text" class="form-control" name="goldarah" id="goldarah"
                                     value="{{ $kk->goldarah }}" placeholder="Masukkan Golongan Darah Anda">
                             </div>
                             <div class="mb-3">
                                 <label for="statusperkawinan" class="form-label">Status
-                                    Perkawinan<span class="text-danger">*</span></label>
+                                    Perkawinan</label>
                                 <select name="statusperkawinan" id="statusperkawinan" class="form-select">
                                     <option value="{{ $kk->statusperkawinan }}">{{ $kk->statusperkawinan }}</option>
                                     <option value="KAWIN TERCATAT"
@@ -269,14 +266,12 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
-                                        class="text-danger">*</span></label>
+                                <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian</label>
                                 <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
                                     value="{{ $kk->tglperkawinan }}">
                             </div>
                             <div class="mb-3">
-                                <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span
-                                        class="text-danger">*</span></label>
+                                <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga</label>
                                 <select name="statushubkeluarga" id="statushubkeluarga" class="form-select">
                                     <option value="{{ $kk->statushubkeluarga }}">{{ $kk->statushubkeluarga }}</option>
                                     <option value="KEPALA KELUARGA"
@@ -292,20 +287,20 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan"
-                                    value="{{ $kk->kewarganegaraan }}" placeholder="Masukkan Kewarganegaraan">
+                                <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
+                                <select name="kewarganegaraan" id="kewarganegaraan" class="form-select">
+                                    <option value="{{ $kk->kewarganegaraan }}">{{ $kk->kewarganegaraan }}</option>
+                                    <option value="WNI" {{ $kk->kewarganegaraan == "WNI" ? "hidden" : "" }}>WNI</option>
+                                    <option value="WNA" {{ $kk->kewarganegaraan == "WNA" ? "hidden" : "" }}>WNA</option>
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <label for="nopaspor" class="form-label">Nomor Paspor<span
-                                        class="text-danger">*</span></label>
+                                <label for="nopaspor" class="form-label">Nomor Paspor</label>
                                 <input type="text" class="form-control" name="nopaspor" id="nopaspor"
                                     value="{{ $kk->nopaspor }}" placeholder="Masukkan Nomor Paspor">
                             </div>
                             <div class="mb-3">
-                                <label for="nokitap" class="form-label">No. Kitap<span
-                                        class="text-danger">*</span></label>
+                                <label for="nokitap" class="form-label">No. Kitap</label>
                                 <input type="text" class="form-control" name="nokitap" id="nokitap"
                                     value="{{ $kk->nokitap }}" placeholder="Masukkan Nomor Kitas/Kitap">
                             </div>

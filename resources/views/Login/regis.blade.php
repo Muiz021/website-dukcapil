@@ -37,10 +37,10 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Username/Email <span
+                                        <label for="username" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
                                         <input type="email" name="username" id="username"
-                                            class=" py-3 ps-4 form-control" placeholder="Masukkan Username/Email anda"
+                                            class=" py-3 ps-4 form-control" placeholder="Masukkan Email anda"
                                             required>
                                     </div>
                                     <label for="pass" class="form-label">Password <span

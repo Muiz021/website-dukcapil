@@ -81,24 +81,22 @@ use App\Models\KartuKeluarga;
                                     placeholder="Masukkan Pendidikan ">
                             </div>
                             <div class="mb-3">
-                                <label for="jpekerjaan" class="form-label">Jenis Pekerjaan<span
-                                        class="text-danger">*</span></label>
+                                <label for="jpekerjaan" class="form-label">Jenis Pekerjaan</label>
                                 <input type="text" class="form-control" name="jpekerjaan" id="jpekerjaan" required
-                                    placeholder="Masukkan Jenis Pekerjaan ">
+                                    value="-">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="goldarah" class="form-label">Golongan Darah<span
-                                        class="text-danger">*</span></label>
+                                <label for="goldarah" class="form-label">Golongan Darah</label>
                                 <input type="text" class="form-control" name="goldarah" id="goldarah" required
-                                    placeholder="Masukkan Golongan Darah Anda">
+                                    value="-">
                             </div>
                             <div class="mb-3">
                                 <label for="statusperkawinan" class="form-label">Status
-                                    Perkawinan<span class="text-danger">*</span></label>
+                                    Perkawinan</label>
                                 <select name="statusperkawinan" id="statusperkawinan" class="form-select">
-                                    <option>status perkawinan</option>
+                                    <option value="-">-</option>
                                     <option value="KAWIN TERCATAT">KAWIN TERCATAT</option>
                                     <option value="KAWIN BELUM TERCATAT">KAWIN BELUM TERCATAT</option>
                                     <option value="BELUM KAWIN">BELUM KAWIN</option>
@@ -107,10 +105,9 @@ use App\Models\KartuKeluarga;
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian<span
-                                        class="text-danger">*</span></label>
+                                <label for="tglperkawinan" class="form-label">Tanggal Perkawinan/Perceraian</label>
                                 <input type="text" class="form-control" name="tglperkawinan" id="tglperkawinan"
-                                    required placeholder="Masukkan Tanggal Perkawinan">
+                                    required value="-">
                             </div>
                             <div class="mb-3">
                                 <label for="statushubkeluarga" class="form-label">Status Hubungan Dalam Keluarga<span
@@ -126,20 +123,20 @@ use App\Models\KartuKeluarga;
                             <div class="mb-3">
                                 <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan"
-                                    required placeholder="Masukkan Kewarganegaraan">
+                                <select name="kewarganegaraan" id="kewarganegaraan" class="form-select">
+                                    <option value="WNI">WNI</option>
+                                    <option value="WNA">WNA</option>
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <label for="nopaspor" class="form-label">Nomor Paspor<span
-                                        class="text-danger">*</span></label>
+                                <label for="nopaspor" class="form-label">Nomor Paspor</label>
                                 <input type="text" class="form-control" name="nopaspor" id="nopaspor" required
-                                    placeholder="Masukkan Nomor Paspor">
+                                    value="-">
                             </div>
                             <div class="mb-3">
-                                <label for="nokitap" class="form-label">No. Kitap<span
-                                        class="text-danger">*</span></label>
+                                <label for="nokitap" class="form-label">No. Kitap</label>
                                 <input type="text" class="form-control" name="nokitap" id="nokitap" required
-                                    placeholder="Masukkan Nomor Kitas/Kitap">
+                                    value="-">
                             </div>
                             <div class="mb-3">
                                 <label for="namaibu" class="form-label">Nama Ibu <span
