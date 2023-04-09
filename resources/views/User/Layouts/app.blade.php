@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" style="background-color:#E9E9EE; height:100vh; overflow:auto;">
 
         <div class="container-fluid">
             <div class="row">

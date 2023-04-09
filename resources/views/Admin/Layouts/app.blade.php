@@ -45,7 +45,7 @@
                 @include('Admin.Layouts.sidebar')
 
                 <!-- Layout container -->
-                <div class="layout-page">
+                <div class="layout-page" style="background-color:#E9E9EE;">
                     @include('Admin.Layouts.navbar')
 
                     <div class="content-wrapper">
