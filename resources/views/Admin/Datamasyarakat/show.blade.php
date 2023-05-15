@@ -48,8 +48,7 @@
                                 @method('PUT')
                                 <input type="hidden" name="is_verification" value="1">
                                 @if ($user->is_verification != 1)
-                                    <button type="submit" class="btn btn-success"
-                                        onclick="confirm('Apakah ingin di verifikasi?')">
+                                    <button type="submit" class="btn btn-success">
                                         <i class="bi bi-person-check"></i> Verifikasi
                                     </button>
                                 @endif

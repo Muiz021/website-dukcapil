@@ -332,7 +332,7 @@
                             <div class="mb-3">
                                 <label for="nik_dinas" class="form-label">NIP Dinas<span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="nik_dinas" id="nik_dinas"
+                                <input type="number" class="form-control" name="nik_dinas" id="nik_dinas"
                                     value="{{ $kk->nik_dinas }}" placeholder="Masukkan NIP Dinas yang berTTD">
                             </div>
                         </div>

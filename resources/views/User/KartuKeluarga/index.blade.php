@@ -27,7 +27,7 @@
                             @foreach ($aktakelahiran as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->namattdkelahiran }}</td>
+                                    <td>{{ auth()->user()->nama_kepala_keluarga }}</td>
                                     <td>{{ auth()->user()->nokk }}</td>
                                     <td>{{ $item->namaanak }}</td>
                                     <td>{{ $item->namaibu }}</td>
@@ -55,7 +55,7 @@
                             @foreach ($aktakematian as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->namattd }}</td>
+                                    <td>{{ auth()->user()->nama_kepala_keluarga }}</td>
                                     <td>{{ auth()->user()->nokk }}</td>
                                     <td>{{ $item->namaalm }}</td>
                                     <td>{{ $item->hari }}, {{ $item->tgl }}</td>

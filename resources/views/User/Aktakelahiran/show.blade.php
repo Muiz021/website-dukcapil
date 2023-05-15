@@ -287,7 +287,7 @@
                                                                     <div class="modal-content">
                                                                         <div class="modal-body">
                                                                             <embed
-                                                                                src="/storage/{{ $aktakelahiran->ktportuaayah }}"
+                                                                                src="/storage/{{ $aktakelahiran->ktportuayah }}"
                                                                                 width="100%" style="height: 70vh;"
                                                                                 type="application/pdf">
                                                                         </div>

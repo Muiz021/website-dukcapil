@@ -108,137 +108,156 @@
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="file" class="form-control" name="bukti"
-                                                        id="buti" placeholder="Bukti Kematian" disabled />
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#bukti">
+                                                        Lihat Bukti Kematian
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="bukti" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <img src="/storage/{{ $aktakematian->bukti }}"
+                                                                        width="100%" style="height: 70vh;" />
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-bs-dismiss="modal">Kembali</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <p class="fw-semibold">Dokumen Persyaratan</p>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Kartu Keluarga</label>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal1">
-                                        Kartu Keluarga
-                                    </button>
+                            <div class="row mt-2">
+                                <p class="fw-semibold">Dokumen Persyaratan</p>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Kartu Keluarga</label>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal1">
+                                            Kartu Keluarga
+                                        </button>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal1" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <embed src="/storage/{{ $aktakematian->kkasli }}" width="100%"
-                                                        style="height: 70vh;" type="application/pdf">
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <embed src="/storage/{{ $aktakematian->kkasli }}" width="100%"
+                                                            style="height: 70vh;" type="application/pdf">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">Kembali</button>
+                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Kembali</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">KTP Pemohon</label>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2">
+                                            Lihat KTP Pemohon
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <embed src="/storage/{{ $aktakematian->ktppemohon }}"
+                                                            width="100%" style="height: 70vh;" type="application/pdf">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">Kembali</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">KTP Pemohon</label>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal2">
-                                        Lihat KTP Pemohon
-                                    </button>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">KTP Saksi 1</label>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal3">
+                                            Lihat KTP Saksi 1
+                                        </button>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal2" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <embed src="/storage/{{ $aktakematian->ktppemohon }}" width="100%"
-                                                        style="height: 70vh;" type="application/pdf">
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <embed src="/storage/{{ $aktakematian->ktpsaksi1 }}"
+                                                            width="100%" style="height: 70vh;" type="application/pdf">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">Kembali</button>
+                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Kembali</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">KTP Saksi 2</label>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal4">
+                                            Lihat KTP Saksi 2
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <embed src="/storage/{{ $aktakematian->ktpsaksi2 }}"
+                                                            width="100%" style="height: 70vh;" type="application/pdf">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">Kembali</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">KTP Saksi 1</label>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal3">
-                                        Lihat KTP Saksi 1
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal3" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <embed src="/storage/{{ $aktakematian->ktpsaksi1 }}" width="100%"
-                                                        style="height: 70vh;" type="application/pdf">
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Kembali</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-end gap-3">
+                                        <a href="{{ route('aktakematian.index') }}" class="btn btn-danger"><i
+                                                class="bi bi-arrow-left-circle"></i>
+                                            Kembali</a>
+                                        <button class="btn btn-success"
+                                            {{ $aktakematian->is_verification == 1 ? '' : 'hidden' }}>Download Surat<i
+                                                class="bi bi-download"></i></button>
                                     </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">KTP Saksi 2</label>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal4">
-                                        Lihat KTP Saksi 2
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal4" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <embed src="/storage/{{ $aktakematian->ktpsaksi2 }}" width="100%"
-                                                        style="height: 70vh;" type="application/pdf">
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Kembali</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex justify-content-end gap-3">
-                                    <a href="{{ route('aktakematian.index') }}" class="btn btn-danger"><i
-                                            class="bi bi-arrow-left-circle"></i>
-                                        Kembali</a>
-                                    <button class="btn btn-success"
-                                        {{ $aktakematian->is_verification == 1 ? '' : 'hidden' }}>Download Surat<i
-                                            class="bi bi-download"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 @endsection

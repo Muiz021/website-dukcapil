@@ -286,7 +286,7 @@
                                                                     <div class="modal-content">
                                                                         <div class="modal-body">
                                                                             <embed
-                                                                                src="/storage/{{ $kelahiran->ktportuaayah }}"
+                                                                                src="/storage/{{ $kelahiran->ktportuayah }}"
                                                                                 width="100%" style="height: 70vh;"
                                                                                 type="application/pdf">
                                                                         </div>
@@ -342,8 +342,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="is_verification" value="1">
                                         @if ($kelahiran->is_verification != 1)
-                                            <button type="submit" class="btn btn-success"
-                                                onclick="confirm('Apakah data diterima?')">
+                                            <button type="submit" class="btn btn-success">
                                                 Terima
                                             </button>
                                         @endif

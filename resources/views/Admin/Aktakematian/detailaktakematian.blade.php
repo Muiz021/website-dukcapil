@@ -108,7 +108,8 @@
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
                                                             class="text-danger">*</span></label>
-                                                    <img src="/storage/{{ $kematian->bukti }}" alt="" width="100%">
+                                                    <img src="/storage/{{ $kematian->bukti }}" alt=""
+                                                        width="100%">
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +117,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="row mt-2">
+                        <div class="row mt-2">
                             <p class="fw-semibold">Dokumen Persyaratan</p>
                             <div class="col-md-6">
                                 <div class="mb-3">
@@ -196,7 +197,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               <div class="mb-3">
+                                <div class="mb-3">
                                     <label class="form-label">KTP Saksi 2</label>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
@@ -234,8 +235,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="is_verification" value="1">
                                         @if ($kematian->is_verification != 1)
-                                            <button type="submit" class="btn btn-success"
-                                                onclick="confirm('Apakah data diterima?')">
+                                            <button type="submit" class="btn btn-success">
                                                 Terima
                                             </button>
                                         @endif

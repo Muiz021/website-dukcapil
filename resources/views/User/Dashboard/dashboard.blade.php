@@ -22,7 +22,7 @@ use App\Models\Aktakematian;
                                 </div>
                                 <p class="title ms-auto">{{ auth()->user()->username }}</p>
                             </div>
-                            <a href="{{ route('kk.download') }}" class="btn btn-success mt-3">Download KK</a>
+                            <a href="{{ route('kk.download') }}" target="_blank" class="btn btn-success mt-3">Download KK</a>
                         </div>
                     </div>
                 </div>

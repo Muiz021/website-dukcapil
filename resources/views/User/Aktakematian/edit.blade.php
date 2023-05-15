@@ -28,28 +28,28 @@
                                                         Bahwa <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="keteranganlaporan"
                                                         id="keteranganlaporan" placeholder="Masukkan Keterangan Laporan"
-                                                        required value="{{ $aktakematian->keteranganlaporan }}" />
+                                                         value="{{ $aktakematian->keteranganlaporan }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="namaalm" class="form-label">Nama Lengkap <span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="namaalm"
                                                         id="namaalm"
-                                                        placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah" required value="{{ $aktakematian->namaalm }}" />
+                                                        placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah"  value="{{ $aktakematian->namaalm }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikalm" class="form-label">NIK <span
                                                             class="text-danger">*</span></label>
                                                     <input type="number" class="form-control" name="nikalm"
                                                         id="nikalm" placeholder="Masukkan NIK Almarhum/Almarhumah"
-                                                        required value="{{ $aktakematian->nikalm }}" />
+                                                         value="{{ $aktakematian->nikalm }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umuralm" class="form-label">Umur <span
                                                             class="text-danger">*</span></label>
                                                     <input type="number" class="form-control" name="umuralm"
                                                         id="umuralm" placeholder="Masukkan Umur Almarhum/Almarhumah"
-                                                        required value="{{ $aktakematian->umuralm }}" />
+                                                         value="{{ $aktakematian->umuralm }}" />
                                                 </div>
                                             </div>
                                         </div>
@@ -75,39 +75,39 @@
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="hari"
                                                         id="hari" placeholder="Hari berpulang kerahmatullah"
-                                                        required value="{{ $aktakematian->hari }}" />
+                                                         value="{{ $aktakematian->hari }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="tgl" class="form-label">Tanggal Kematian <span
                                                             class="text-danger">*</span></label>
                                                     <input type="date" class="form-control" name="tgl"
                                                         id="tgl" placeholder="Tanggal berpulang kerahmatullah"
-                                                        required value="{{ $aktakematian->tgl }}" />
+                                                         value="{{ $aktakematian->tgl }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pukul" class="form-label">Pukul <span
                                                             class="text-danger">*</span></label>
                                                     <input type="time" class="form-control" name="pukul"
                                                         id="pukul" placeholder="Pukul berpulang kerahmatullah"
-                                                        required value="{{ $aktakematian->pukul }}" />
+                                                         value="{{ $aktakematian->pukul }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bertempat" class="form-label">Bertempat di <span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="bertempat"
-                                                        id="bertempat" placeholder="Tempat kediaman" required value="{{ $aktakematian->bertempat }}" />
+                                                        id="bertempat" placeholder="Tempat kediaman"  value="{{ $aktakematian->bertempat }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="penyebab" class="form-label">Penyebab Kematian <span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="penyebab"
-                                                        id="penyebab" placeholder="Penyebab Kematian" required value="{{ $aktakematian->penyebab }}" />
+                                                        id="penyebab" placeholder="Penyebab Kematian"  value="{{ $aktakematian->penyebab }}" />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
                                                             class="text-danger">*</span></label>
                                                     <input type="file" class="form-control" name="bukti"
-                                                        id="buti" placeholder="Bukti Kematian" required />
+                                                        id="buti" placeholder="Bukti Kematian"  />
                                                 </div>
                                             </div>
                                         </div>

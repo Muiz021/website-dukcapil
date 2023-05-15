@@ -14,13 +14,13 @@
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingTwo">
                                             <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#hubungan"
-                                                aria-expanded="false" aria-controls="hubungan" role="tabpanel">
+                                                data-bs-toggle="collapse" data-bs-target="#hubungan" aria-expanded="false"
+                                                aria-controls="hubungan" role="tabpanel">
                                                 Data Almarhum/Almarhumah
                                             </button>
                                         </h2>
-                                        <div id="hubungan" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div id="hubungan" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample">
                                             <div class="accordion-body mt-3">
                                                 <div class="mb-3">
                                                     <label for="keteranganlaporan" class="form-label">Melaporkan
@@ -32,23 +32,20 @@
                                                 <div class="mb-3">
                                                     <label for="namaalm" class="form-label">Nama Lengkap <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="namaalm"
-                                                        id="namaalm"
+                                                    <input type="text" class="form-control" name="namaalm" id="namaalm"
                                                         placeholder="Masukkan Nama Lengkap Almarhum/Almarhumah" required />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nikalm" class="form-label">NIK <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="number" class="form-control" name="nikalm"
-                                                        id="nikalm" placeholder="Masukkan NIK Almarhum/Almarhumah"
-                                                        required />
+                                                    <input type="number" class="form-control" name="nikalm" id="nikalm"
+                                                        placeholder="Masukkan NIK Almarhum/Almarhumah" required />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="umuralm" class="form-label">Umur <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="number" class="form-control" name="umuralm"
-                                                        id="umuralm" placeholder="Masukkan Umur Almarhum/Almarhumah"
-                                                        required />
+                                                    <input type="number" class="form-control" name="umuralm" id="umuralm"
+                                                        placeholder="Masukkan Umur Almarhum/Almarhumah" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +54,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="accordion" id="accordionExample">
-                                    
+
                                     <div class="border-1 mb-3 accordion-item">
                                         <h2 class="accordion-header" id="headingThree">
                                             <button type="button" class="accordion-button collapsed"
@@ -72,16 +69,14 @@
                                                 <div class="mb-3">
                                                     <label for="hari" class="form-label">Hari <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="hari"
-                                                        id="hari" placeholder="Hari berpulang kerahmatullah"
-                                                        required />
+                                                    <input type="text" class="form-control" name="hari" id="hari"
+                                                        placeholder="Hari berpulang kerahmatullah" required />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="tgl" class="form-label">Tanggal Kematian <span
                                                             class="text-danger">*</span></label>
-                                                    <input type="date" class="form-control" name="tgl"
-                                                        id="tgl" placeholder="Tanggal berpulang kerahmatullah"
-                                                        required />
+                                                    <input type="date" class="form-control" name="tgl" id="tgl"
+                                                        placeholder="Tanggal berpulang kerahmatullah" required />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="pukul" class="form-label">Pukul <span
@@ -104,9 +99,9 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
-                                                            class="text-danger">* | MAX 5MB</span></label>
+                                                            class="text-danger">* | jpeg,png,jpg | MAX 5MB</span></label>
                                                     <input type="file" class="form-control" name="bukti"
-                                                        id="buti" placeholder="Bukti Kematian" required />
+                                                        id="bukti" placeholder="Bukti Kematian" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -123,22 +118,22 @@
                                     <input type="file" class="form-control" name="kkasli" id="kkasli" required />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="ktppemohon" class="form-label">KTP Pemohon <span
-                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
+                                    <label for="ktppemohon" class="form-label">KTP Pemohon <span class="text-danger">* |
+                                            Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktppemohon" id="ktppemohon"
                                         required />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="ktpsaksi1" class="form-label">KTP Saksi 1 <span
-                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
+                                    <label for="ktpsaksi1" class="form-label">KTP Saksi 1 <span class="text-danger">* |
+                                            Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktpsaksi1" id="ktpsaksi1"
                                         required />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="ktpsaksi2" class="form-label">KTP Saksi 2 <span
-                                            class="text-danger">* | Format PDF | Max 5Mb</span></label>
+                                    <label for="ktpsaksi2" class="form-label">KTP Saksi 2 <span class="text-danger">* |
+                                            Format PDF | Max 5Mb</span></label>
                                     <input type="file" class="form-control" name="ktpsaksi2" id="ktpsaksi2"
                                         required />
                                 </div>

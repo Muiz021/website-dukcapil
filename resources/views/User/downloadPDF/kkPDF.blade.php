@@ -71,7 +71,7 @@
                     <td style="width: 52%; text-transform: uppercase;">
                         @foreach ($kartukeluarga as $item)
                             @if ($item->statushubkeluarga == 'KEPALA KELUARGA')
-                                <p style="margin-top: 1px;">: {{ auth()->user()->nama_kepala_keluarga }}</p>
+                                <p style="margin-top: 1px;">: {{ $item->nama }}</p>
                                 <p style="margin-top: 1px;">: {{ $item->alamat }}</p>
                                 <p style="margin-top: 1px;">: {{ $item->rt_rw }}</p>
                                 <p style="margin-top: 1px;">: {{ $item->kel }}</p>
@@ -272,9 +272,13 @@
                             <p>KEPALA KELUARGA</p>
                         </div>
                         <div style="margin-top: 56px;">
-                            <p style="text-decoration: underline; font-weight: 600;">
-                                {{ auth()->user()->nama_kepala_keluarga }}
-                            </p>
+                            @foreach ($kartukeluarga as $item)
+                                @if ($item->statushubkeluarga == 'KEPALA KELUARGA')
+                                    <p style="text-decoration: underline; font-weight: 600;">
+                                        {{ $item->nama }}
+                                    </p>
+                                @endif
+                            @endforeach
                             <p style="font-size: 14px;">Tanda Tangan/Cap Jempol</p>
                         </div>
                     </td>
