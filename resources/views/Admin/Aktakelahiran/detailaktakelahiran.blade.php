@@ -77,7 +77,7 @@
                                                         disabled value="{{ $kelahiran->agama }}"
                                                         placeholder="Masukkan Agama">
                                                 </div>
-                                                <div class="mb-3">
+                                                <!-- <div class="mb-3">
                                                     <label for="pendidikan" class="form-label">Pendidikan<span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="pendidikan"
@@ -131,7 +131,7 @@
                                                     <input type="text" class="form-control" name="nokitas"
                                                         id="nokitas" disabled value="{{ $kelahiran->nokitas }}"
                                                         placeholder="Masukkan Nomor Kitas/Kitap">
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>

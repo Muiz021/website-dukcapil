@@ -10,7 +10,7 @@
         html,
         body {
             margin: 0;
-            background-color: #B8F1F7;
+            background-color: #fff;
             padding: 0;
         }
 
@@ -163,7 +163,7 @@
                             <th>Jenis Pekerjaan</th>
                             <th>Golongan <br> Darah</th>
                         </tr>
-                        <tr style="background-color: rgb(164, 192, 199); text-align: center;">
+                        <tr style=" text-align: center;">
                             <th></th>
                             <th>(1)</th>
                             <th>(2)</th>
@@ -214,7 +214,7 @@
                             <th>Ayah</th>
                             <th>Ibu</th>
                         </tr>
-                        <tr style="text-align: center; background-color: rgb(164, 192, 199);">
+                        <tr style="text-align: center; ">
                             <th></th>
                             <th>(10)</th>
                             <th>(11)</th>

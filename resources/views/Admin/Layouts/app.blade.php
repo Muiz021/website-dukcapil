@@ -35,6 +35,17 @@
     <script src="{{ asset('assets/js/config.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/datatables.css') }}">
+       <style>
+        /* Menyembunyikan ikon pada input angka */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
 </head>
 
 <body>

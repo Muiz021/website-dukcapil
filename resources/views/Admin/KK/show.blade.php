@@ -2,6 +2,36 @@
 
 @section('content')
     <div class="row">
+    <div class="col-12 mb-3">
+                <div class="card">
+                    <div class="card-header fs-4 fw-bold">
+                        Data Pengajuan Akta Kematian
+                    </div>
+                     <div class="card-body table-responsive">
+                        <table class="table table-responsive" id="table1">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama yang Meninggal</th>
+                                    <th>NIK yang Meninggal</th>
+                                    <th>Waktu Meninggal</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($kematian as $item)
+                                    <tr>
+                                          <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->namaalm }}</td>
+                                        <td>{{ $item->nikalm }}</td>
+                                        <td>{{ $item->hari }}, {{ $item->tgl }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         <div class="col-12">
             <div class="card p-4">
                 <div class="d-flex">

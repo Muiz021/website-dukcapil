@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::delete('/admin/kartukeluarga/{id}', [KartuKeluargaController::class, 'destroy']);
 
     // anggota kk
-    Route::get('/admin/kartukeluarga/createanggota', [KartuKeluargaController::class, 'createAnggota'])->name('kkadmin.createanggota');
+    Route::get('/admin/kartukeluarga/createanggota/{nokk}', [KartuKeluargaController::class, 'createAnggota'])->name('kkadmin.createanggota');
     Route::post('/admin/kartukeluarga/anggota', [KartuKeluargaController::class, 'storeAnggota'])->name('kkadmin.storeanggota');
     Route::get('/admin/kartukeluarga/nokartu/{nokk}', [KartuKeluargaController::class, 'showAnggota'])->name('kkadmin.showanggota');
     Route::get('/admin/kartukeluarga/editanggota/{id}', [KartuKeluargaController::class, 'editanggota'])->name('kkadmin.editanggota');

@@ -24,13 +24,13 @@ return new class extends Migration
             $table->string('tempatlahiranak');
             $table->string('tgllahiranak');
             $table->string('agama');
-            $table->string('pendidikan');
-            $table->string('jpekerjaan');
-            $table->string('statuspernikahan');
-            $table->string('statushubkeluarga');
-            $table->string('kewarganegaraan');
-            $table->string('nopaspor');
-            $table->string('nokitas');
+            // $table->string('pendidikan');
+            // $table->string('jpekerjaan');
+            // $table->string('statuspernikahan');
+            // $table->string('statushubkeluarga');
+            // $table->string('kewarganegaraan');
+            // $table->string('nopaspor');
+            // $table->string('nokitas');
 
             $table->string('namaibu');
             $table->string('namaayah');

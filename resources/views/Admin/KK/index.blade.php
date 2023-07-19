@@ -29,9 +29,9 @@
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->nik }}</td>
                                     <td class="d-flex justify-content-center gap-2">
-                                        <a href="{{ route('kkadmin.createanggota') }}" class="btn btn-sm btn-success"><i
+                                        <a href="/admin/kartukeluarga/createanggota/{{$item->nokk}}" class="btn btn-sm btn-success"><i
                                                 class="bi bi-person-plus"></i></a>
-                                        <a href="/admin/kartukeluarga/nokartu/{{ $item->nokk }}" class="btn btn-sm btn-primary"><i class="bi bi-eye-fill"></i></a>
+                                        <a href="/admin/kartukeluarga/nokartu/{{ $item->nokk }}" class="btn btn-sm btn-primary"><i class="bi bi-dash"></i></a>
                                         <a href="/admin/kartukeluarga/edit/{{ $item->id }}"
                                             class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></a>
                                         <form action="/admin/kartukeluarga/{{ $item->id }}" method="post">

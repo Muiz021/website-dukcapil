@@ -30,6 +30,7 @@
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="namaanak"
                                                         id="namaanak" required placeholder="Masukkan Nama Anak yg lahir">
+                                                   
                                                 </div>
                                                 {{-- <div class="mb-3">
                                                     <label for="nikanak" class="form-label">NIK <span
@@ -76,7 +77,7 @@
                                                         <option value="KRISTEN">KRISTEN</option>
                                                     </select>
                                                 </div>
-                                                <div class="mb-3">
+                                                <!-- <div class="mb-3">
                                                     <label for="pendidikan" class="form-label">Pendidikan<span
                                                             class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="pendidikan"
@@ -124,7 +125,7 @@
                                                     <label for="nokitas" class="form-label">No. Kitas/Kitap</label>
                                                     <input type="text" class="form-control" name="nokitas"
                                                         id="nokitas" required value="-">
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -167,22 +168,31 @@
                                 <div class="mb-3">
                                     <label for="bukunikah" class="form-label">Buku Nikah <span class="text-danger">* |
                                             Format PDF | Max:5Mb</span></label>
-                                    <input type="file" class="form-control" name="bukunikah" required id="bukunikah">
+                                    <input type="file" class="form-control @error('bukunikah') is-invalid @enderror" name="bukunikah" required id="bukunikah">
+                                    @error('bukunikah')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="suratketbidan" class="form-label">Surat Keterangan
                                         Bidan <span class="text-danger">* | Format PDF |
                                             Max:5Mb</span></label>
-                                    <input type="file" class="form-control" name="suratketbidan" required
+                                    <input type="file" class="form-control @error('suratketbidan') is-invalid @enderror" name="suratketbidan" required
                                         id="suratketbidan">
+                                    @error('suratketbidan')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="ktportuaibu" class="form-label">KTP
                                         Orangtua/Ibu <span class="text-danger">* | Format PDF |
                                             Max:5Mb</span></label>
-                                    <input type="file" class="form-control" name="ktportuaibu" required
+                                    <input type="file" class="form-control @error('ktportuaibu') is-invalid @enderror" name="ktportuaibu" required
                                         id="ktportuaibu">
+                                    @error('ktportuaibu')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -190,15 +200,21 @@
                                     <label for="ktportuayah" class="form-label">KTP
                                         Orangtua/Ayah <span class="text-danger">* | Format PDF |
                                             Max:5Mb</span></label>
-                                    <input type="file" class="form-control" name="ktportuayah" required
+                                    <input type="file" class="form-control @error('ktportuayah') is-invalid @enderror" name="ktportuayah" required
                                         id="ktportuayah">
+                                    @error('ktportuayah')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="kkkelahiran" class="form-label">Kartu Keluarga <span
                                             class="text-danger">* |
                                             Format PDF | Max:5Mb</span></label>
-                                    <input type="file" class="form-control" name="kkkelahiran" required
+                                    <input type="file" class="form-control @error('kkkelahiran') is-invalid @enderror" name="kkkelahiran" required
                                         id="kkkelahiran">
+                                    @error('kkkelahiran')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>

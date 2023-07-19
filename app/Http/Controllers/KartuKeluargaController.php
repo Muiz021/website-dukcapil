@@ -124,14 +124,17 @@ class KartuKeluargaController extends Controller
         return redirect()->route('kkadmin.index');
     }
 
-    public function createAnggota()
+    public function createAnggota($nokk)
     {
-        // $data = KartuKeluarga::all();
-        return view('Admin.KK.tambahanggota');
+        $data = KartuKeluarga::where('nokk', $nokk)->get();
+        $kelahiran = Aktakelahiran::where('is_verification', '=', '1')->get();
+        return view('Admin.KK.tambahanggota', compact('data', 'nokk', 'kelahiran'));
     }
+    
 
     public function storeAnggota(Request $request)
     {
+        // dd("tes");
         $data = $request->validate([
             'nokk' => 'required',
             'nama' => 'required',
@@ -165,6 +168,7 @@ class KartuKeluargaController extends Controller
         $kk = KartuKeluarga::find($nokk);
         $data = KartuKeluarga::where('nokk', $nokk)->first();
         $datakk = KartuKeluarga::all();
-        return view('Admin.KK.show', compact('kk', 'data', 'datakk'));
+        $kematian = AktaKematian::where('is_verification', '=', '1')->get();
+        return view('Admin.KK.show', compact('kk', 'data', 'datakk', 'kematian'));
     }
 }

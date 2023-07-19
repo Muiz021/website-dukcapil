@@ -6,6 +6,45 @@ use App\Models\KartuKeluarga;
 
 @section('content')
     <div class="row">
+    <div class="col-12 mb-3">
+                <div class="card">
+                    <div class="card-header fs-4 fw-bold">
+                        Data Pengajuan Akta Kelahiran
+                    </div>
+
+                    <div class="card-body table-responsive">
+                        <table class="table table-responsive" id="table1">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Anak</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Tempat Lahir</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Agama</th>
+                                    <th>Nama Ayah</th>
+                                    <th>Nama Ibu</th>
+                               
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($kelahiran as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->namaanak }}</td>
+                                        <td>{{ $item->jk }}</td>
+                                        <td>{{ $item->tempatlahiranak }}</td>
+                                        <td>{{ $item->tgllahiranak }}</td>
+                                        <td>{{ $item->agama }}</td>
+                                        <td>{{ $item->namaayah }}</td>
+                                        <td>{{ $item->namaibu }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         <div class="col-12">
             <div class="card p-4">
                 <p class="fs-4 mb-4 fw-semibold">
@@ -18,7 +57,9 @@ use App\Models\KartuKeluarga;
                             <div class="mb-3">
                                 <label for="nokk" class="form-label">Nomor Kartu Keluarga<span
                                         class="text-danger">*</span></label>
-                                <select name="nokk" id="nokk" class="form-select">
+                                    <input type="text" class="form-control" name="nokk" id="nokk" required
+                                    placeholder="Masukkan nokk" value="{{$nokk}}">
+                                <!-- <select name="nokk" id="nokk" class="form-select">
                                     <option>Pilih Nomor Kartu Keluarga</option>
                                     {{ $data = KartuKeluarga::all() }}
                                     @foreach ($data as $item)
@@ -27,7 +68,7 @@ use App\Models\KartuKeluarga;
                                             {{ $item->nokk }}
                                         </option>
                                     @endforeach
-                                </select>
+                                </select> -->
                             </div>
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>

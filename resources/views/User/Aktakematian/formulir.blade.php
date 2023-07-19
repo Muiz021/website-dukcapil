@@ -100,8 +100,11 @@
                                                 <div class="mb-3">
                                                     <label for="bukti" class="form-label">Bukti Kematian <span
                                                             class="text-danger">* | jpeg,png,jpg | MAX 5MB</span></label>
-                                                    <input type="file" class="form-control" name="bukti"
+                                                    <input type="file" class="form-control @error('bukti') is-invalid @enderror" name="bukti"
                                                         id="bukti" placeholder="Bukti Kematian" required />
+                                                        @error('bukti')
+                                                            <div class="invalid-feedback">{{$message}}</div>
+                                                        @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -115,27 +118,39 @@
                                 <div class="mb-3">
                                     <label for="kkasli" class="form-label">Kartu Keluarga Asli <span
                                             class="text-danger">* | Format PDF | Max 5Mb</span></label>
-                                    <input type="file" class="form-control" name="kkasli" id="kkasli" required />
+                                    <input type="file" class="form-control @error('kkasli') is-invalid @enderror" name="kkasli" id="kkasli" required />
+                                    @error('kkasli')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktppemohon" class="form-label">KTP Pemohon <span class="text-danger">* |
                                             Format PDF | Max 5Mb</span></label>
-                                    <input type="file" class="form-control" name="ktppemohon" id="ktppemohon"
+                                    <input type="file" class="form-control @error('ktppemohon') is-invalid @enderror" name="ktppemohon" id="ktppemohon"
                                         required />
+                                    @error('ktppemohon')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="ktpsaksi1" class="form-label">KTP Saksi 1 <span class="text-danger">* |
                                             Format PDF | Max 5Mb</span></label>
-                                    <input type="file" class="form-control" name="ktpsaksi1" id="ktpsaksi1"
+                                    <input type="file" class="form-control @error('ktpsaksi1') is-invalid @enderror" name="ktpsaksi1" id="ktpsaksi1"
                                         required />
+                                    @error('ktpsaksi1')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="ktpsaksi2" class="form-label">KTP Saksi 2 <span class="text-danger">* |
                                             Format PDF | Max 5Mb</span></label>
-                                    <input type="file" class="form-control" name="ktpsaksi2" id="ktpsaksi2"
+                                    <input type="file" class="form-control @error('ktpsaksi2') is-invalid @enderror" name="ktpsaksi2" id="ktpsaksi2"
                                         required />
+                                    @error('ktpsaksi2')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>

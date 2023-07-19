@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use App\Models\Aktakematian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ValidasiAktaKematian;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AktakematianController extends Controller
@@ -38,61 +39,44 @@ class AktakematianController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidasiAktaKematian $request)
     {
-        $data = $request->validate([
-            'keteranganlaporan' => 'required',
-            'namaalm' => 'required',
-            'nikalm' => 'required',
-            'umuralm' => 'required',
-
-            'hari' => 'required',
-            'tgl' => 'required',
-            'pukul' => 'required',
-            'bertempat' => 'required',
-            'penyebab' => 'required',
-            'bukti' => 'required|mimes:jpeg,png,jpg|max:5000',
-
-            'kkasli' => 'required|mimes:pdf|max:5000',
-            'ktppemohon' => 'required|mimes:pdf|max:5000',
-            'ktpsaksi1' => 'required|mimes:pdf|max:5000',
-            'ktpsaksi2' => 'required|mimes:pdf|max:5000',
-        ]);
-
+        $data = $request->validated();
+        
         $aktakematian = new Aktakematian();
         $aktakematian->user_id = Auth::user()->id;
         $aktakematian->fill($data);
-
+        
         $dir = 'Aktakematian/' . $request->namattd;
         $path = $request
-            ->file('bukti')
-            ->storePubliclyAs($dir, "bukti.{$request->file('bukti')->extension()}");
+        ->file('bukti')
+        ->storePubliclyAs($dir, "bukti.{$request->file('bukti')->extension()}");
         $aktakematian->bukti = Str::of($path)->replace('public', 'storage')->toString();
-
+        
         $dir = 'Aktakematian/' . $request->namattd;
         $path = $request
-            ->file('kkasli')
-            ->storePubliclyAs($dir, "kkasli.{$request->file('kkasli')->extension()}");
+        ->file('kkasli')
+        ->storePubliclyAs($dir, "kkasli.{$request->file('kkasli')->extension()}");
         $aktakematian->kkasli = Str::of($path)->replace('public', 'storage')->toString();
 
         $dir = 'Aktakematian/' . $request->namattd;
         $path = $request
-            ->file('ktppemohon')
-            ->storePubliclyAs($dir, "ktppemohon.{$request->file('ktppemohon')->extension()}");
+        ->file('ktppemohon')
+        ->storePubliclyAs($dir, "ktppemohon.{$request->file('ktppemohon')->extension()}");
         $aktakematian->ktppemohon = Str::of($path)->replace('public', 'storage')->toString();
-
+        
         $dir = 'Aktakematian/' . $request->namattd;
         $path = $request
-            ->file('ktpsaksi1')
-            ->storePubliclyAs($dir, "ktpsaksi1.{$request->file('ktpsaksi1')->extension()}");
+        ->file('ktpsaksi1')
+        ->storePubliclyAs($dir, "ktpsaksi1.{$request->file('ktpsaksi1')->extension()}");
         $aktakematian->ktpsaksi1 = Str::of($path)->replace('public', 'storage')->toString();
-
+        
         $dir = 'Aktakematian/' . $request->namattd;
         $path = $request
-            ->file('ktpsaksi2')
-            ->storePubliclyAs($dir, "ktpsaksi2.{$request->file('ktpsaksi2')->extension()}");
+        ->file('ktpsaksi2')
+        ->storePubliclyAs($dir, "ktpsaksi2.{$request->file('ktpsaksi2')->extension()}");
         $aktakematian->ktpsaksi2 = Str::of($path)->replace('public', 'storage')->toString();
-
+        
         $aktakematian->save();
         Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('aktakematian.index');

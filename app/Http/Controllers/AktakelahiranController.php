@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Aktakelahiran;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Requests\ValidasiAktaKelahiran;
 
 class AktakelahiranController extends Controller
 {
@@ -38,33 +39,9 @@ class AktakelahiranController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidasiAktaKelahiran $request)
     {
-        $data = $request->validate([
-            'namaanak' => 'required',
-            // 'nikanak' => 'required',
-            'jk' => 'required',
-            'tempatlahiranak' => 'required',
-            'tgllahiranak' => 'required',
-            'agama' => 'required',
-            'pendidikan' => 'required',
-            'jpekerjaan' => 'required',
-            'statuspernikahan' => 'required',
-            'statushubkeluarga' => 'required',
-            'kewarganegaraan' => 'required',
-            'nopaspor' => 'required',
-            'nokitas' => 'required',
-
-            'namaibu' => 'required',
-            'namaayah' => 'required',
-
-            'bukunikah' => 'required|mimes:pdf|max:5000',
-            'suratketbidan' => 'required|mimes:pdf|max:5000',
-            'ktportuaibu' => 'required|mimes:pdf|max:5000',
-            'ktportuayah' => 'required|mimes:pdf|max:5000',
-            'kkkelahiran' => 'required|mimes:pdf|max:5000',
-        ]);
-
+        $data = $request->validated();
 
         $aktakelahiran = new Aktakelahiran();
         $aktakelahiran->user_id = Auth::user()->id;
