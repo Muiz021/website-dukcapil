@@ -285,13 +285,16 @@
                     <td style="width: 40%; text-align: center;">
                         <div style="margin-top: 72px;">
                             <p>KEPALA DINAS KEPENDUDUKAN DAN <br> PENCATATAN SIPIL KAB. JENEPONTO</p>
+                            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/img/bar-code.jpeg'))) }}"
+                                alt="" style="width: 100px; margin-top:10px;">
                         </div>
-                        <div style="margin-top: 40px;">
+                        <div style="margin-top: 10px;">
                             @foreach ($kartukeluarga as $item)
                                 @if ($item->statushubkeluarga == 'KEPALA KELUARGA')
-                                    <p style="text-decoration: underline; font-weight: 600;">{{ $item->nama_dinas }}
+                                    <p style="text-decoration: underline; font-weight: 600;">H. MUHAMMAD JAFAR ABBAS,
+                                        SE, M.Pd
                                     </p>
-                                    <p style="font-size: 14px;">NIP. {{ $item->nik_dinas }}</p>
+                                    <p style="font-size: 14px;">NIP. 196606201994031012</p>
                                 @endif
                             @endforeach
                         </div>

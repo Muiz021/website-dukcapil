@@ -6,6 +6,7 @@
  <nav class="navbar navbar-expand-lg fixed-top">
      <div class="container">
          <a class="navbar-brand" href="{{ route('dashboard-user') }}">
+             <img src="{{ asset('assets/img/logos.png') }}" alt="" width="100px" />
              <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100px" />
          </a>
          <div>

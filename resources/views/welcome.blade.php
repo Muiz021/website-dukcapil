@@ -15,6 +15,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/img/logos.png') }}" alt="" width="100px" />
                 <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100px" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
